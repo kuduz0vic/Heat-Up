@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "heading": {
+      "type": "v1-page-heading",
+      "settings": {
+      }
+    },
+    "f4b9e4b5-3b12-4663-aa3c-5f479bb81c4e": {
+      "type": "v1-tekst-en-afbeelding",
+      "settings": {
+        "titel": "Snelle opwarming voor snelle verlichting",
+        "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+      }
+    },
+    "template": {
+      "type": "v1-afbeelding-en-tekst",
+      "settings": {
+        "titel": "Snelle opwarming voor snelle verlichting",
+        "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+      }
+    },
+    "d70cfc8f-d2f5-4d2f-b022-dc45fbe92a83": {
+      "type": "v1-instagram",
+      "blocks": {
+        "267324e9-b1e0-4ada-900a-905c37b9898d": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "515a7f4b-717a-4b2a-bfe1-fa82274395ec": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "671a1889-cc62-40f3-8ff3-28209852f58e": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "92f03cf3-6f4d-44e5-8163-3f8bd3deb041": {
+          "type": "post",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "267324e9-b1e0-4ada-900a-905c37b9898d",
+        "515a7f4b-717a-4b2a-bfe1-fa82274395ec",
+        "671a1889-cc62-40f3-8ff3-28209852f58e",
+        "92f03cf3-6f4d-44e5-8163-3f8bd3deb041"
+      ],
+      "settings": {
+        "titel": "Warmte in beeld"
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "f4b9e4b5-3b12-4663-aa3c-5f479bb81c4e",
+    "template",
+    "d70cfc8f-d2f5-4d2f-b022-dc45fbe92a83"
+  ]
+}

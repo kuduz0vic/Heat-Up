@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "template": {
+      "type": "v1-page-heading",
+      "settings": {
+      }
+    },
+    "b751c807-48c4-411e-8330-65f0aaff8298": {
+      "type": "v1-tekst-en-afbeelding",
+      "settings": {
+        "titel": "Snelle opwarming voor snelle verlichting",
+        "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+      }
+    },
+    "contact-form": {
+      "type": "v1-contact-form",
+      "settings": {
+        "titel": "Contact us",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    },
+    "971352fc-d947-44da-b59b-cca8a0696fed": {
+      "type": "v1-instagram",
+      "blocks": {
+        "3741b048-cac8-447a-86e9-b51bcc1073df": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "fbe06764-7e77-4756-9259-d334cd13ff7d": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "5bb9448b-8763-4711-a2b9-94488e3fdddb": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "1922b3df-3aef-4b8c-9a5d-b23ee365fb65": {
+          "type": "post",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "3741b048-cac8-447a-86e9-b51bcc1073df",
+        "fbe06764-7e77-4756-9259-d334cd13ff7d",
+        "5bb9448b-8763-4711-a2b9-94488e3fdddb",
+        "1922b3df-3aef-4b8c-9a5d-b23ee365fb65"
+      ],
+      "settings": {
+        "titel": "Warmte in beeld"
+      }
+    }
+  },
+  "order": [
+    "template",
+    "b751c807-48c4-411e-8330-65f0aaff8298",
+    "contact-form",
+    "971352fc-d947-44da-b59b-cca8a0696fed"
+  ]
+}
