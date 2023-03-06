@@ -1,0 +1,255 @@
+{
+  "sections": {
+    "store-name": {
+      "type": "store-name",
+      "settings": {
+        "store_name": "Store Name"
+      }
+    },
+    "3e737601-60ce-4a51-9e7f-c38ada1b92b9": {
+      "type": "v1-hero",
+      "settings": {
+        "tagline": "Luxueuze warmte, zonder schuldgevoel.",
+        "paragraph": "Geniet van ultieme comfort met ons elektrisch warmtekussen zonder je zorgen te hoeven maken over de uitstoot en energierekening. Ervaar de luxe warmte thuis zonder schuldgevoel.",
+        "cta": "Shop mijn heatup kussen",
+        "review_text": "4,8 met 200+ reviews",
+        "knop_link": "",
+        "knop_link_text": "Shop mijn heatup kussen"
+      }
+    },
+    "db2ea83e-fb35-407e-a6ef-ab94422543a4": {
+      "type": "v1-usp-slider",
+      "blocks": {
+        "fab3de5c-e2ff-45f8-beca-0d134f6d1f91": {
+          "type": "slide",
+          "settings": {
+            "slide-text": "Comfortabel"
+          }
+        },
+        "1f652ca6-ba14-4609-9f33-3fafbe385830": {
+          "type": "slide",
+          "settings": {
+            "slide-text": "Comfortabel"
+          }
+        },
+        "81c180c1-5083-4ade-b332-dcf79ff41f03": {
+          "type": "slide",
+          "settings": {
+            "slide-text": "Comfortabel"
+          }
+        },
+        "7766d6af-a941-4cfe-87bb-704541e83a32": {
+          "type": "slide",
+          "settings": {
+            "slide-text": "Comfortabel"
+          }
+        },
+        "5d337fdf-1a86-437d-b5c1-f6074f2a7206": {
+          "type": "slide",
+          "settings": {
+            "slide-text": "Comfortabel"
+          }
+        },
+        "237bb49f-ff71-4144-9cf9-124be03ff413": {
+          "type": "slide",
+          "settings": {
+            "slide-text": "Comfortabel"
+          }
+        }
+      },
+      "block_order": [
+        "fab3de5c-e2ff-45f8-beca-0d134f6d1f91",
+        "1f652ca6-ba14-4609-9f33-3fafbe385830",
+        "81c180c1-5083-4ade-b332-dcf79ff41f03",
+        "7766d6af-a941-4cfe-87bb-704541e83a32",
+        "5d337fdf-1a86-437d-b5c1-f6074f2a7206",
+        "237bb49f-ff71-4144-9cf9-124be03ff413"
+      ],
+      "settings": {
+      }
+    },
+    "9fd60fcc-3c2b-4a6a-b9c2-cab75434ee48": {
+      "type": "v1-why-sectie",
+      "settings": {
+        "titel": "Luxueuze warmte, zonder schuldgevoel.",
+        "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    },
+    "9433a138-e2da-4b63-9188-2e1e8abf3c42": {
+      "type": "v1-beoordelingen",
+      "blocks": {
+        "6c4d03c3-33a6-4913-91bf-bf31951c901a": {
+          "type": "review",
+          "settings": {
+            "titel": "Customizable Comfort Settings",
+            "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
+            "reviewer": "Marieke van der Meer",
+            "text_naast_checkmark": "Geverifiëerd"
+          }
+        },
+        "0569af21-f42c-4ae6-ade8-4a03b3ddc639": {
+          "type": "review",
+          "settings": {
+            "titel": "Customizable Comfort Settings",
+            "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
+            "reviewer": "Marieke van der Meer",
+            "text_naast_checkmark": "Geverifiëerd"
+          }
+        },
+        "6bb99784-485b-4e74-a00f-68dca51b8d26": {
+          "type": "review",
+          "settings": {
+            "titel": "Customizable Comfort Settings",
+            "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
+            "reviewer": "Marieke van der Meer",
+            "text_naast_checkmark": "Geverifiëerd"
+          }
+        }
+      },
+      "block_order": [
+        "6c4d03c3-33a6-4913-91bf-bf31951c901a",
+        "0569af21-f42c-4ae6-ade8-4a03b3ddc639",
+        "6bb99784-485b-4e74-a00f-68dca51b8d26"
+      ],
+      "settings": {
+        "titel": "Klanten houden van Heatup.",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    },
+    "1572f302-b4ac-4e70-be2d-405873e404fe": {
+      "type": "v1-homepage-featured-producten",
+      "settings": {
+        "titel": "Bestel het Heatup kussen",
+        "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "usp_1": "Probeer gratis 30 dagen warmte",
+        "usp_2": "Gratis verzending boven de €100",
+        "usp_3": "Wij planten 1m2 groen terug per kussen"
+      }
+    },
+    "ed023ff0-c017-4744-8c17-17dc2436dcad": {
+      "type": "v1-home-faq",
+      "blocks": {
+        "d0cfdbe2-bd94-4960-a7eb-a308f857047a": {
+          "type": "faq",
+          "settings": {
+            "vraag": "Hoe snel wordt het kussen warm?",
+            "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          }
+        },
+        "2450f736-96d5-46b8-b618-35ff43a00248": {
+          "type": "faq",
+          "settings": {
+            "vraag": "Hoe snel wordt het kussen warm?",
+            "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          }
+        },
+        "36c83792-4bea-4bac-aefc-498dd5604849": {
+          "type": "faq",
+          "settings": {
+            "vraag": "Hoe snel wordt het kussen warm?",
+            "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          }
+        }
+      },
+      "block_order": [
+        "d0cfdbe2-bd94-4960-a7eb-a308f857047a",
+        "2450f736-96d5-46b8-b618-35ff43a00248",
+        "36c83792-4bea-4bac-aefc-498dd5604849"
+      ],
+      "settings": {
+        "titel": "Questions? We have got answers.",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      }
+    },
+    "b241103e-4718-4c8d-91fe-823b1ef07bf2": {
+      "type": "v1-key-features",
+      "blocks": {
+        "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7": {
+          "type": "slide",
+          "settings": {
+            "titel": "Insant Warmth Experience",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+          }
+        },
+        "e482d97d-f71a-463d-9441-6e21c7ebbecf": {
+          "type": "slide",
+          "settings": {
+            "titel": "Insant Warmth Experience",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+          }
+        },
+        "bbcf364e-1d89-4468-9ed7-76697a894ae9": {
+          "type": "slide",
+          "settings": {
+            "titel": "Insant Warmth Experience",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+          }
+        }
+      },
+      "block_order": [
+        "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7",
+        "e482d97d-f71a-463d-9441-6e21c7ebbecf",
+        "bbcf364e-1d89-4468-9ed7-76697a894ae9"
+      ],
+      "settings": {
+        "titel": "Highlight key features of the product or service",
+        "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "subtitel_weergeven": true
+      }
+    },
+    "04df9282-021a-4983-bd7c-ddca87366f0f": {
+      "type": "v1-statistics",
+      "settings": {
+        "titel": "Highlight key features of the product or service",
+        "tagline": "Emphasise time-saving and use numbers to maximise credibility.",
+        "subtitel_weergeven": true
+      }
+    },
+    "48495ae1-f386-4ec5-ae22-1405a83dde8e": {
+      "type": "v1-instagram",
+      "blocks": {
+        "15dd4c73-b635-4ed2-b34f-dd3a3713c4f6": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "9ea14f09-d98b-41f1-971f-30b0e3d2a389": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "84c760ec-c314-428c-9cd9-de97deac84c9": {
+          "type": "post",
+          "settings": {
+          }
+        },
+        "11cc6e31-db42-4832-8e52-33efd933f1aa": {
+          "type": "post",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "15dd4c73-b635-4ed2-b34f-dd3a3713c4f6",
+        "9ea14f09-d98b-41f1-971f-30b0e3d2a389",
+        "84c760ec-c314-428c-9cd9-de97deac84c9",
+        "11cc6e31-db42-4832-8e52-33efd933f1aa"
+      ],
+      "settings": {
+        "titel": "Warmte in beeld"
+      }
+    }
+  },
+  "order": [
+    "store-name",
+    "3e737601-60ce-4a51-9e7f-c38ada1b92b9",
+    "db2ea83e-fb35-407e-a6ef-ab94422543a4",
+    "9fd60fcc-3c2b-4a6a-b9c2-cab75434ee48",
+    "9433a138-e2da-4b63-9188-2e1e8abf3c42",
+    "1572f302-b4ac-4e70-be2d-405873e404fe",
+    "ed023ff0-c017-4744-8c17-17dc2436dcad",
+    "b241103e-4718-4c8d-91fe-823b1ef07bf2",
+    "04df9282-021a-4983-bd7c-ddca87366f0f",
+    "48495ae1-f386-4ec5-ae22-1405a83dde8e"
+  ]
+}

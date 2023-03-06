@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html data-wf-page="{{ wfPage }}" data-wf-site="63fb8d54806681128a4258a9" lang="{{ request.locale.iso_code }}" data-money-format="{{ shop.money_format | escape }}"><head>{%- liquid
+<html
+  data-wf-page="{{ wfPage }}"
+  data-wf-site="63fb8d54806681128a4258a9"
+  lang="{{ request.locale.iso_code }}"
+  data-money-format="{{ shop.money_format | escape }}">
+  <head>
+    {%- assign headerSnippetPath = "header-index" -%}{%- assign wfPage = "63fb8d54806681e5d74258a2" -%}{%- assign bodyClasses = "body" -%}
+    {%- liquid
     if headerSnippetPath
         include headerSnippetPath
     else
         render "__default-head"
     endif
 -%}
-{{content_for_header}}
-{% if template contains 'customers' %}
-    {{ "shopify_common.js" | shopify_asset_url | script_tag }}
-{% endif %}
-</head>
-<body class="{{ bodyClasses }} {{ "template-" | append: request.page_type | handle }}">
+    {{ content_for_header }}
+    {% if template contains 'customers' %}
+      {{ "shopify_common.js" | shopify_asset_url | script_tag }}
+    {% endif %}
+  </head>
+  <body class="{{ bodyClasses }} {{ "template-" | append: request.page_type | handle }}">
 
-{% section 'header' %}
-    <main id="main" class="main" role="main" tabindex="-1">
+    {% section 'header' %}
+    <main
+      id="main"
+      class="main"
+      role="main"
+      tabindex="-1">
       {{ content_for_layout }}
     </main>
     {% section 'v1-footer' %}
+    {% section 'sidecart' %}
 
-{% endif %}
-</body>
+  </body>
+  {% render 'scripts' %}
 </html>

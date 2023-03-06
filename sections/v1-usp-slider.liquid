@@ -1,0 +1,64 @@
+<div class="marquee">
+  <div class="marquee-content scroll">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'slide' %}
+        <div>{{ block.settings.slide-text }}</div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <div class="marquee-content scroll">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'slide' %}
+        <div>{{ block.settings.slide-text }}</div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <div class="html-embed w-embed">
+    <style>
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(-100% - 1rem));
+        }
+      }
+      .scroll {
+        animation: scroll 18s linear infinite;
+      }
+      .reverse {
+        animation-direction: reverse;
+      }
+    </style>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "presets": [
+      {
+        "name": "V1 - USP Slider"
+      }
+    ],
+    "name": "V1 - USP Slider",
+    "tag": "div",
+    "class": "usp-slider",
+    "blocks": [
+      {
+        "name": "Slide",
+        "type": "slide",
+        "settings": [
+          {
+            "type": "text",
+            "id": "slide-text",
+            "label": "Slide Text",
+            "default": "Comfortabel"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
