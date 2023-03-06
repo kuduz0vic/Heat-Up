@@ -1,0 +1,54 @@
+
+    <div class="page-padding">
+      <div class="container-v1">
+        <div class="container-large-v3">
+          <h4 class="insta-h1">{{ section.settings.titel | newline_to_br }}</h4>
+          <div class="instagram-swiper-component">
+            <div id="instagram-swiper" class="instagram-slider">
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}{%- if block.type == "post" -%}<div class="swiper-slide" block.shopify_attributes>{%- if block.settings.afbeelding == nil -%}<img src="{{ 'image_1.png' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 640px) 95vw, 608px" srcset="{{ 'image_1-p-500.png' | asset_url }} 500w, {{ 'image_1.png' | asset_url }} 608w" alt="" class="photo-slide">{%- else -%}<img src="{{ block.settings.afbeelding.src | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.afbeelding.alt | escape }}" class="photo-slide" srcset="{{ block.settings.afbeelding | img_url: '1920x' }} 1920w,{{ block.settings.afbeelding | img_url: '1600x' }} 1600w,{{ block.settings.afbeelding | img_url: '1366x' }} 1366w,{{ block.settings.afbeelding | img_url: '1024x' }} 1024w,{{ block.settings.afbeelding | img_url: '768x' }} 768w,{{ block.settings.afbeelding | img_url: '640x' }} 640w">{%- endif -%}</div>{%- endif -%}{%- endfor -%}
+              </div>
+            </div>
+          </div>
+          <div class="slider-arrow-container-relative insta">
+            <div id="insta-prev-arrow" class="slider-arrow"><img src="{{ 'arrow-right.svg' | asset_url }}" loading="lazy" alt="" class="arrow-swipe"></div>
+            <div id="insta-next-arrow" class="slider-arrow"><img src="{{ 'right-arrow.svg' | asset_url }}" loading="lazy" alt="" class="arrow-swipe"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","instagram-section");</script>
+        
+{% schema %}{
+  "presets": [
+    {
+      "name": "V1 - Instagram"
+    }
+  ],
+  "name": "V1 - Instagram",
+  "tag": "div",
+  "class": "instagram-section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "titel",
+      "label": "Titel",
+      "default": "Warmte in beeld"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Post",
+      "type": "post",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "afbeelding",
+          "label": "Afbeelding"
+        }
+      ]
+    }
+  ]
+}{% endschema %}

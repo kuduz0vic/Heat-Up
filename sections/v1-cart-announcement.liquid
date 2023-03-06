@@ -1,0 +1,29 @@
+
+    <div class="container-v1">
+      <div class="cart-announcement-wrapper">
+        <div class="flashing-dot"></div>
+        <div class="cart-announcement-p">{{ section.settings.announcement | newline_to_br }}</div>
+      </div>
+    </div>
+  
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","cart-announcement-bar");</script>
+        
+{% schema %}{
+  "presets": [
+    {
+      "name": "V1 - Cart Announcement"
+    }
+  ],
+  "name": "V1 - Cart Announcement",
+  "tag": "div",
+  "class": "cart-announcement-bar",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "announcement",
+      "label": "Announcement",
+      "default": "Goede keuze! Dit product verkoopt snel."
+    }
+  ]
+}{% endschema %}

@@ -1,0 +1,45 @@
+
+    <div class="page-padding">
+      <div class="container-v1">
+        <div class="mission-header-wrapper">
+          <h1 class="mission-header">{{ section.settings.titel | newline_to_br }}</h1>
+          <div>{{ section.settings.paragraph | newline_to_br }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="mission-image-bg">{%- if section.settings.afbeelding == nil -%}<img src="{{ 'image-1.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'image-1-p-500.png' | asset_url }} 500w, {{ 'image-1.png' | asset_url }} 774w" alt="" class="mission-image">{%- else -%}<img src="{{ section.settings.afbeelding.src | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.afbeelding.alt | escape }}" class="mission-image" srcset="{{ section.settings.afbeelding | img_url: '1920x' }} 1920w,{{ section.settings.afbeelding | img_url: '1600x' }} 1600w,{{ section.settings.afbeelding | img_url: '1366x' }} 1366w,{{ section.settings.afbeelding | img_url: '1024x' }} 1024w,{{ section.settings.afbeelding | img_url: '768x' }} 768w,{{ section.settings.afbeelding | img_url: '640x' }} 640w">{%- endif -%}
+      <div class="mission-overlay"></div>
+    </div>
+  
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","pdp-footer-mission");</script>
+        
+{% schema %}{
+  "presets": [
+    {
+      "name": "V1 - Missie"
+    }
+  ],
+  "name": "V1 - Missie",
+  "tag": "div",
+  "class": "pdp-footer-mission",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "titel",
+      "label": "Titel",
+      "default": "Veilig en ecologisch verantwoord"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "Dit kussen is Oeko-tex® gecertificeerd, wat betekent dat je dankzij de niet-toxische materialen heerlijk rustig kunt genieten. Dus zonder stoffen die schadelijk zijn voor je gezondheid, je huid of het milieu."
+    },
+    {
+      "type": "image_picker",
+      "id": "afbeelding",
+      "label": "Afbeelding"
+    }
+  ]
+}{% endschema %}

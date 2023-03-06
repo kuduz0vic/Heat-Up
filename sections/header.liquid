@@ -1,0 +1,165 @@
+
+    <div data-animation="default" class="navbar w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" role="banner" data-duration="400">
+      <div class="navbar-container">
+        <a href="{{ section.settings.logo_link }}" id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04ea-aeba04e7" aria-current="page" class="logo-link w-nav-brand w--current"><img src="{{ 'logo.svg' | asset_url }}" loading="lazy" alt="" class="navbar-logo"></a>
+        <nav role="navigation" id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04ec-aeba04e7" class="middle-links is-page-height-tablet w-nav-menu">
+          <a href="#" class="navbar2_link w-nav-link">{{ 'tn2191fdbd' | t }}</a>
+          <a href="#" class="navbar2_link w-nav-link">{{ 't234bd928' | t }}</a>
+          <a href="#" class="navbar2_link w-nav-link">{{ 'tn6de9c1a' | t }}</a>
+        </nav>
+        <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04f3-aeba04e7" class="navbar-buttons-wrapper">
+          <a data-w-id="b9088d66-d0c6-bef0-44e2-882faeba04f4" href="#" class="search-btn w-inline-block"><img src="{{ 'search.svg' | asset_url }}" loading="lazy" alt=""></a>
+          <a href="#" class="cart-icon w-inline-block"><img src="{{ 'cart.svg' | asset_url }}" loading="lazy" alt="">
+            <div class="div-block">{{ 't641' | t }}</div>
+          </a>
+        </div>
+        <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04fa-aeba04e7" class="navbar-buttons-wrapper-mobile">
+          <a data-w-id="b9088d66-d0c6-bef0-44e2-882faeba04fb" href="#" class="menu-btn w-inline-block"><img src="{{ 'menu-btn-closed-state.svg' | asset_url }}" loading="lazy" alt="" class="closed-state-menu-icon"><img src="{{ 'menu-btn-opened-state.svg' | asset_url }}" loading="lazy" alt="" class="opened-state-menu-icon"></a>
+        </div>
+      </div>
+      <div class="mobile-menu-container">
+        {%- if section.settings.search_aanuit -%}<div class="mobile-menu-search">
+          <div class="search-icon"><img src="{{ 'search-module-mobile.svg' | asset_url }}" loading="lazy" alt=""></div>
+          <div class="mobile-search-text">{{ 'td2562b' | t }}</div>
+        </div>{%- endif -%}
+        <ul role="list" class="mobile-menu-navigation">
+          <li class="mobile-menu-link">{{ 'tn23507abb' | t }}</li>
+          <li class="mobile-menu-link">{{ 't234c5148' | t }}</li>
+          <li class="mobile-menu-link">{{ 'tn6de9c1a' | t }}</li>
+        </ul>
+        {%- if section.settings.cta_gebied_aanuit -%}<div class="menu-cta-area">
+          <div class="mobile-cta-inner">
+            {%- if section.settings.urge_aanuit -%}<div class="cta-urge">
+              <div class="urge-icon">{%- if section.settings.urge_icon == nil -%}<img src="{{ 'groene-bezorging-1.svg' | asset_url }}" loading="lazy" alt="">{%- else -%}<img src="{{ section.settings.urge_icon.src | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.urge_icon.alt | escape }}" srcset="{{ section.settings.urge_icon | img_url: '1920x' }} 1920w,{{ section.settings.urge_icon | img_url: '1600x' }} 1600w,{{ section.settings.urge_icon | img_url: '1366x' }} 1366w,{{ section.settings.urge_icon | img_url: '1024x' }} 1024w,{{ section.settings.urge_icon | img_url: '768x' }} 768w,{{ section.settings.urge_icon | img_url: '640x' }} 640w">{%- endif -%}</div>
+              <div>{{ section.settings.urge | newline_to_br }}</div>
+            </div>{%- endif -%}
+            {%- if section.settings.cta_aanuit -%}<a href="{{ section.settings.cta_link }}" class="cta-btn w-inline-block">
+              <div>{{ section.settings.cta_title | newline_to_br }}</div>
+              <div class="arrow"><img src="{{ 'arrow.svg' | asset_url }}" loading="lazy" alt=""></div>
+            </a>{%- endif -%}
+          </div>
+        </div>{%- endif -%}
+      </div>
+      <div data-w-id="bc916d55-dea1-1c74-bfec-649bf41b22cc" class="menu-overlay"></div>
+    </div>
+    <div class="search-announcement-wrapper">
+      <div class="search-bar">
+        <div class="search-inner-container">
+          <div class="left-side-search">
+            <a href="#" class="search-trigger-btn w-inline-block"><img src="{{ 'search-module.svg' | asset_url }}" loading="lazy" alt=""></a>
+            <div class="text-block">{{ 't17716f2b' | t }}</div>
+          </div>
+          <a data-w-id="b9088d66-d0c6-bef0-44e2-882faeba051e" href="#" class="close-search-btn w-inline-block"><img src="{{ 'close-search.svg' | asset_url }}" loading="lazy" alt="" class="close-search-img-btn"></a>
+        </div>
+      </div>
+      <div class="announcements">
+        <div class="desktop-announcements-container">
+          <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba0522-aeba04e7" class="left-announcement"><img src="{{ 'temperatuur.svg' | asset_url }}" loading="lazy" alt="" class="announcement-img">
+            <div>{{ 't63fa3f1a' | t }}</div>
+          </div>
+          <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba0526-aeba04e7" class="middle-announcement">
+            <div class="announcement-seperator"></div>
+            <div class="middle-announcement-inner"><img src="{{ 'groene-bezorging-1.svg' | asset_url }}" loading="lazy" alt="" class="announcement-img">
+              <div>{{ 't1db9b76' | t }}</div>
+            </div>
+            <div class="announcement-seperator"></div>
+          </div>
+          <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba052d-aeba04e7" class="right-announcement"><img src="{{ 'duurzaamheid-rood-1.svg' | asset_url }}" loading="lazy" alt="" class="announcement-img">
+            <div>{{ 't77319738' | t }}</div>
+          </div>
+        </div>
+        <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="200" data-infinite="true">
+          <div class="w-slider-mask">
+            <div class="announcement-slide w-slide">
+              <div class="announcement"><img src="{{ 'temperatuur.svg' | asset_url }}" loading="lazy" alt="" class="announcement-img">
+                <div>{{ 't63fa3f1a' | t }}</div>
+              </div>
+            </div>
+            <div class="announcement-slide w-slide">
+              <div class="announcement"><img src="{{ 'groene-bezorging-1.svg' | asset_url }}" loading="lazy" alt="" class="announcement-img">
+                <div>{{ 't1db9b76' | t }}</div>
+              </div>
+            </div>
+            <div class="announcement-slide w-slide">
+              <div class="announcement"><img src="{{ 'duurzaamheid-rood-1.svg' | asset_url }}" loading="lazy" alt="" class="announcement-img">
+                <div>{{ 't77319738' | t }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="left-arrow w-slider-arrow-left">
+            <div class="icon-2 w-icon-slider-left"></div>
+          </div>
+          <div class="right-arrow w-slider-arrow-right">
+            <div class="icon w-icon-slider-right"></div>
+          </div>
+          <div class="slide-nav w-slider-nav w-round"></div>
+        </div>
+      </div>
+    </div>
+  
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","sticky-nav");</script>
+        
+{% schema %}{
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ],
+  "name": "Header",
+  "tag": "div",
+  "class": "sticky-nav",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "urge",
+      "label": "Urge",
+      "default": "Vandaag besteld, morgen groen geleverd."
+    },
+    {
+      "type": "textarea",
+      "id": "cta_title",
+      "label": "CTA Title",
+      "default": "Shop het Heatup kussen"
+    },
+    {
+      "type": "image_picker",
+      "id": "urge_icon",
+      "label": "Urge icon"
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "Logo link"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "search_aanuit",
+      "label": "Search aan/uit",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "cta_gebied_aanuit",
+      "label": "CTA gebied aan/uit",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "urge_aanuit",
+      "label": "Urge aan/uit",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "cta_aanuit",
+      "label": "CTA aan/uit",
+      "default": true
+    }
+  ]
+}{% endschema %}

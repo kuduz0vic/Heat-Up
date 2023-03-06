@@ -1,0 +1,77 @@
+
+    <div class="page-padding">
+      <div class="container-v1">
+        <div class="section-grid align-start">
+          <div class="faq-sec-heading">
+            <h1 class="heading">{{ section.settings.titel | newline_to_br }}</h1>
+            <p class="faq-sec-p">{{ section.settings.paragraph | newline_to_br }}</p>
+          </div>
+          <div class="c-faq">
+            {%- for block in section.blocks -%}{%- if block.type == "faq" -%}<div data-click="faq" class="c-faq-item" block.shopify_attributes>
+              <div class="c-faq-q">
+                <div class="c-faq-q-text">
+                  <div class="faq-q-text">{{ block.settings.vraag | newline_to_br }}</div>
+                </div>
+                <div class="c-faq-icon">
+                  <div class="horizontal-plus-line"></div>
+                  <div class="vertical-plus-line"></div>
+                </div>
+              </div>
+              <div class="c-faq-a">
+                <div class="c-faq-a-text">
+                  <p class="faq-a-text">{{ block.settings.antwoord | newline_to_br }}</p>
+                </div>
+              </div>
+            </div>{%- endif -%}{%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","faq-section");</script>
+        
+{% schema %}{
+  "presets": [
+    {
+      "name": "V1 - Home FAQ"
+    }
+  ],
+  "name": "V1 - Home FAQ",
+  "tag": "div",
+  "class": "faq-section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "titel",
+      "label": "Titel",
+      "default": "Questions? We have got answers."
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+    }
+  ],
+  "blocks": [
+    {
+      "name": "FAQ",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "vraag",
+          "label": "Vraag",
+          "default": "Hoe snel wordt het kussen warm?"
+        },
+        {
+          "type": "textarea",
+          "id": "antwoord",
+          "label": "Antwoord",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        }
+      ]
+    }
+  ]
+}{% endschema %}

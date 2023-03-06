@@ -1,0 +1,455 @@
+{
+  "current": {
+    "sections": {
+      "sidecart": {
+        "type": "sidecart",
+        "settings": {
+          "titel": "Mijn winkelwagen (1 item)",
+          "motivator": "Goede keuze. Dit product verkoopt snel.",
+          "upsell_title": "Maak je bestelling af",
+          "atc_garantie": "VANDAAG BESTELD? MORGEN IN HUIS"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "urge": "Vandaag besteld, morgen groen geleverd.",
+          "cta_title": "Shop het Heatup kussen",
+          "logo_link": "",
+          "cta_link": "",
+          "search_aanuit": true,
+          "cta_gebied_aanuit": true,
+          "urge_aanuit": true,
+          "cta_aanuit": true
+        }
+      },
+      "v1-hero": {
+        "type": "v1-hero",
+        "settings": {
+          "tagline": "Luxueuze warmte, zonder schuldgevoel.",
+          "paragraph": "Geniet van ultieme comfort met ons elektrisch warmtekussen zonder je zorgen te hoeven maken over de uitstoot en energierekening. Ervaar de luxe warmte thuis zonder schuldgevoel.",
+          "cta": "Shop mijn heatup kussen",
+          "review_text": "4,8 met 200+ reviews",
+          "knop_link": "",
+          "knop_link_text": "Shop mijn Heatup kussen"
+        }
+      },
+      "v1-why-sectie": {
+        "type": "v1-why-sectie",
+        "settings": {
+          "titel": "Luxueuze warmte, zonder schuldgevoel.",
+          "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      },
+      "v1-beoordelingen": {
+        "type": "v1-beoordelingen",
+        "blocks": {
+          "ada15add-91fa-4b8f-98d1-6fc180833b64": {
+            "type": "review",
+            "settings": {
+              "titel": "Customizable Comfort Settings",
+              "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
+              "reviewer": "Marieke van der Meer",
+              "text_naast_checkmark": "Geverifiëerd"
+            }
+          },
+          "822e29ee-1654-4a1c-9f14-7e074ae2be28": {
+            "type": "review",
+            "settings": {
+              "titel": "Customizable Comfort Settings",
+              "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
+              "reviewer": "Marieke van der Meer",
+              "text_naast_checkmark": "Geverifiëerd"
+            }
+          },
+          "1bebdf61-8ce3-4bca-b545-3cac757c2431": {
+            "type": "review",
+            "settings": {
+              "titel": "Customizable Comfort Settings",
+              "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
+              "reviewer": "Marieke van der Meer",
+              "text_naast_checkmark": "Geverifiëerd"
+            }
+          }
+        },
+        "block_order": [
+          "ada15add-91fa-4b8f-98d1-6fc180833b64",
+          "822e29ee-1654-4a1c-9f14-7e074ae2be28",
+          "1bebdf61-8ce3-4bca-b545-3cac757c2431"
+        ],
+        "settings": {
+          "titel": "Klanten houden van Heatup.",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      },
+      "v1-homepage-featured-producten": {
+        "type": "v1-homepage-featured-producten",
+        "settings": {
+          "titel": "Bestel het Heatup kussen",
+          "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "usp_1": "Probeer gratis 30 dagen warmte",
+          "usp_2": "Gratis verzending boven de €100",
+          "usp_3": "Wij planten 1m2 groen terug per kussen"
+        }
+      },
+      "v1-home-faq": {
+        "type": "v1-home-faq",
+        "blocks": {
+          "7ede42d3-66c7-4e38-8fce-4e86896906d1": {
+            "type": "faq",
+            "settings": {
+              "vraag": "Hoe snel wordt het kussen warm?",
+              "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            }
+          },
+          "b1535527-dc50-4f5c-a120-421c1d003a48": {
+            "type": "faq",
+            "settings": {
+              "vraag": "Hoe snel wordt het kussen warm?",
+              "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            }
+          },
+          "1ee9d8e6-6332-4a74-b1f6-0e6dada5a8b6": {
+            "type": "faq",
+            "settings": {
+              "vraag": "Hoe snel wordt het kussen warm?",
+              "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            }
+          },
+          "9c2c9b12-84d9-4e33-800a-e2d0dad34a05": {
+            "type": "faq",
+            "settings": {
+              "vraag": "Hoe snel wordt het kussen warm?",
+              "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            }
+          }
+        },
+        "block_order": [
+          "7ede42d3-66c7-4e38-8fce-4e86896906d1",
+          "b1535527-dc50-4f5c-a120-421c1d003a48",
+          "1ee9d8e6-6332-4a74-b1f6-0e6dada5a8b6",
+          "9c2c9b12-84d9-4e33-800a-e2d0dad34a05"
+        ],
+        "settings": {
+          "titel": "Questions? We have got answers.",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        }
+      },
+      "v1-key-features": {
+        "type": "v1-key-features",
+        "blocks": {
+          "331ca774-edec-46a9-8c3c-7b725551cefe": {
+            "type": "slide",
+            "settings": {
+              "titel": "Insant Warmth Experience",
+              "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+            }
+          },
+          "9dcef2b3-a55e-4436-9a16-ee0dbe1c2801": {
+            "type": "slide",
+            "settings": {
+              "titel": "Insant Warmth Experience",
+              "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+            }
+          },
+          "1943fbd3-8962-4ced-84ed-f046bcb5eb41": {
+            "type": "slide",
+            "settings": {
+              "titel": "Insant Warmth Experience",
+              "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+            }
+          }
+        },
+        "block_order": [
+          "331ca774-edec-46a9-8c3c-7b725551cefe",
+          "9dcef2b3-a55e-4436-9a16-ee0dbe1c2801",
+          "1943fbd3-8962-4ced-84ed-f046bcb5eb41"
+        ],
+        "settings": {
+          "titel": "Highlight key features of the product or service",
+          "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "subtitel_weergeven": true
+        }
+      },
+      "v1-statistics": {
+        "type": "v1-statistics",
+        "settings": {
+          "titel": "Highlight key features of the product or service",
+          "tagline": "Emphasise time-saving and use numbers to maximise credibility.",
+          "subtitel_weergeven": true
+        }
+      },
+      "v1-instagram": {
+        "type": "v1-instagram",
+        "blocks": {
+          "b8ec80aa-c3ae-4457-86ef-485ddd31ca3d": {
+            "type": "post",
+            "settings": {
+            }
+          },
+          "b87743fe-1d3d-480d-ac31-a8523f745c4a": {
+            "type": "post",
+            "settings": {
+            }
+          },
+          "31d74ef0-4dfd-48dc-936e-4d11da2226cc": {
+            "type": "post",
+            "settings": {
+            }
+          },
+          "45683549-8498-445e-97a2-ed294b2c5ae9": {
+            "type": "post",
+            "settings": {
+            }
+          },
+          "13914cbd-bb3b-40ee-ac76-263b9dc16c3a": {
+            "type": "post",
+            "settings": {
+            }
+          },
+          "ec6146d9-c3d7-49fc-aea5-ab5dc7c38060": {
+            "type": "post",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "b8ec80aa-c3ae-4457-86ef-485ddd31ca3d",
+          "b87743fe-1d3d-480d-ac31-a8523f745c4a",
+          "31d74ef0-4dfd-48dc-936e-4d11da2226cc",
+          "45683549-8498-445e-97a2-ed294b2c5ae9",
+          "13914cbd-bb3b-40ee-ac76-263b9dc16c3a",
+          "ec6146d9-c3d7-49fc-aea5-ab5dc7c38060"
+        ],
+        "settings": {
+          "titel": "Warmte in beeld"
+        }
+      },
+      "v1-footer": {
+        "type": "v1-footer",
+        "settings": {
+          "menu_titel_1": "Column One",
+          "menu_titel_2": "Column Two",
+          "menu_titel_3": "Follow Us",
+          "nieuwsbrief_text": "Join our newsletter to stay up to date on features and releases.",
+          "subscribe_button_text": "Subscribe",
+          "nieuwsletter_disclaimer": "By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.",
+          "copyright_notice": "2023 by EcomTraffic B.V. All right reserved."
+        }
+      },
+      "v1-product": {
+        "type": "v1-product",
+        "blocks": {
+          "b39365fb-ef0d-4f19-b609-5f6c2405ee44": {
+            "type": "usp_icon_text",
+            "settings": {
+              "waardepropositie": "Fast Charging: Opwarmt snel voor snelle verlichting en ontspanning."
+            }
+          },
+          "755f0b58-fb73-4a4f-af3d-4b4620ece841": {
+            "type": "usp_icon_text",
+            "settings": {
+              "waardepropositie": "Fast Charging: Opwarmt snel voor snelle verlichting en ontspanning."
+            }
+          },
+          "3c2abd13-c56f-411b-b05a-005ea51ed3c5": {
+            "type": "usp_icon_text",
+            "settings": {
+              "waardepropositie": "Fast Charging: Opwarmt snel voor snelle verlichting en ontspanning."
+            }
+          },
+          "b617788e-5630-4dd4-8053-866c756e127f": {
+            "type": "why_reason",
+            "settings": {
+              "why_paragraph": "Probeer gratis 30 dagen warmte"
+            }
+          },
+          "037781b6-7045-4de6-9f38-5bac61e30402": {
+            "type": "why_reason",
+            "settings": {
+              "why_paragraph": "Probeer gratis 30 dagen warmte"
+            }
+          },
+          "f21ba698-0f0c-4a70-a826-dab7840df3e4": {
+            "type": "why_reason",
+            "settings": {
+              "why_paragraph": "Probeer gratis 30 dagen warmte"
+            }
+          },
+          "028f2c1e-7777-49af-a79f-61beb838836b": {
+            "type": "hero_afbeelding",
+            "settings": {
+              "label_text": "FAST SELLING",
+              "labels_aanuit": true,
+              "product_label_aanuit": true,
+              "trust_badges_aanuit": true,
+              "badge_1_aanuit": true,
+              "badge_2_aanuit": true
+            }
+          },
+          "087161ad-7bac-4937-88d9-6d2adb6d9a94": {
+            "type": "2_afbeeldingen",
+            "settings": {
+            }
+          },
+          "eed11d77-183c-4d8e-96f9-1bfcf6741667": {
+            "type": "usp",
+            "settings": {
+            }
+          },
+          "cf4ed3e7-11a7-4a18-8c47-71c34b5f1717": {
+            "type": "usp",
+            "settings": {
+            }
+          },
+          "8c0e5023-e148-4ace-acdb-5bbeb077a7be": {
+            "type": "usp",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "b39365fb-ef0d-4f19-b609-5f6c2405ee44",
+          "755f0b58-fb73-4a4f-af3d-4b4620ece841",
+          "3c2abd13-c56f-411b-b05a-005ea51ed3c5",
+          "b617788e-5630-4dd4-8053-866c756e127f",
+          "037781b6-7045-4de6-9f38-5bac61e30402",
+          "f21ba698-0f0c-4a70-a826-dab7840df3e4",
+          "028f2c1e-7777-49af-a79f-61beb838836b",
+          "087161ad-7bac-4937-88d9-6d2adb6d9a94",
+          "eed11d77-183c-4d8e-96f9-1bfcf6741667",
+          "cf4ed3e7-11a7-4a18-8c47-71c34b5f1717",
+          "8c0e5023-e148-4ace-acdb-5bbeb077a7be"
+        ],
+        "settings": {
+          "atc_garantie": "VANDAAG BESTELD? MORGEN IN HUIS",
+          "titel": "Mijn winkelwagen (1 item)",
+          "motivator": "Goede keuze. Dit product verkoopt snel.",
+          "upsell_title": "Maak je bestelling af",
+          "waarom_titel": "Waarom Heat Up?"
+        }
+      },
+      "v1-informationele-faq": {
+        "type": "v1-informationele-faq",
+        "settings": {
+          "titel": "Snelle opwarming voor snelle verlichting",
+          "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+        }
+      },
+      "v1-informatie": {
+        "type": "v1-informatie",
+        "blocks": {
+          "64e2a70f-ca6a-4414-81a8-2e046270c6f2": {
+            "type": "slide",
+            "settings": {
+              "titel": "Verwarming omlaag, Heatup omhoog",
+              "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+            }
+          },
+          "f41dd717-2601-4296-aa75-3c1191109411": {
+            "type": "slide",
+            "settings": {
+              "titel": "Verwarming omlaag, Heatup omhoog",
+              "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+            }
+          },
+          "0f32dc1d-ac03-4783-b46f-fb0471c5d6e5": {
+            "type": "slide",
+            "settings": {
+              "titel": "Verwarming omlaag, Heatup omhoog",
+              "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+            }
+          }
+        },
+        "block_order": [
+          "64e2a70f-ca6a-4414-81a8-2e046270c6f2",
+          "f41dd717-2601-4296-aa75-3c1191109411",
+          "0f32dc1d-ac03-4783-b46f-fb0471c5d6e5"
+        ],
+        "settings": {
+          "titel": "Verwarming omlaag, Heatup omhoog.",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        }
+      },
+      "v1-tabel": {
+        "type": "v1-tabel",
+        "settings": {
+          "kolom_1_titel": "Heatup",
+          "kolom_2_titel": "Radiator",
+          "kolom_3_titel": "Concurrenten",
+          "reden_1": "100% Natural",
+          "reden_2": "Warmt snel op",
+          "reden_3": "Veilig in gebruik",
+          "reden_4": "100% Natural",
+          "reden_5": "Prijs",
+          "kolom_1_prijs": "€99,95",
+          "kolom_2_prijs": "€900",
+          "kolom_3_prijs": "€1900"
+        }
+      },
+      "v1-faq": {
+        "type": "v1-faq",
+        "blocks": {
+          "2e00aa93-e903-43bc-ab92-81b80338c9cb": {
+            "type": "faq",
+            "settings": {
+              "vraag": "Hoe snel wordt het kussen warm?",
+              "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            }
+          },
+          "e1f4dc10-3a04-4632-a7c3-9c6cf4061b25": {
+            "type": "faq",
+            "settings": {
+              "vraag": "Hoe snel wordt het kussen warm?",
+              "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            }
+          },
+          "263a0ecb-578f-4ef0-8b40-981c581074f6": {
+            "type": "faq",
+            "settings": {
+              "vraag": "Hoe snel wordt het kussen warm?",
+              "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            }
+          },
+          "f4f1fedb-3397-406c-9ace-1d278a2455ab": {
+            "type": "faq",
+            "settings": {
+              "vraag": "Hoe snel wordt het kussen warm?",
+              "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            }
+          }
+        },
+        "block_order": [
+          "2e00aa93-e903-43bc-ab92-81b80338c9cb",
+          "e1f4dc10-3a04-4632-a7c3-9c6cf4061b25",
+          "263a0ecb-578f-4ef0-8b40-981c581074f6",
+          "f4f1fedb-3397-406c-9ace-1d278a2455ab"
+        ],
+        "settings": {
+          "titel": "Questions? We have got answers.",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        }
+      },
+      "v1-footer-producten": {
+        "type": "v1-footer-producten",
+        "settings": {
+          "titel": "Bestel het Heatup kussen",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "usp_1": "Probeer gratis 30 dagen warmte",
+          "usp_2": "Gratis verzending boven de €100",
+          "usp_3": "Wij planten 1m2 groen terug per kussen"
+        }
+      },
+      "v1-missie": {
+        "type": "v1-missie",
+        "settings": {
+          "titel": "Veilig en ecologisch verantwoord",
+          "paragraph": "Dit kussen is Oeko-tex® gecertificeerd, wat betekent dat je dankzij de niet-toxische materialen heerlijk rustig kunt genieten. Dus zonder stoffen die schadelijk zijn voor je gezondheid, je huid of het milieu."
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

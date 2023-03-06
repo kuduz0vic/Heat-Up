@@ -1,0 +1,182 @@
+{%- assign headerSnippetPath = "header-index" -%}{%- assign wfPage = "63fbef66c1ef8e450f6585fe" -%}{%- assign bodyClasses = "" -%}
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63fb8d54806681128a4258a9" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="{{ 'webflow.js' | asset_url }}" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+// document.addEventListener('DOMContentLoaded', () => {
+//  document.querySelectorAll('.cart-icon').forEach(trigger => {
+//  trigger.addEventListener('click', function(){ 
+//    document.querySelectorAll('.body').forEach(target => target.classList.add('is-non-scrollable')); 
+//    });
+// });
+// document.querySelectorAll('.overlay-sidebar-close-btn').forEach(trigger => {
+//  trigger.addEventListener('click', function(){ 
+//    document.querySelectorAll('.body').forEach(target => target.classList.remove('is-non-scrollable')); 
+//    });
+// });
+// });
+</script>
+  <script>
+  	var mySwiper = new Swiper ('#why-swiper', {
+    	// Optional parameters
+    	spaceBetween: 16,
+    	slidesPerView: 1,
+    	freeMode: false,
+    	loop: true,
+    	centeredSlides: true,
+      slidesPerGroup: 1,
+      loopFillGroupWithBlank: false,
+    	// Enable lazy loading
+    	lazy: true,
+			pagination: {
+			       el: '#WhySwiperPagination',
+			  	},
+      navigation: {
+        nextEl: "#why-next-arrow",
+        prevEl: "#why-prev-arrow",
+      },
+    	keyboard: {
+      	enabled: true,
+   	  },
+  });
+</script>
+  <script>
+  	var mySwiper = new Swiper ('#review-swiper', {
+    	// Optional parameters
+    	spaceBetween: 16,
+    	slidesPerView: 1,
+    	freeMode: false,
+    	loop: true,
+    	centeredSlides: true,
+      slidesPerGroup: 1,
+      loopFillGroupWithBlank: false,
+    	// Enable lazy loading
+    	lazy: true,
+      navigation: {
+        nextEl: "#review-next-arrow",
+        prevEl: "#review-prev-arrow",
+      },
+    	keyboard: {
+      	enabled: true,
+   	  },
+        breakpoints: {
+      480: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        loopFillGroupWithBlank: false,
+      },
+      992: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        loopFillGroupWithBlank: false,
+      },
+    }
+  })
+</script>
+  <script>
+  	var mySwiper = new Swiper ('#key-features', {
+    	// Optional parameters
+    	spaceBetween: 16,
+    	slidesPerView: 1,
+    	freeMode: false,
+    	loop: true,
+    	centeredSlides: true,
+      slidesPerGroup: 1,
+      loopFillGroupWithBlank: false,
+    	// Enable lazy loading
+    	lazy: true,
+      navigation: {
+        nextEl: "#key-features-next-arrow",
+        prevEl: "#key-features-prev-arrow",
+      },
+    	keyboard: {
+      	enabled: true,
+   	  },
+        breakpoints: {
+      480: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        loopFillGroupWithBlank: false,
+      },
+      992: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        loopFillGroupWithBlank: false,
+      },
+    }
+  })
+</script>
+  <script>
+  var mySwiper = new Swiper ('#instagram-swiper', {
+    // Optional parameters
+    spaceBetween: 16,
+    slidesPerView: 2,
+    freeMode: false,
+    loop: true,
+    centeredSlides: true,
+    // Enable lazy loading
+    lazy: false,
+    keyboard: {
+      enabled: true,
+    },
+    navigation: {
+        nextEl: "#insta-next-arrow",
+        prevEl: "#insta-prev-arrow",
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+        centeredSlides: true,
+      },
+      992: {
+        slidesPerView: 4,
+    	centeredSlides: false,
+      },
+    }
+  })
+</script>
+  <script>
+  var mySwiper = new Swiper ('#usp-swiper', {
+    // Optional parameters
+    spaceBetween: 16,
+    slidesPerView: 1,
+    freeMode: false,
+    loop: true,
+    centeredSlides: true,
+    // Enable lazy loading
+    lazy: false,
+    keyboard: {
+      enabled: true,
+    },
+    navigation: {
+        nextEl: "#usp-next-arrow",
+        prevEl: "#usp-prev-arrow",
+      },
+  });
+</script>
+  <script>
+  var mySwiper = new Swiper ('#Product-Images-Swiper', {
+    // Optional parameters
+    spaceBetween: 8,
+    slidesPerView: 1,
+    freeMode: false,
+    loop: false,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    // Enable lazy loading
+    lazy: false,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: '#ProductSwiperPagination',
+    },
+    navigation: {
+      nextEl: "#product-next-arrow",
+      prevEl: "#product-prev-arrow",
+    },
+  });
+</script>
+
+{{ 'udesly-shopify.min.js' | asset_url | script_tag }}
