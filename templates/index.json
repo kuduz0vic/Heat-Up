@@ -81,15 +81,6 @@
             "text_naast_checkmark": "Geverifiëerd"
           }
         },
-        "0569af21-f42c-4ae6-ade8-4a03b3ddc639": {
-          "type": "review",
-          "settings": {
-            "titel": "Uitstekende klantenservice",
-            "paragraph": "Warmtekussen cadeau gegeven aan moeders, die er helemaal gelukkig mee is. Mooi en functioneel: top! Daarnaast was de eerste bestelling bij PostNL kwijtgeraakt en zonder af te wachten, heeft Heatup kosteloos een nieuwe gestuurd. Dat is nog eens topservice! Snel en adequaat gehandeld. Mooi bedrijf! Complimenten.",
-            "reviewer": "Thijs Jansen",
-            "text_naast_checkmark": "Geverifiëerd"
-          }
-        },
         "6bb99784-485b-4e74-a00f-68dca51b8d26": {
           "type": "review",
           "settings": {
@@ -98,12 +89,21 @@
             "reviewer": "Marieke van der Meer",
             "text_naast_checkmark": "Geverifiëerd"
           }
+        },
+        "0569af21-f42c-4ae6-ade8-4a03b3ddc639": {
+          "type": "review",
+          "settings": {
+            "titel": "Uitstekende klantenservice",
+            "paragraph": "Warmtekussen cadeau gegeven aan moeders, die er helemaal gelukkig mee is. Mooi en functioneel: top! Daarnaast was de eerste bestelling bij PostNL kwijtgeraakt en zonder af te wachten, heeft Heatup kosteloos een nieuwe gestuurd. Dat is nog eens topservice! Snel en adequaat gehandeld. Mooi bedrijf! Complimenten.",
+            "reviewer": "Thijs Jansen",
+            "text_naast_checkmark": "Geverifiëerd"
+          }
         }
       },
       "block_order": [
         "6c4d03c3-33a6-4913-91bf-bf31951c901a",
-        "0569af21-f42c-4ae6-ade8-4a03b3ddc639",
-        "6bb99784-485b-4e74-a00f-68dca51b8d26"
+        "6bb99784-485b-4e74-a00f-68dca51b8d26",
+        "0569af21-f42c-4ae6-ade8-4a03b3ddc639"
       ],
       "settings": {
         "titel": "Klanten houden van Heatup.",
