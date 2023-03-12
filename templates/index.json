@@ -64,6 +64,9 @@
     },
     "9fd60fcc-3c2b-4a6a-b9c2-cab75434ee48": {
       "type": "v1-why-sectie",
+      "custom_css": [
+
+      ],
       "settings": {
         "titel": "Speciaal voor de koukleum",
         "tagline": "De Heatup warmtekussens zijn draadloos en verwarmen je met unieke met infraroodtechnologie en oplaadbare batterij. Kies één van de 3 warmtestanden en geniet urenlang van behaaglijke warmte."
@@ -151,8 +154,8 @@
         "36c83792-4bea-4bac-aefc-498dd5604849"
       ],
       "settings": {
-        "titel": "Questions? We have got answers.",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        "titel": "Vragen? Wij hebben jouw antwoord.",
+        "paragraph": "Hier vind je een antwoord op alle vragen over het Heatup warmtekussen. Heb je toch nog hulp nodig? Ons team staat voor je klaar!"
       }
     },
     "b241103e-4718-4c8d-91fe-823b1ef07bf2": {
