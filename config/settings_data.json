@@ -6,7 +6,7 @@
         "type": "sidecart",
         "settings": {
           "titel": "Mijn winkelwagen (1 item)",
-          "motivator": "Goede keuze. Dit product verkoopt snel.",
+          "motivator": "Goede keuze! Dit product verkoopt snel.",
           "upsell_title": "Maak je bestelling af",
           "atc_garantie": "VANDAAG BESTELD? MORGEN IN HUIS"
         }
