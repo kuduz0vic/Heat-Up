@@ -244,7 +244,7 @@
           "b39365fb-ef0d-4f19-b609-5f6c2405ee44": {
             "type": "usp_icon_text",
             "settings": {
-              "waardepropositie": "Fast Charging: Opwarmt snel voor snelle verlichting en ontspanning."
+              "waardepropositie": "Draadloos design: Gebruik Heatup waar en wanneer jij dat wilt."
             }
           },
           "755f0b58-fb73-4a4f-af3d-4b4620ece841": {
@@ -446,6 +446,12 @@
         "settings": {
           "titel": "Veilig en ecologisch verantwoord",
           "paragraph": "Dit kussen is Oeko-tex® gecertificeerd, wat betekent dat je dankzij de niet-toxische materialen heerlijk rustig kunt genieten. Dus zonder stoffen die schadelijk zijn voor je gezondheid, je huid of het milieu."
+        }
+      },
+      "v1-cart-announcement": {
+        "type": "v1-cart-announcement",
+        "settings": {
+          "announcement": "Goede keuze! Dit product verkoopt snel."
         }
       }
     },
