@@ -250,13 +250,15 @@
           "755f0b58-fb73-4a4f-af3d-4b4620ece841": {
             "type": "usp_icon_text",
             "settings": {
-              "waardepropositie": "Energiebesparend: Een warmtekussen verwarmt direct jezelf, zonder een hele ruimte te hoeven opwarmen."
+              "waardepropositie": "Energiebesparend: Een warmtekussen verwarmt direct jezelf, zonder een hele ruimte te hoeven opwarmen.",
+              "afbeelding": "shopify:\/\/shop_images\/boom-icon.png"
             }
           },
           "3c2abd13-c56f-411b-b05a-005ea51ed3c5": {
             "type": "usp_icon_text",
             "settings": {
-              "waardepropositie": "Binnen en buiten: geniet het gehele jaar van duurzame warmte, zowel binnen als buiten."
+              "waardepropositie": "Binnen en buiten: geniet het gehele jaar van duurzame warmte, zowel binnen als buiten.",
+              "afbeelding": "shopify:\/\/shop_images\/home-icon.png"
             }
           },
           "b617788e-5630-4dd4-8053-866c756e127f": {
