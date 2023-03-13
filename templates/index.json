@@ -192,12 +192,21 @@
             "paragraph": "De kachel één graad lager, betekent op jaarbasis al 7% minder stookkosten. Dat is al snel €160,- voor een gemiddeld huishouden. Je hebt je Heatup dus zo terugverdiend.",
             "afbeelding": "shopify:\/\/shop_images\/debbie-bank-heatup.jpg"
           }
+        },
+        "4f68b794-d10c-4032-a639-1daac1258427": {
+          "type": "slide",
+          "settings": {
+            "titel": "3 warmtestanden",
+            "paragraph": "Lorem ipsum dolor sit amet,",
+            "afbeelding": "shopify:\/\/shop_images\/warmtestand-kristine.jpg"
+          }
         }
       },
       "block_order": [
         "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7",
         "bbcf364e-1d89-4468-9ed7-76697a894ae9",
-        "e482d97d-f71a-463d-9441-6e21c7ebbecf"
+        "e482d97d-f71a-463d-9441-6e21c7ebbecf",
+        "4f68b794-d10c-4032-a639-1daac1258427"
       ],
       "settings": {
         "titel": "Duurzaam en goed voor je portemonnee",
