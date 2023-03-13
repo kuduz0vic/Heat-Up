@@ -174,21 +174,23 @@
           "settings": {
             "titel": "Insant Warmth Experience",
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
-            "afbeelding": "shopify:\/\/shop_images\/Naamloos-1.jpg"
+            "afbeelding": "shopify:\/\/shop_images\/sophie-buiten-1.jpg"
           }
         },
         "e482d97d-f71a-463d-9441-6e21c7ebbecf": {
           "type": "slide",
           "settings": {
             "titel": "Insant Warmth Experience",
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
+            "afbeelding": "shopify:\/\/shop_images\/sophie-buiten-2.jpg"
           }
         },
         "bbcf364e-1d89-4468-9ed7-76697a894ae9": {
           "type": "slide",
           "settings": {
             "titel": "Wasbare stof",
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
+            "afbeelding": "shopify:\/\/shop_images\/stof-close-up-nagels.jpg"
           }
         }
       },
