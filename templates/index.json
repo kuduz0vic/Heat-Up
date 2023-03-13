@@ -169,14 +169,6 @@
     "b241103e-4718-4c8d-91fe-823b1ef07bf2": {
       "type": "v1-key-features",
       "blocks": {
-        "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7": {
-          "type": "slide",
-          "settings": {
-            "titel": "Ideaal voor buiten",
-            "paragraph": "De warmtekussens zijn ideaal voor in je tuin tijdens de koudere zomeravonden, op het terras als het eigenlijk nét iets te koud is of voor om de vuurkorf. Wij smelten al weg bij die gedachte!",
-            "afbeelding": "shopify:\/\/shop_images\/sophie-buiten-3.jpg"
-          }
-        },
         "e482d97d-f71a-463d-9441-6e21c7ebbecf": {
           "type": "slide",
           "settings": {
@@ -189,15 +181,23 @@
           "type": "slide",
           "settings": {
             "titel": "Wasbare stof",
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
+            "paragraph": "De stof is super zacht en dankzij de speciale samenstelling is de kussenhoes ook wasbaar. Aan de binnenkant van jouw Heatup warmtekussen vind je een waslabel.",
             "afbeelding": "shopify:\/\/shop_images\/stof-close-up-nagels.jpg"
+          }
+        },
+        "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7": {
+          "type": "slide",
+          "settings": {
+            "titel": "Ideaal voor buiten",
+            "paragraph": "De warmtekussens zijn ideaal voor in je tuin tijdens de koudere zomeravonden, op het terras als het eigenlijk nét iets te koud is of voor om de vuurkorf. Wij smelten al weg bij die gedachte!",
+            "afbeelding": "shopify:\/\/shop_images\/sophie-buiten-3.jpg"
           }
         }
       },
       "block_order": [
-        "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7",
         "e482d97d-f71a-463d-9441-6e21c7ebbecf",
-        "bbcf364e-1d89-4468-9ed7-76697a894ae9"
+        "bbcf364e-1d89-4468-9ed7-76697a894ae9",
+        "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7"
       ],
       "settings": {
         "titel": "Duurzaam en goed voor de portemonnee",
