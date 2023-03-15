@@ -20,6 +20,7 @@
   </head>
   <body class="{{ bodyClasses }} {{ "template-" | append: request.page_type | handle }}">
 
+    {% section 'global-settings' %}
     {% section 'header' %}
     <main
       id="main"
@@ -33,4 +34,17 @@
 
   </body>
   {% render 'scripts' %}
+
+  <script type="application/json" data-ajax-cart-initial-state>
+    {{ cart | json }}
+  </script>
+
+  <script type="module">
+    import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
+  </script>
+
+  <script type="application/json" data-ajax-cart-configuration>
+    {
+    "addToCartCssClass": "js-my-cart-open"
+          }</script>
 </html>

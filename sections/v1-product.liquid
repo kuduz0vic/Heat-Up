@@ -55,6 +55,10 @@
         "name": "Swatches",
         "limit": 1
       }, {
+        "type": "variants",
+        "name": "Variants",
+        "limit": 1
+      }, {
         "type": "checkout_buttons",
         "name": "Checkout Buttons",
         "limit": 1,
@@ -178,14 +182,14 @@
 {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
 
   {% capture discount %}
-    {{ selected_variant.compare_at_price | minus: selected_variant.price }}%
+    {{ selected_variant.compare_at_price | minus: selected_variant.price | money }}
   {% endcapture %}
 
   <input
     type="hidden"
     name="id"
     value="{{ selected_variant.id }}">
-  <div class="page-padding pdp-section">
+  <div class="page-padding pdp-section" x-data="app()">
     <div class="container-v1">
       <div class="product-inner-container">
         {% for block in section.blocks %}
@@ -421,131 +425,106 @@
               {% endcase %}
             {% endfor %}
           </div>
+
+
+
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              <div id="variant-id" value="{{ variant.id }}">
+                {{ variant.title }}
+              </div>
+            {% endif %}
+          {% endfor %}
+
+
+
           <div class="product-cart-form w-form">
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'swatches' %}
                 <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb452-bf8cb3ff" class="product-selectors">
-                  <div
-                    aria-label="add description here"
-                    role="radiogroup"
-                    class="pdp-swatch-group">
-                    <label class="pdp-swatch-info">
-                      <strong>{{ 'tn61d06f63' | t }}</strong>
-                      {{ 'tn67e75256' | t }}</label>
-                    <div class="pdp-swatch-column">
-                      <label class="pdp-swatch-field is-active w-radio">
-                        <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button w-radio-input"></div><input
-                          type="radio"
-                          name="contact[radio_]"
-                          id="gingerrood"
-                          value="Radio B"
-                          data-name="Radio 2"
-                          style="opacity:0;position:absolute;z-index:-1"><span
-                          fs-cmsfilter-field="category"
-                          fs-cmsfilter-active="is-active"
-                          class="swatch-color w-form-label"
-                          for="gingerrood">{{ 'tn5e1bfe36' | t }}</span>
-                      </label>
-                      <label class="pdp-swatch-field w-radio">
-                        <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button w-radio-input"></div><input
-                          type="radio"
-                          name="contact[radio_]"
-                          id="geel"
-                          value="Radio B"
-                          data-name="Radio 2"
-                          style="opacity:0;position:absolute;z-index:-1"><span
-                          fs-cmsfilter-field="category"
-                          fs-cmsfilter-active="is-active"
-                          class="swatch-color w-form-label"
-                          for="geel">{{ 't21ce25' | t }}</span>
-                      </label>
-                      <label class="pdp-swatch-field w-radio">
-                        <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button w-radio-input"></div><input
-                          type="radio"
-                          name="contact[radio_]"
-                          id="navyblauw"
-                          value="Radio B"
-                          data-name="Radio 2"
-                          style="opacity:0;position:absolute;z-index:-1"><span
-                          fs-cmsfilter-field="category"
-                          fs-cmsfilter-active="is-active"
-                          class="swatch-color w-form-label"
-                          for="navyblauw">{{ 'tn44e22291' | t }}</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div
-                    aria-label="add description here"
-                    role="radiogroup"
-                    class="pdp-swatch-group">
-                    <label class="pdp-swatch-info">
-                      <strong>{{ 'tn1da6e1d1' | t }}</strong>
-                      {{ 'tn678d0ee9' | t }}</label>
-                    <div class="amount-selectors-inner-wrapper">
-                      <div class="amount-labels">
-                        <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb46c-bf8cb3ff" class="amount-label">{{ 't26d73001' | t }}</div>
+                  {% if product.available == true %}
+                    {% if product.variants.size > 1 %}
+                      <div class="choice-container" x-data="{ showSizePopup: false }">
+                        <template x-if="Object.keys(productOptions).includes('Kleur')">
+                          <div :class="`swatch-Kleur`" x-data="{ optionName: 'Kleur' }">
+                            <div class="pdp-swatch-column">
+                              <template x-for="value of productOptions['Kleur']">
+                                <label class="pdp-swatch-field">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button w-radio-input" :class="`swatch-${value.toLowerCase()}`"></div>
+                                  <input
+                                    class="color-input"
+                                    type="radio"
+                                    :name="'Kleur'"
+                                    :value="value"
+                                    @click="handleClick()"
+                                    style="opacity:0;position:absolute;z-index:-1">
+                                  <span
+                                    :style="currentOptions[optionName] === value ?"
+                                    class="size-radio-button-label swatch-text-outside w-form-label"
+                                    for="radio"
+                                    x-text="value"></span>
+                                </label>
+                              </template>
+                            </div>
+                          </div>
+                        </template>
                       </div>
-                      <div class="pdp-amount-column">
-                        <label class="pdp-amount-field w-radio">
-                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button_amount w-radio-input"></div><input
-                            type="radio"
-                            name="contact[radio_]"
-                            id="gingerrood"
-                            value="Radio B"
-                            data-name="Radio 2"
-                            style="opacity:0;position:absolute;z-index:-1"><span
-                            fs-cmsfilter-field="category"
-                            fs-cmsfilter-active="is-active"
-                            class="w-form-label"
-                            for="gingerrood">{{ 't55876746' | t }}</span>
-                          <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb473-bf8cb3ff" class="prices">
-                            <span class="before">{{ 'tn57533ec3' | t }}</span>
-                            {{ 't609aa41c' | t }}</div>
-                        </label>
-                        <label class="pdp-amount-field w-radio">
-                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button_amount w-radio-input"></div><input
-                            type="radio"
-                            name="contact[radio_]"
-                            id="geel"
-                            value="Radio B"
-                            data-name="Radio 2"
-                            style="opacity:0;position:absolute;z-index:-1"><span
-                            fs-cmsfilter-field="category"
-                            fs-cmsfilter-active="is-active"
-                            class="radio-button-label-3 w-form-label"
-                            for="geel">{{ 'tn6fb442f2' | t }}</span>
-                          <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb47b-bf8cb3ff" class="prices">
-                            <span class="before">{{ 'tn57533ec3' | t }}</span>
-                            {{ 't609aa41c' | t }}</div>
-                        </label>
-                        <label class="pdp-amount-field is-active w-radio">
-                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button_amount w-radio-input"></div><input
-                            type="radio"
-                            name="contact[radio_]"
-                            id="navyblauw"
-                            value="Radio B"
-                            data-name="Radio 2"
-                            style="opacity:0;position:absolute;z-index:-1"><span
-                            fs-cmsfilter-field="category"
-                            fs-cmsfilter-active="is-active"
-                            class="w-form-label"
-                            for="navyblauw">{{ 't898dd3b' | t }}</span>
-                          <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb483-bf8cb3ff" class="prices">
-                            <span class="before">{{ 't69410775' | t }}</span>
-                            {{ 'tnf9f7b04' | t }}</div>
-                        </label>
+                    {% endif %}
+                  {% endif %}
+
+
+                {% endcase %}
+              {% endfor %}
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'variants' %}
+                  {% if product.available == true %}
+                    {% if product.variants.size > 1 %}
+                      <div class="choice-container" x-data="{ showSizePopup: false }">
+                        <template x-if="Object.keys(productOptions).includes('Aantal')">
+                          <div :class="`swatch-Aantal`" x-data="{ optionName: 'Aantal' }">
+                            <div class="pdp-amount-column">
+                              <template x-for="value of productOptions['Aantal']">
+                                <label class="pdp-amount-field">
+                                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button_amount w-radio-input"></div>
+                                  <input
+                                    class="color-input"
+                                    type="radio"
+                                    :name="'Aantal'"
+                                    :value="value"
+                                    @click="handleClick()"
+                                    style="opacity:0;position:absolute;z-index:-1">
+                                  <span
+                                    class="w-form-label"
+                                    style="text-transform:uppercase;"
+                                    x-text="value"></span>
+                                  <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb473-bf8cb3ff" class="prices">
+                                    <span class="before">€149,50</span>
+                                    €99,95</div>
+                                </label>
+                              </template>
+                            </div>
+                          </div>
+                        </template>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              {% endcase %}
-            {% endfor %}
+                    {% endif %}
+                  {% endif %}
+
+
+
+                {% endcase %}
+              {% endfor %}
+            </div>
             <div class="pdp-guarantee">{{ block.settings.delivery }}</div>
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'checkout_buttons' %}
-                <a href="#" class="checkout-btn w-inline-block">{{ block.settings.atc-text }} - {{ selected_variant.price | money }}</a>
+                <a
+                  href="/cart/add?id={{ product.selected_or_first_available_variant.id }}"
+                  type="submit"
+                  data-ajax-cart-request-button
+                  class="checkout-btn w-inline-block">{{ block.settings.atc-text }} - {{ selected_variant.price | money }}</a>
               {% endcase %}
             {% endfor %}
             {% for block in section.blocks %}
@@ -553,37 +532,37 @@
                 {% when 'payment_icons' %}
                 <div class="payment-icons pdp">
                   <div class="payment-icon"><img
-                      src="{{ 'bancontact-1b5f5b192aedfa7ce6d2f62dccc81a01c97e6f4b48c301e8c54c610e9276de94.png.svg' | asset_url }}"
+                      src="{{ 'bancontact-1b5f5b192aedfa7ce6d2f62dccc81a01c97e6f4b48c301e8c54c610e9276de94_png.svg' | asset_url }}"
                       loading="lazy"
                       alt=""
                       class="payment-icon-img"></div>
                   <div class="payment-icon"><img
-                      src="{{ 'klarna-389801c6056cb5600b4f05f72ebc2c58e4947688c6c4f5e6ccea41f7973d3a28.svg.svg' | asset_url }}"
+                      src="{{ 'klarna-389801c6056cb5600b4f05f72ebc2c58e4947688c6c4f5e6ccea41f7973d3a28_svg.svg' | asset_url }}"
                       loading="lazy"
                       alt=""
                       class="payment-icon-img"></div>
                   <div class="payment-icon"><img
-                      src="{{ 'paypal-logo_uujmio.png.svg' | asset_url }}"
+                      src="{{ 'paypal-logo_uujmio_png.svg' | asset_url }}"
                       loading="lazy"
                       alt=""
                       class="payment-icon-img"></div>
                   <div class="payment-icon"><img
-                      src="{{ 'master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg.svg' | asset_url }}"
+                      src="{{ 'master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1_svg.svg' | asset_url }}"
                       loading="lazy"
                       alt=""
                       class="payment-icon-img"></div>
                   <div class="payment-icon"><img
-                      src="{{ 'maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg.svg' | asset_url }}"
+                      src="{{ 'maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c_svg.svg' | asset_url }}"
                       loading="lazy"
                       alt=""
                       class="payment-icon-img"></div>
                   <div class="payment-icon"><img
-                      src="{{ 'visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg.svg' | asset_url }}"
+                      src="{{ 'visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00_svg.svg' | asset_url }}"
                       loading="lazy"
                       alt=""
                       class="payment-icon-img"></div>
                   <div class="payment-icon"><img
-                      src="{{ 'american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg.svg' | asset_url }}"
+                      src="{{ 'american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20_svg.svg' | asset_url }}"
                       loading="lazy"
                       alt=""
                       class="payment-icon-img"></div>
@@ -624,4 +603,171 @@
 <script>
   var currentSection = document.currentScript.closest('.shopify-section');
   currentSection.setAttribute("class", "product-section");
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
+
+
+<script>
+  $(document).ready(function() {
+    var sizeMetafield = $('.size-metafield').text();
+    var colorMetafield = $('.color-metafield').text();
+
+// On page load, add active class to preselected swatches
+    $('.color-swatch .swatch-text-outside').each(function() {
+      if ($(this).text() == colorMetafield) {
+        $(this).closest('.variant-size-radio').addClass('color-active');
+      }
+    });
+
+    $('.size-swatch .swatch-text-inside').each(function() {
+      if ($(this).text() == sizeMetafield) {
+        $(this).addClass('size-active');
+      }
+    });
+
+    $('.swatch-text-outside').filter(function() {
+      return $(this).text() === colorMetafield;
+    }).prev().addClass('color-active');
+
+// Handle active state on swatch click
+    $('.pdp-swatch-field').click(function() {
+      $('.pdp-swatch-field').removeClass('is-active');
+      $(this).closest('.pdp-swatch-field').addClass('is-active');
+    });
+
+    $('.pdp-swatch-field').click(function() {
+
+// Remove the class from all radio buttons
+      $('.w-form-formradioinput').removeClass('w--redirected-checked');
+
+// Add the class to the radio button inside the clicked label
+      $(this).find('.w-form-formradioinput').addClass('w--redirected-checked');
+    });
+
+
+    $('.pdp-amount-field').click(function() {
+
+// Remove the class from all radio buttons
+      $('.w-form-label').removeClass('bold-text');
+
+// Add the class to the radio button inside the clicked label
+      $(this).find('.w-form-label').addClass('bold-text');
+    });
+
+    $('.pdp-amount-field').click(function() {
+      $('.pdp-amount-field').removeClass('is-active');
+      $(this).closest('.pdp-amount-field').addClass('is-active');
+    });
+  });
+</script>
+
+
+
+<script>
+
+
+  const colorMap = {
+    {% for block in section.blocks %}
+      {% if block.type == 'color' %}
+        '{{ block.settings.name }}' : '{{ block.settings.code }}',{% endif %}{% endfor %}
+  };
+
+  const allProducts = [
+    {{ product | json }},{% for p in product.metafields.custom.linked_products.value %}{
+        {
+          p | json
+        }
+      },{% endfor %}
+  ];
+
+  function app() {
+    return {
+      allProducts,
+      product: allProducts[0],
+      upsold: false,
+      currentOptions: {},
+
+      init() {
+        const swiper = new Swiper('#swiper-                                                                                                                             {{ section.id }}', {
+          direction: 'horizontal',
+          navigation: {
+            nextEl: '#swiper-next',
+            prevEl: '#swiper-prev'
+          },
+
+          pagination: {
+            el: '.swiper-pagination'
+          }
+        });
+
+        this.$watch('product', () => swiper.update());
+        this.$watch('variant', () => {
+          const variant = this.variant;
+          if (! variant || ! variant.featured_image) 
+            return;
+          
+
+
+
+          const imgSrc = variant.featured_image.src;
+          for (let i = 0; i < swiper.slides.length; i++) {
+            const slide = swiper.slides[i];
+            const img = slide.querySelector('img');
+            if (! img) 
+              continue;
+            
+
+
+
+            if (img.getAttribute("src") === imgSrc) {
+              swiper.slideTo(i);
+              break;
+            }
+          }
+        })
+      },
+
+      priceToCurr(price) {
+        const n = parseInt(price);
+        return `$${
+          (n / 100).toFixed(2)
+        }`;
+      },
+
+      get variant() {
+        for (const variant of this.product.variants) {
+          if (JSON.stringify(Object.values(this.currentOptions).sort()) === JSON.stringify(variant.options.sort())) {
+            return variant;
+          }
+        }
+        return null;
+      },
+
+      get productOptions() {
+        const x = this.product.variants.reduce((prev, curr) => {
+          for (let i = 0; i < curr.options.length; i++) {
+            if (!prev[this.product.options[i]]) 
+              prev[this.product.options[i]] = [];
+            
+
+
+
+            prev[this.product.options[i]].push(curr[`option${
+                i + 1
+              }`]);
+            prev[this.product.options[i]] = [...new Set(prev[this.product.options[i]])];
+          }
+
+          return prev;
+        }, {});
+
+        return x;
+      }
+    };
+  }
 </script>

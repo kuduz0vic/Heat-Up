@@ -35,6 +35,11 @@
           "settings": {
           }
         },
+        "130404e8-171f-4383-a524-980a0c751ef6": {
+          "type": "variants",
+          "settings": {
+          }
+        },
         "63ef80d9-fb67-416f-ae4b-43558ce0c794": {
           "type": "checkout_buttons",
           "settings": {
@@ -110,6 +115,7 @@
         "ce7832aa-5f35-4826-8d86-dd7f14c204c3",
         "806757aa-4830-47c6-8e8d-f965a0082bc8",
         "806c7ef6-eeb6-4884-995f-549b9a4aeaed",
+        "130404e8-171f-4383-a524-980a0c751ef6",
         "63ef80d9-fb67-416f-ae4b-43558ce0c794",
         "7a496ca9-5239-4d92-a07e-e7a0e63975c5",
         "d622e170-6299-4271-930c-d258473c38ba",
