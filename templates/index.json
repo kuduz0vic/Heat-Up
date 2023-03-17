@@ -169,6 +169,14 @@
     "b241103e-4718-4c8d-91fe-823b1ef07bf2": {
       "type": "v1-key-features",
       "blocks": {
+        "754b0b8d-ea4c-46ad-b7ed-e8c1a560e944": {
+          "type": "slide",
+          "settings": {
+            "titel": "Veilige warmtetechnologie",
+            "paragraph": "Alle producten zijn uitgerust met 100% veilige infraroodtechniek. De warmte-elementen zijn voorzien van oververhittingsbeveiliging, waardoor je jouw Heatup overal zorgeloos gebruikt.",
+            "afbeelding": "shopify:\/\/shop_images\/kat-kussen-heatup.jpg"
+          }
+        },
         "4f68b794-d10c-4032-a639-1daac1258427": {
           "type": "slide",
           "settings": {
@@ -188,7 +196,7 @@
         "bbcf364e-1d89-4468-9ed7-76697a894ae9": {
           "type": "slide",
           "settings": {
-            "titel": "Wasbare stof",
+            "titel": "Over de stof",
             "paragraph": "De stof is super zacht en dankzij de speciale samenstelling is de kussenhoes ook wasbaar. Aan de binnenkant van jouw Heatup warmtekussen vind je een waslabel.",
             "afbeelding": "shopify:\/\/shop_images\/stof-close-up-nagels.jpg"
           }
@@ -203,6 +211,7 @@
         }
       },
       "block_order": [
+        "754b0b8d-ea4c-46ad-b7ed-e8c1a560e944",
         "4f68b794-d10c-4032-a639-1daac1258427",
         "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7",
         "bbcf364e-1d89-4468-9ed7-76697a894ae9",
