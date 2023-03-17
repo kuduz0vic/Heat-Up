@@ -169,6 +169,13 @@
     "b241103e-4718-4c8d-91fe-823b1ef07bf2": {
       "type": "v1-key-features",
       "blocks": {
+        "754b0b8d-ea4c-46ad-b7ed-e8c1a560e944": {
+          "type": "slide",
+          "settings": {
+            "titel": "Hoogwaardig design",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
+          }
+        },
         "4f68b794-d10c-4032-a639-1daac1258427": {
           "type": "slide",
           "settings": {
@@ -188,7 +195,7 @@
         "bbcf364e-1d89-4468-9ed7-76697a894ae9": {
           "type": "slide",
           "settings": {
-            "titel": "Wasbare stof",
+            "titel": "Over de stof",
             "paragraph": "De stof is super zacht en dankzij de speciale samenstelling is de kussenhoes ook wasbaar. Aan de binnenkant van jouw Heatup warmtekussen vind je een waslabel.",
             "afbeelding": "shopify:\/\/shop_images\/stof-close-up-nagels.jpg"
           }
@@ -200,21 +207,14 @@
             "paragraph": "De kachel één graad lager, betekent op jaarbasis al 7% minder stookkosten. Dat is al snel €160,- voor een gemiddeld huishouden. Je hebt je Heatup dus zo terugverdiend.",
             "afbeelding": "shopify:\/\/shop_images\/debbie-bank-heatup.jpg"
           }
-        },
-        "754b0b8d-ea4c-46ad-b7ed-e8c1a560e944": {
-          "type": "slide",
-          "settings": {
-            "titel": "Hoogwaardig design",
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
-          }
         }
       },
       "block_order": [
+        "754b0b8d-ea4c-46ad-b7ed-e8c1a560e944",
         "4f68b794-d10c-4032-a639-1daac1258427",
         "f9753fa8-29ff-42d0-9e01-4f6d8916d8f7",
         "bbcf364e-1d89-4468-9ed7-76697a894ae9",
-        "e482d97d-f71a-463d-9441-6e21c7ebbecf",
-        "754b0b8d-ea4c-46ad-b7ed-e8c1a560e944"
+        "e482d97d-f71a-463d-9441-6e21c7ebbecf"
       ],
       "settings": {
         "titel": "Duurzaam en goed voor je portemonnee",
