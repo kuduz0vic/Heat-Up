@@ -181,9 +181,6 @@
 
 {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
 
-  {% capture discount %}
-    {{ selected_variant.compare_at_price | minus: selected_variant.price | money }}
-  {% endcapture %}
 
   <input
     type="hidden"
@@ -420,7 +417,7 @@
                     <div class="price-pdp">{{ selected_variant.price | money }}</div>
                     <div class="before-price-pdp">{{ selected_variant.compare_at_price | money }}</div>
                   </div>
-                  <div class="save-label">{{ discount }}</div>
+                  <div class="save-label">Bespaar €<span id="discount"></span></div>
                 </div>
               {% endcase %}
             {% endfor %}
@@ -429,12 +426,11 @@
 
 
           {% for variant in product.variants %}
-            {% if variant.available %}
-              <div id="variant-id" value="{{ variant.id }}">
-                {{ variant.title }}
-              </div>
-            {% endif %}
+            <div style="display: none;" id="variant-{{ variant.id }}" data-color="{{ variant.option1 }}" data-size="{{ variant.option2 }}" value="{{ variant.id }}" data-price="{{ variant.price }}" data-compare-price="{{ variant.compare_at_price }}">
+              {{ variant.title }}
+            </div>
           {% endfor %}
+          
 
 
 
@@ -521,10 +517,11 @@
               {% case block.type %}
                 {% when 'checkout_buttons' %}
                 <a
-                  href="/cart/add?id={{ product.selected_or_first_available_variant.id }}"
-                  type="submit"
-                  data-ajax-cart-request-button
-                  class="checkout-btn w-inline-block">{{ block.settings.atc-text }} - {{ selected_variant.price | money }}</a>
+                  href="/cart/add"
+                  id="add-to-cart-btn"
+                  class="checkout-btn w-inline-block">{{ block.settings.atc-text }} -
+                  <span id="variant-price"></span>
+                </a>
               {% endcase %}
             {% endfor %}
             {% for block in section.blocks %}
@@ -693,7 +690,7 @@
       currentOptions: {},
 
       init() {
-        const swiper = new Swiper('#swiper-                                                                                                                             {{ section.id }}', {
+        const swiper = new Swiper('#swiper-                                                                                                                                {{ section.id }}', {
           direction: 'horizontal',
           navigation: {
             nextEl: '#swiper-next',
@@ -771,3 +768,62 @@
     };
   }
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const colorButtons = document.querySelectorAll(".swatch-Kleur label");
+    const sizeButtons = document.querySelectorAll(".swatch-Aantal label");
+    const addToCartButton = document.querySelector(".checkout-btn");
+    const variants = document.querySelectorAll("[id^='variant-']");
+    const price = document.querySelector(".price-pdp");
+    const comparePrice = document.querySelector(".before-price-pdp");
+    const discountSpan = document.querySelector("#discount");
+
+    function updateAddToCartButton() {
+      const selectedColor = document.querySelector(".swatch-Kleur input:checked").value;
+      const selectedSize = document.querySelector(".swatch-Aantal input:checked").value;
+      const selectedVariant = [...variants].find(variant => variant.dataset.color === selectedColor && variant.dataset.size === selectedSize);
+      if (selectedVariant) {
+        const variantId = selectedVariant.getAttribute("value");
+        const variantPrice = parseFloat(selectedVariant.dataset.price) / 100;
+        const formattedPrice = variantPrice.toLocaleString("nl-NL", {
+          style: "currency",
+          currency: "{{ shop.currency }}",
+          minimumFractionDigits: 2,
+        });
+        const buttonText = "Add to Cart - " + formattedPrice;
+        addToCartButton.href = `/cart/add?id=${variantId}`;
+        addToCartButton.textContent = buttonText;
+
+        // Update prices
+        const variantComparePrice = parseFloat(selectedVariant.dataset.comparePrice) / 100;
+        const formattedComparePrice = variantComparePrice.toLocaleString("nl-NL", {
+          style: "currency",
+          currency: "{{ shop.currency }}",
+          minimumFractionDigits: 2,
+        });
+        price.textContent = formattedPrice;
+        comparePrice.textContent = formattedComparePrice;
+
+        // Update discount
+        const discountAmount = Math.round((variantComparePrice - variantPrice) * 100) / 100;
+        const formattedDiscount = discountAmount.toLocaleString("nl-NL", {
+          minimumFractionDigits: 0,
+        }).replace(/ /g, '\u00a0');
+        discountSpan.textContent = formattedDiscount;
+      }
+    }
+
+    // Select the first variant on page load
+    const firstColor = document.querySelector(".swatch-Kleur input:first-of-type");
+    const firstSize = document.querySelector(".swatch-Aantal input:first-of-type");
+    firstColor.checked = true;
+    firstSize.checked = true;
+    updateAddToCartButton();
+
+    colorButtons.forEach(button => button.addEventListener("click", updateAddToCartButton));
+    sizeButtons.forEach(button => button.addEventListener("click", updateAddToCartButton));
+  });
+</script>
+
+
