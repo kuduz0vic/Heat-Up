@@ -434,6 +434,39 @@
         "settings": {
           "announcement": "Goede keuze! Dit product verkoopt snel."
         }
+      },
+      "global-settings": {
+        "type": "global-settings",
+        "blocks": {
+          "29775536-9842-4040-b744-2e6ec7f933a4": {
+            "type": "swatch",
+            "settings": {
+              "name": "Antraciet",
+              "code": "#000000"
+            }
+          },
+          "52164005-5ce1-4d3c-b9da-e30641725aea": {
+            "type": "swatch",
+            "settings": {
+              "name": "Grey",
+              "code": "#9b9b9b"
+            }
+          },
+          "0b4277cf-9086-4a72-acfe-2dd3467801a9": {
+            "type": "swatch",
+            "settings": {
+              "name": "Beige",
+              "code": "#f5de7e"
+            }
+          }
+        },
+        "block_order": [
+          "29775536-9842-4040-b744-2e6ec7f933a4",
+          "52164005-5ce1-4d3c-b9da-e30641725aea",
+          "0b4277cf-9086-4a72-acfe-2dd3467801a9"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
