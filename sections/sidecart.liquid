@@ -157,16 +157,7 @@
             <div class="custom-code-do-not-delete w-embed"></div>
           </div>
         </div>
-        {%- form "contact", class: "delete-this-div" -%}
-          <label for="contact[email]">{{ 't3ff5b7c' | t }}</label><input
-            type="email"
-            name="contact[email]"
-            class="w-input"
-            required="">{%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
-        <div class="delete-this-div w-form-done  {% if form_success %}form-posted-successfully{% endif %}"></div>
-        {%- unless form_success -%}
-          <div class="delete-this-div w-form-fail  {% if form.errors %}form-has-errors{% endif %}">{%- render "form-errors", form_errors: form_errors -%}</div>
-        {%- endunless -%}
+
       </div>
       <div class="shipping-bar-footer">
         <div class="shopping-info">
