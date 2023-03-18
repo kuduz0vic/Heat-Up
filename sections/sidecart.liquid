@@ -1,243 +1,246 @@
-<div id="sidecart_wrapper" class="overlay-banner">
-  <div class="overlay-color" data-ajax-cart-toggle-class-button="js-my-cart-open | remove"></div>
-  <div class="shopping-sidebar">
-    <div id="checkout_form" class="shopping-bar-sidewrapper w-form">
-      <div id="slidecart-main-content-wrapper" class="sidecart-main-content-wrapper">
-        <div class="shopping-bar-topbar">
-          <div class="overlay-sidebar-title">{{ section.settings.titel | newline_to_br }}</div>
-          <a
-            href="javascript:void(0)"
-            data-ajax-cart-toggle-class-button="js-my-cart-open | remove"
-            class="overlay-sidebar-close-btn w-inline-block"><img
-              src="{{ 'ic24-close.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="close-btn-img"></a>
-        </div>
-        <div class="shopping-bar-shipping-banner">
-          <div class="shipping-progress-text">{{ 't6a2ee5df' | t }}<strong>{{ 'tn3c91ae66' | t }}</strong>
-            {{ 't55f6d8d8' | t }}</div>
-          <div class="content-bar">
-            <div class="shipping-progress-bar"></div>
+<form action="{{ routes.cart_url }}" method="post">
+  <div
+    id="sidecart_wrapper"
+    class="overlay-banner"
+    data-ajax-cart-section
+    x-data="app()">
+    {% assign freeShippingPrice = section.settings.freeshipping_threshold | plus: 0 %}
+    {% assign cartPriceCents = cart.total_price | plus: 0 %}
+    {% assign width = cartPriceCents | times: 100 | divided_by: freeShippingPrice %}
+    <div class="overlay-color" data-ajax-cart-toggle-class-button="js-my-cart-open | remove"></div>
+    <div class="shopping-sidebar">
+      <div id="checkout_form" class="shopping-bar-sidewrapper w-form">
+        <div id="slidecart-main-content-wrapper" class="sidecart-main-content-wrapper">
+          <div class="shopping-bar-topbar">
+            <div class="overlay-sidebar-title">{{ section.settings.titel | newline_to_br }}
+              <span>(</span>
+              <span data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span>
+              <span>Item)</span>
+            </div>
+            <a
+              href="javascript:void(0)"
+              data-ajax-cart-toggle-class-button="js-my-cart-open | remove"
+              class="overlay-sidebar-close-btn w-inline-block"><img
+                src="{{ 'ic24-close.svg' | asset_url }}"
+                loading="lazy"
+                alt=""
+                class="close-btn-img"></a>
           </div>
-          <div class="cart-trust">
-            <div class="cart-trust-inner">
-              <div class="cart-trust-checkmark">
-                {%- if section.settings.motivator_icon == nil -%}<img
-                    src="{{ 'trust-check.svg' | asset_url }}"
+          <div class="shopping-bar-shipping-banner">
+            <div class="shipping-progress-text">{{ 't6a2ee5df' | t }}<strong>{{ 'tn3c91ae66' | t }}</strong>
+              {{ 't55f6d8d8' | t }}</div>
+            <div class="content-bar">
+              <div class="shipping-progress-bar" style="width:{{width}}%; max-width: 100%;"></div>
+            </div>
+            <div class="cart-trust">
+              <div class="cart-trust-inner">
+                <div class="cart-trust-checkmark">
+                  {%- if section.settings.motivator_icon == nil -%}<img
+                      src="{{ 'trust-check.svg' | asset_url }}"
+                      loading="lazy"
+                      alt=""
+                      class="cart-trust-icon-img">{%- else -%}<img
+                      src="{{ section.settings.motivator_icon.src | img_url: 'master' }}"
+                      loading="lazy"
+                      alt="{{ section.settings.motivator_icon.alt | escape }}"
+                      class="cart-trust-icon-img"
+                      srcset="{{ section.settings.motivator_icon | img_url: '1920x' }} 1920w,{{ section.settings.motivator_icon | img_url: '1600x' }} 1600w,{{ section.settings.motivator_icon | img_url: '1366x' }} 1366w,{{ section.settings.motivator_icon | img_url: '1024x' }} 1024w,{{ section.settings.motivator_icon | img_url: '768x' }} 768w,{{ section.settings.motivator_icon | img_url: '640x' }} 640w">{%- endif -%}
+                </div>
+                <div>{{ section.settings.motivator | newline_to_br }}</div>
+              </div>
+              <div class="cart-line-seperator"></div>
+            </div>
+          </div>
+          <div class="shopping-bar-lineitems">
+            {% for item in cart.items %}
+              <div class="shopping-item">
+                <div class="shopping-item-inner">
+                  <div class="shopping-item-left"><img
+                      src="{{ item.variant.featured_image | img_url: 'master' }}"
+                      loading="lazy"
+                      alt=""
+                      class="shopping-item-image">
+                    <div class="shopping-item-details">
+                      {% assign title_parts = item.title | split: ' - ' %}
+                      <div class="shopping-item-title">{{ title_parts[0] }}</div>
+                      {% assign color_parts = title_parts[1] | split: ' / ' %}
+                      <div class="shopping-item-variant-info">{{ color_parts[0] }}</div>
+                      <div class="add-shopping-grid">
+                        <a
+                          data-ajax-cart-request-button
+                          href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | minus: 1 }}"
+                          class="remove-shopping-button w-inline-block"><img
+                            src="{{ 'minus.svg' | asset_url }}"
+                            loading="lazy"
+                            alt=""></a>
+                        <input
+                          id="w-node-_4c4ab614-3a3a-5bd6-4837-ea48db96b920-db96b8f5"
+                          class="quantity-inside-sidecart"
+                          data-ajax-cart-quantity-input="{{ forloop.index }}"
+                          value="{{ item.quantity }}"
+                          name="updates[]"
+                          type="number" />
+                        <a
+                          data-ajax-cart-request-button
+                          href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | plus: 1 }}"
+                          class="add-shopping-button w-inline-block"><img
+                            src="{{ 'plus.svg' | asset_url }}"
+                            loading="lazy"
+                            alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shopping-total-item-price-wrapper">
+                    <div class="shopping-total-item-price">{{ item.price | money }}</div>
+                    {% if item.compare_at_price %}
+                      <div class="shopping-before-item-price">{{ item.compare_at_price | money }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+                <a
+                  data-ajax-cart-request-button
+                  href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0"
+                  class="shopping-item-remove-button w-inline-block"><img
+                    src="{{ 'ic24-close.svg' | asset_url }}"
                     loading="lazy"
                     alt=""
-                    class="cart-trust-icon-img">{%- else -%}<img
-                    src="{{ section.settings.motivator_icon.src | img_url: 'master' }}"
-                    loading="lazy"
-                    alt="{{ section.settings.motivator_icon.alt | escape }}"
-                    class="cart-trust-icon-img"
-                    srcset="{{ section.settings.motivator_icon | img_url: '1920x' }} 1920w,{{ section.settings.motivator_icon | img_url: '1600x' }} 1600w,{{ section.settings.motivator_icon | img_url: '1366x' }} 1366w,{{ section.settings.motivator_icon | img_url: '1024x' }} 1024w,{{ section.settings.motivator_icon | img_url: '768x' }} 768w,{{ section.settings.motivator_icon | img_url: '640x' }} 640w">{%- endif -%}
+                    class="close-btn-img"></a>
               </div>
-              <div>{{ section.settings.motivator | newline_to_br }}</div>
-            </div>
+            {% endfor %}
             <div class="cart-line-seperator"></div>
           </div>
-        </div>
-        <div class="shopping-bar-lineitems">
-          <div class="shopping-item">
-            <div class="shopping-item-inner">
-              <div class="shopping-item-left"><img
-                  src="{{ 'product-image.png' | asset_url }}"
-                  loading="lazy"
-                  alt=""
-                  class="shopping-item-image">
-                <div class="shopping-item-details">
-                  <div class="shopping-item-title">{{ 't18d94975' | t }}</div>
-                  <div class="shopping-item-variant-info">{{ 'tn5e1bfe36' | t }}</div>
-                  <div class="add-shopping-grid">
-                    <a
-                      data-ajax-cart-request-button=""
-                      href="#"
-                      class="remove-shopping-button w-inline-block"><img
-                        src="{{ 'minus.svg' | asset_url }}"
-                        loading="lazy"
-                        alt=""></a>
-                    <div id="w-node-_4c4ab614-3a3a-5bd6-4837-ea48db96b920-db96b8f5" class="quantity-inside-sidecart">{{ 't32' | t }}</div>
-                    <a
-                      data-ajax-cart-request-button=""
-                      href="#"
-                      class="add-shopping-button w-inline-block"><img
-                        src="{{ 'plus.svg' | asset_url }}"
-                        loading="lazy"
-                        alt=""></a>
-                  </div>
-                </div>
-              </div>
-              <div class="shopping-total-item-price-wrapper">
-                <div class="shopping-total-item-price">{{ 'tn3c2cc404' | t }}</div>
-                <div class="shopping-before-item-price">{{ 'tn570cc8bd' | t }}</div>
-              </div>
-            </div>
-            <a href="#" class="shopping-item-remove-button w-inline-block"><img
-                src="{{ 'ic24-close.svg' | asset_url }}"
-                loading="lazy"
-                alt=""
-                class="close-btn-img"></a>
-          </div>
-          <div class="shopping-item">
-            <div class="shopping-item-inner">
-              <div class="shopping-item-left"><img
-                  src="{{ 'hero-image.png' | asset_url }}"
-                  loading="lazy"
-                  sizes="(max-width: 479px) 0px, 100vw"
-                  srcset="{{ 'hero-image-p-500.png' | asset_url }} 500w, {{ 'hero-image-p-800.png' | asset_url }} 800w, {{ 'hero-image-p-1080.png' | asset_url }} 1080w, {{ 'hero-image.png' | asset_url }} 1512w"
-                  alt=""
-                  class="shopping-item-image">
-                <div class="shopping-item-details">
-                  <div class="shopping-item-title">{{ 't18d94975' | t }}</div>
-                  <div class="shopping-item-variant-info">{{ 'tn5e1bfe36' | t }}</div>
-                  <div class="add-shopping-grid">
-                    <a
-                      data-ajax-cart-request-button=""
-                      href="#"
-                      class="remove-shopping-button w-inline-block"><img
-                        src="{{ 'minus.svg' | asset_url }}"
-                        loading="lazy"
-                        alt=""></a>
-                    <div id="w-node-_4c4ab614-3a3a-5bd6-4837-ea48db96b937-db96b8f5" class="quantity-inside-sidecart">{{ 't31' | t }}</div>
-                    <a
-                      data-ajax-cart-request-button=""
-                      href="#"
-                      class="add-shopping-button w-inline-block"><img
-                        src="{{ 'plus.svg' | asset_url }}"
-                        loading="lazy"
-                        alt=""></a>
-                  </div>
-                </div>
-              </div>
-              <div class="shopping-total-item-price-wrapper">
-                <div class="shopping-total-item-price when-no-comparison">{{ 'tn3c9d800d' | t }}</div>
-              </div>
-            </div>
-            <a href="#" class="shopping-item-remove-button w-inline-block"><img
-                src="{{ 'ic24-close.svg' | asset_url }}"
-                loading="lazy"
-                alt=""
-                class="close-btn-img"></a>
-          </div>
-          <div class="cart-line-seperator"></div>
-        </div>
-        <div class="upsell-cart">
-          <div class="upsell-cart-title">{{ section.settings.upsell_title | newline_to_br }}</div>
-          <div class="upsell-cart-container">
-            <div class="upsell-cart-cell">
-              <div class="upsell-cart-image"><img
-                  src="{{ 'product-image.png' | asset_url }}"
-                  loading="lazy"
-                  alt=""
-                  class="img-cover-absolute"></div>
-              <div class="upsell-cart-info">
-                <div class="upsell-cart-product-title">{{ 't18d94975' | t }}</div>
-                <div class="upsell-cart-product-price">{{ 'tn3c91ae66' | t }}</div>
-              </div>
-              <div class="upsell-cart-swatches">
-                <div class="upsell-cart-swatches-title">{{ 't2ac97090' | t }}</div>
-                <div class="upsell-cart-swatches-container">
-                  <div class="upsell-cart-swatch brown active"></div>
-                  <div class="upsell-cart-swatch yellow"></div>
-                  <div class="upsell-cart-swatch navy"></div>
-                </div>
-              </div>
-              <a href="#" class="upsell-cart-atc w-inline-block">{{ 'tn71c64b52' | t }}</a>
-            </div>
-            <div class="upsell-cart-cell">
-              <div class="upsell-cart-image"><img
-                  src="{{ 'product-image.png' | asset_url }}"
-                  loading="lazy"
-                  alt=""
-                  class="img-cover-absolute"></div>
-              <div class="upsell-cart-info">
-                <div class="upsell-cart-product-title">{{ 't18d94975' | t }}</div>
-                <div class="upsell-cart-product-price">{{ 'tn3c91ae66' | t }}</div>
-              </div>
-              <div class="upsell-cart-swatches">
-                <div class="upsell-cart-swatches-title">{{ 't2ac97090' | t }}</div>
-                <div class="upsell-cart-swatches-container">
-                  <div class="upsell-cart-swatch brown active"></div>
-                  <div class="upsell-cart-swatch yellow"></div>
-                  <div class="upsell-cart-swatch navy"></div>
-                </div>
-              </div>
-              <a href="#" class="upsell-cart-atc w-inline-block">{{ 'tn71c64b52' | t }}</a>
-            </div>
-          </div>
-          <div class="custom-code-do-not-delete w-embed"></div>
-        </div>
-      </div>
-      {%- form "contact", class: "delete-this-div" -%}
-        <label for="contact[email]">{{ 't3ff5b7c' | t }}</label><input
-          type="email"
-          name="contact[email]"
-          class="w-input"
-          required="">{%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
-      <div class="delete-this-div w-form-done  {% if form_success %}form-posted-successfully{% endif %}"></div>
-      {%- unless form_success -%}
-        <div class="delete-this-div w-form-fail  {% if form.errors %}form-has-errors{% endif %}">{%- render "form-errors", form_errors: form_errors -%}</div>
-      {%- endunless -%}
-    </div>
-    <div class="shipping-bar-footer">
-      <div class="shopping-info">
-        <div>{{ 'tn677f458d' | t }}</div>
-        <div>{{ 'tndde9e1a' | t }}</div>
-      </div>
-      <div class="shopping-info">
-        <div>{{ 'tn1aeabe32' | t }}</div>
-        <div>{{ 'tn337fc5c0' | t }}</div>
-      </div>
-      <div class="shopping-info total">
-        <div>{{ 'tn6a56878d' | t }}</div>
-        <div>{{ 'tndd34071' | t }}</div>
-      </div>
-      <div class="side-cart-guarantee">{{ section.settings.atc_garantie | newline_to_br }}</div>
-      <a href="#" class="checkout-btn w-inline-block">{{ 'tn4ac247ab' | t }}</a>
-      <div class="payment-icons">
-        <div class="payment-icon"><img
-            src="{{ 'bancontact-1b5f5b192aedfa7ce6d2f62dccc81a01c97e6f4b48c301e8c54c610e9276de94.png.svg' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="payment-icon-img"></div>
-        <div class="payment-icon"><img
-            src="{{ 'klarna-389801c6056cb5600b4f05f72ebc2c58e4947688c6c4f5e6ccea41f7973d3a28.svg.svg' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="payment-icon-img"></div>
-        <div class="payment-icon"><img
-            src="{{ 'paypal-logo_uujmio.png.svg' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="payment-icon-img"></div>
-        <div class="payment-icon"><img
-            src="{{ 'master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg.svg' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="payment-icon-img"></div>
-        <div class="payment-icon"><img
-            src="{{ 'maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg.svg' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="payment-icon-img"></div>
-        <div class="payment-icon"><img
-            src="{{ 'american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg.svg' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="payment-icon-img"></div>
-        <div class="payment-icon"><img
-            src="{{ 'visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg.svg' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="payment-icon-img"></div>
-      </div>
-    </div>
-    <div class="w-embed"></div>
-  </div>
-</div>
+          <div class="upsell-cart">
+            <div class="upsell-cart-title">{{ section.settings.upsell_title | newline_to_br }}</div>
+            <div class="upsell-cart-container">
 
+              {% for product in section.settings.swiper-products %}
+                <div class="upsell-cart-cell">
+                  <div class="upsell-cart-image"><img
+                      src="{{ product.featured_image | img_url: 'master' }}"
+                      loading="lazy"
+                      alt=""
+                      class="img-cover-absolute"></div>
+                  <div class="upsell-cart-info">
+                    <div class="upsell-cart-product-title">{{ product.title }}</div>
+                    <div class="upsell-cart-product-price">{{ product.price | money }}</div>
+                  </div>
+                  <div class="upsell-cart-swatches">
+                    <div class="upsell-cart-swatches-title">{{ 't2ac97090' | t }}</div>
+                    {% if product.available == true %}
+                      {% if product.variants.size > 1 %}
+                        <div class="choice-container" x-data="{ showSizePopup: false }">
+                          <template x-if="Object.keys(productOptions).includes('Kleur')">
+                            <div :class="`swatch-Kleur`" x-data="{ optionName: 'Kleur' }">
+                              <div class="upsell-cart-swatches-container">
+                                <template x-for="value of productOptions['Kleur']">
+                                  <div class="upsell-cart-swatch">
+                                    <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button w-radio-input" :class="`swatch-${value.toLowerCase()}`"></div>
+                                    <input
+                                      class="color-input"
+                                      type="radio"
+                                      :name="'Kleur'"
+                                      :value="value"
+                                      @click="handleClick()"
+                                      style="opacity:0;position:absolute;z-index:-1">
+                                  </div>
+                                </template>
+                              </div>
+                            </div>
+                          </template>
+                        </div>
+                      {% endif %}
+                    {% endif %}
+
+
+                  </div>
+                  <a href="#" class="upsell-cart-atc w-inline-block">{{ 'tn71c64b52' | t }}</a>
+                </div>
+              {% endfor %}
+
+            </div>
+            <div class="custom-code-do-not-delete w-embed"></div>
+          </div>
+        </div>
+        {%- form "contact", class: "delete-this-div" -%}
+          <label for="contact[email]">{{ 't3ff5b7c' | t }}</label><input
+            type="email"
+            name="contact[email]"
+            class="w-input"
+            required="">{%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
+        <div class="delete-this-div w-form-done  {% if form_success %}form-posted-successfully{% endif %}"></div>
+        {%- unless form_success -%}
+          <div class="delete-this-div w-form-fail  {% if form.errors %}form-has-errors{% endif %}">{%- render "form-errors", form_errors: form_errors -%}</div>
+        {%- endunless -%}
+      </div>
+      <div class="shipping-bar-footer">
+        <div class="shopping-info">
+          <div>{{ 'tn677f458d' | t }}</div>
+          <div>{{ cart.total_price | money_with_currency }}</div>
+        </div>
+        <div class="shopping-info">
+          <div>{{ 'tn1aeabe32' | t }}</div>
+          <div>
+            {% if freeShippingPrice <= cartPriceCents %}
+              GRATIS
+            {% else %}
+              {{
+                 section.settings.shipping | money }}
+            {% endif %}
+          </div>
+        </div>
+        <div class="shopping-info total">
+          <div>{{ 'tn6a56878d' | t }}</div>
+          <div>
+            {% if freeShippingPrice <= cartPriceCents %}
+              {{ cart.total_price | money_with_currency }}
+            {% else %}
+              {{ cart.total_price | plus: section.settings.shipping | money_with_currency }}{% endif %}
+          </div>
+        </div>
+        <div class="side-cart-guarantee">{{ section.settings.atc_garantie | newline_to_br }}</div>
+        <a href="#" class="checkout-btn w-inline-block">{{ 'tn4ac247ab' | t }}</a>
+        <div class="payment-icons">
+          <div class="payment-icon"><img
+              src="{{ 'bancontact-1b5f5b192aedfa7ce6d2f62dccc81a01c97e6f4b48c301e8c54c610e9276de94.png.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="payment-icon-img"></div>
+          <div class="payment-icon"><img
+              src="{{ 'klarna-389801c6056cb5600b4f05f72ebc2c58e4947688c6c4f5e6ccea41f7973d3a28.svg.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="payment-icon-img"></div>
+          <div class="payment-icon"><img
+              src="{{ 'paypal-logo_uujmio.png.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="payment-icon-img"></div>
+          <div class="payment-icon"><img
+              src="{{ 'master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="payment-icon-img"></div>
+          <div class="payment-icon"><img
+              src="{{ 'maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="payment-icon-img"></div>
+          <div class="payment-icon"><img
+              src="{{ 'american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="payment-icon-img"></div>
+          <div class="payment-icon"><img
+              src="{{ 'visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="payment-icon-img"></div>
+        </div>
+      </div>
+      <div class="w-embed"></div>
+    </div>
+  </div>
+</form>
 
 <script>
   var currentSection = document.currentScript.closest('.shopify-section');
@@ -322,6 +325,20 @@
         "type": "image_picker",
         "id": "motivator_icon",
         "label": "Motivator icon"
+      }, {
+        "type": "number",
+        "id": "freeshipping_threshold",
+        "default": 4000,
+        "label": "Free shipping threshold"
+      }, {
+        "type": "number",
+        "id": "shipping",
+        "default": 499,
+        "label": "Shipping price"
+      }, {
+        "id": "swiper-products",
+        "type": "product_list",
+        "label": "Swiper Products"
       }
     ]
   }
