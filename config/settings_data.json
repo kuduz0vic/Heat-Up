@@ -5,10 +5,16 @@
       "sidecart": {
         "type": "sidecart",
         "settings": {
-          "titel": "Mijn winkelwagen (1 item)",
+          "titel": "Mijn winkelwagen",
           "motivator": "Goede keuze! Dit product verkoopt snel.",
           "upsell_title": "Maak je bestelling af",
-          "atc_garantie": "VANDAAG BESTELD? MORGEN IN HUIS"
+          "atc_garantie": "VANDAAG BESTELD? MORGEN IN HUIS",
+          "freeshipping_threshold": 4000,
+          "shipping": 499,
+          "swiper-products": [
+            "upsell-1",
+            "upsell-2"
+          ]
         }
       },
       "header": {

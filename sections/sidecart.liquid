@@ -12,7 +12,13 @@
       <div id="checkout_form" class="shopping-bar-sidewrapper w-form">
         <div id="slidecart-main-content-wrapper" class="sidecart-main-content-wrapper">
           <div class="shopping-bar-topbar">
-            <div class="overlay-sidebar-title">{{ section.settings.titel | newline_to_br }}</div>
+            <div class="overlay-sidebar-title">{{ section.settings.titel | newline_to_br }}
+              <span>(</span>
+              <span data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}
+              </span>
+              <span>
+                Items)</span>
+            </div>
             <a
               href="javascript:void(0)"
               data-ajax-cart-toggle-class-button="js-my-cart-open | remove"
