@@ -76,9 +76,11 @@
             <div class="logo-footer-link"><img src="{{ 'frame.svg' | asset_url }}" loading="lazy" alt=""></div>
             <div class="footer-p">{{ section.settings.nieuwsbrief_text | newline_to_br }}</div>
             <div class="footer-form-block w-form">
-              {%- form "contact",  class: "footer-form" -%}<input type="email" class="form-input w-input" maxlength="256" name="contact[email]" data-name="Email 2" placeholder="Enter your email" id="email-2" required="">
-                <a href="#" class="secondairy-button w-button">{{ section.settings.subscribe_button_text | newline_to_br }}</a>
-              {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
+              {% form 'customer', id: 'email-form', class: 'footer-form' %}
+                <input type="email" class="form-input w-input" maxlength="256" name="contact[email]" data-name="Email 2" placeholder="Enter your email" id="email-2" required="">
+                <button type="submit" value="Subscribe" class="secondairy-button w-button">{{ section.settings.subscribe_button_text | newline_to_br }}</button>
+              {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}
+            {%- endform -%}
               <div class="success-message w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
                 <div>{{ 't5a0ea5a1' | t }}</div>
               </div>
