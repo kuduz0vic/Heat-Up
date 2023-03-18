@@ -9,7 +9,7 @@
   data-duration="400">
   <div class="navbar-container">
     <a
-      href="{{ section.settings.logo_link }}"
+      href="{{ routes.root_url }}"
       id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04ea-aeba04e7"
       aria-current="page"
       class="logo-link w-nav-brand w--current"><img
@@ -21,9 +21,9 @@
       role="navigation"
       id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04ec-aeba04e7"
       class="middle-links is-page-height-tablet w-nav-menu">
-      <a href="#" class="navbar2_link w-nav-link">{{ 'tn2191fdbd' | t }}</a>
-      <a href="#" class="navbar2_link w-nav-link">{{ 't234bd928' | t }}</a>
-      <a href="#" class="navbar2_link w-nav-link">{{ 'tn6de9c1a' | t }}</a>
+      {% for link in linklists[section.settings.main-menu_desktop].links %}
+        <a href="{{link.url}}" class="navbar2_link w-nav-link">{{ link.title }}</a>
+      {% endfor %}
     </nav>
     <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04f3-aeba04e7" class="navbar-buttons-wrapper">
       <a
@@ -40,7 +40,7 @@
           src="{{ 'cart.svg' | asset_url }}"
           loading="lazy"
           alt="">
-        <div class="div-block">{{ 't641' | t }}</div>
+        <div class="div-block" data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</div>
       </a>
     </div>
     <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04fa-aeba04e7" class="navbar-buttons-wrapper-mobile">
@@ -69,9 +69,11 @@
       </div>
     {%- endif -%}
     <ul role="list" class="mobile-menu-navigation">
-      <li class="mobile-menu-link">{{ 'tn23507abb' | t }}</li>
-      <li class="mobile-menu-link">{{ 't234c5148' | t }}</li>
-      <li class="mobile-menu-link">{{ 'tn6de9c1a' | t }}</li>
+      {% for link in linklists[section.settings.main-menu_mobile].links %}
+        <li class="mobile-menu-link">
+          <a href="{{link.url}}" style="text-decoration: none; color: var(--color-n19f500b1);">{{ link.title }}</a>
+        </li>
+      {% endfor %}
     </ul>
     {%- if section.settings.cta_gebied_aanuit -%}
       <div class="menu-cta-area">
@@ -268,6 +270,14 @@
         "id": "cta_aanuit",
         "label": "CTA aan/uit",
         "default": true
+      }, {
+        "type": "link_list",
+        "id": "main-menu_desktop",
+        "label": "Main Menu Links"
+      }, {
+        "type": "link_list",
+        "id": "main-menu_mobile",
+        "label": "Main Menu Mobile Links"
       }
     ]
   }

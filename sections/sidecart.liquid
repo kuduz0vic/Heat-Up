@@ -13,10 +13,8 @@
         <div id="slidecart-main-content-wrapper" class="sidecart-main-content-wrapper">
           <div class="shopping-bar-topbar">
             <div class="overlay-sidebar-title">{{ section.settings.titel | newline_to_br }}
-              <span>(</span>
-              <span data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}
-              </span>
-              <span>
+              <span>(<span data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}
+                </span>
                 Items)</span>
             </div>
             <a
@@ -189,7 +187,10 @@
           </div>
         </div>
         <div class="side-cart-guarantee">{{ section.settings.atc_garantie | newline_to_br }}</div>
-        <a href="#" class="checkout-btn w-inline-block">{{ 'tn4ac247ab' | t }}</a>
+        <button
+          type="submit"
+          name="checkout"
+          class="checkout-btn w-inline-block">{{ 'tn4ac247ab' | t }}</button>
         <div class="payment-icons">
           <div class="payment-icon"><img
               src="{{ 'bancontact-1b5f5b192aedfa7ce6d2f62dccc81a01c97e6f4b48c301e8c54c610e9276de94.png.svg' | asset_url }}"

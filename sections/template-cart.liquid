@@ -1,0 +1,262 @@
+<form action="{{ routes.cart_url }}" method="post">
+  <div class="cart-hero-section" data-ajax-cart-section>
+    {% assign freeShippingPrice = section.settings.freeshipping_threshold | plus: 0 %}
+    {% assign cartPriceCents = cart.total_price | plus: 0 %}
+    {% assign width = cartPriceCents | times: 100 | divided_by: freeShippingPrice %}
+    <div class="page-padding-3">
+      <div class="container-v1-2">
+        <div class="cart-grid">
+          <div id="w-node-_0d76a6e8-1667-5a70-532a-fc209922e8f8-01513945" class="cart-block">
+            <div class="cart-list">
+              {% for item in cart.items %}
+                <div class="shopping-item">
+                  <div class="shopping-item-inner">
+                    <div class="shopping-item-left"><img
+                        src="{{item.variant.featured_image | img_url: 'master'}}"
+                        loading="lazy"
+                        alt=""
+                        class="shopping-item-image">
+                      <div class="shopping-item-details">
+                        {% assign title_parts = item.title | split: ' - ' %}
+                        <div class="shopping-item-title">{{ title_parts[0] }}</div>
+                        {% assign color_parts = title_parts[1] | split: ' / ' %}
+                        <div class="shopping-item-variant-info">{{ color_parts[0] }}</div>
+                        <div class="add-shopping-grid">
+                          <a
+                            data-ajax-cart-request-button
+                            href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | minus: 1 }}"
+                            class="remove-shopping-button w-inline-block"><img
+                              src="{{ 'minus.svg' | asset_url }}"
+                              loading="lazy"
+                              alt=""></a>
+                          <input
+                            id="w-node-_4c4ab614-3a3a-5bd6-4837-ea48db96b920-db96b8f5"
+                            class="quantity-inside-sidecart"
+                            data-ajax-cart-quantity-input="{{ forloop.index }}"
+                            value="{{ item.quantity }}"
+                            name="updates[]"
+                            type="number" />
+                          <a
+                            data-ajax-cart-request-button
+                            href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | plus: 1 }}"
+                            class="add-shopping-button w-inline-block"><img
+                              src="{{ 'plus.svg' | asset_url }}"
+                              loading="lazy"
+                              alt=""></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shopping-total-item-price-wrapper">
+                      <div class="shopping-total-item-price">{{ item.price | money }}</div>
+                      <div class="shopping-before-item-price">{{ item.compare_at_price | money }}</div>
+                    </div>
+                  </div>
+                  <a
+                    data-ajax-cart-request-button
+                    href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0"
+                    class="shopping-item-remove-button w-inline-block"><img
+                      src="{{ 'ic24-close.svg' | asset_url }}"
+                      loading="lazy"
+                      alt=""
+                      class="close-btn-img"></a>
+                </div>
+              {% endfor %}
+
+            </div>
+          </div>
+          <div id="w-node-_0d76a6e8-1667-5a70-532a-fc209922e947-01513945" class="cart-form-box">
+            <div class="cart-form-headline">
+              <div class="text-xxl cart-heading text-bold">Je winkelwagen
+                <span class="light-grey">(<span data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span> items)</span>
+              </div>
+            </div>
+            <div class="cart-form-div desktop">
+              <div class="slidebar-info">
+                <div class="amount-bar-container">
+                  <div class="amount-bar" style="width: {{width}}%;max-width: 100%;"></div>
+                </div>
+                <div class="text-m text-bold black">
+                  {% if freeShippingPrice <= cartPriceCents %}
+                    <p>{{ section.settings.gratis-shipping }}</p>
+                  {% else %}
+                    <p class="rewards-message">
+                      Voeg nog
+                      <strong>{{ freeShippingPrice | minus: cartPriceCents | money }}</strong>
+                      en ontvang gratis verzending
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="cart-form-block">
+                <div class="cart-details">
+                  <div class="text-s text-bold _24-line-height">Verzending</div>
+                  <div class="text-s text-bold _24-line-height">
+                    {% if freeShippingPrice <= cartPriceCents %}
+                      GRATIS
+                    {% else %}
+                      {{
+                         section.settings.shipping | money }}
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="cart-details">
+                  <div class="text-s text-bold _24-line-height">Totaal</div>
+                  <div class="cart-total-price-wrapper">
+                    <div class="text-s text-bold _24-line-height">
+                      {% if freeShippingPrice <= cartPriceCents %}
+                        {{ cart.total_price | money_with_currency }}
+                      {% else %}
+                        {{ cart.total_price | plus: section.settings.shipping | money_with_currency }}{% endif %}
+                    </div>
+                  </div>
+                </div>
+                <button
+                type="submit"
+                name="checkout" class="cta-primairy even w-inline-block">
+                  <div>VEILIG AFREKENEN</div>
+                </button>
+                <div class="cart-payment-methods"><img
+                    src="{{'klarna.svg' | asset_url}}"
+                    loading="lazy"
+                    alt=""
+                    class="cart-payment-icon"><img
+                    src="{{'random.svg' | asset_url}}"
+                    loading="lazy"
+                    alt=""
+                    class="cart-payment-icon"><img
+                    src="{{'visa.svg' | asset_url}}"
+                    loading="lazy"
+                    alt=""
+                    class="cart-payment-icon"><img
+                    src="{{'mastercard.svg' | asset_url}}"
+                    loading="lazy"
+                    alt=""
+                    class="cart-payment-icon"><img
+                    src="{{'amex.svg' | asset_url}}"
+                    loading="lazy"
+                    alt=""
+                    class="cart-payment-icon"><img
+                    src="{{'maestro.svg' | asset_url}}"
+                    loading="lazy"
+                    alt=""
+                    class="cart-payment-icon"><img
+                    src="{{'purple-pay.svg' | asset_url}}"
+                    loading="lazy"
+                    alt=""
+                    class="cart-payment-icon"><img
+                    src="{{'paypal.svg' | asset_url}}"
+                    loading="lazy"
+                    alt=""
+                    class="payment-icon-2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-form-div mobile">
+            <div class="slidebar-info">
+              <div class="amount-bar-container">
+                <div class="amount-bar" style="width: {{width}}%; max-width: 100%;"></div>
+              </div>
+              <div class="text-m text-bold black _14">{% if freeShippingPrice <= cartPriceCents %} <p class="rewards-message">{{section.settings.gratis-shipping}}</p>
+              {% else %}
+              <p class="rewards-message">
+                Voeg nog {{ freeShippingPrice | minus: cartPriceCents | money }} en ontvang gratis verzending
+              </p>
+              {% endif %}</div>
+            </div>
+            <div class="cart-form-block">
+              <div class="cart-details">
+                <div class="text-s text-bold _24-line-height">Verzending</div>
+                <div class="text-s text-bold _24-line-height">            {% if freeShippingPrice <= cartPriceCents %}
+                GRATIS
+              {% else %}
+                {{
+                   section.settings.shipping | money }}
+              {% endif %}</div>
+              </div>
+              <div class="cart-details">
+                <div class="text-s text-bold _24-line-height">Totaal</div>
+                <div class="cart-total-price-wrapper">
+                  <div class="text-s text-bold _24-line-height">{% if freeShippingPrice <= cartPriceCents %}
+                  {{ cart.total_price | money_with_currency }}
+                {% else %}
+                  {{ cart.total_price | plus: section.settings.shipping | money_with_currency }}{% endif %}</div>
+                </div>
+              </div>
+              <button
+              type="submit"
+              name="checkout" class="cta-primairy even w-inline-block">
+                <div>VEILIG AFREKENEN</div>
+              </button>
+              <div class="cart-payment-methods"><img
+              src="{{'klarna.svg' | asset_url}}"
+              loading="lazy"
+              alt=""
+              class="cart-payment-icon"><img
+              src="{{'random.svg' | asset_url}}"
+              loading="lazy"
+              alt=""
+              class="cart-payment-icon"><img
+              src="{{'visa.svg' | asset_url}}"
+              loading="lazy"
+              alt=""
+              class="cart-payment-icon"><img
+              src="{{'mastercard.svg' | asset_url}}"
+              loading="lazy"
+              alt=""
+              class="cart-payment-icon"><img
+              src="{{'amex.svg' | asset_url}}"
+              loading="lazy"
+              alt=""
+              class="cart-payment-icon"><img
+              src="{{'maestro.svg' | asset_url}}"
+              loading="lazy"
+              alt=""
+              class="cart-payment-icon"><img
+              src="{{'purple-pay.svg' | asset_url}}"
+              loading="lazy"
+              alt=""
+              class="cart-payment-icon"><img
+              src="{{'paypal.svg' | asset_url}}"
+              loading="lazy"
+              alt=""
+              class="payment-icon-2"></div>
+        </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+{% schema %}
+  {
+    "name": "Cart",
+    "tag": "div",
+    "class": "cart-section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "titel",
+        "label": "Titel",
+        "default": "Mijn winkelwagen (1 item)"
+      }, {
+        "type": "textarea",
+        "id": "gratis-shipping",
+        "label": "Gratis Shipping Text",
+        "default": "Gratis verzending! Vóór 22:00 uur besteld is morgen in huis"
+      }, {
+        "type": "number",
+        "id": "freeshipping_threshold",
+        "default": 4000,
+        "label": "Free shipping threshold"
+      }, {
+        "type": "number",
+        "id": "shipping",
+        "default": 499,
+        "label": "Shipping price"
+      }
+    ]
+  }
+{% endschema %}
