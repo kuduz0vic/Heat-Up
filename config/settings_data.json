@@ -9,7 +9,7 @@
           "motivator": "Goede keuze! Dit product verkoopt snel.",
           "upsell_title": "Maak je bestelling af",
           "atc_garantie": "VANDAAG BESTELD? MORGEN IN HUIS",
-          "freeshipping_threshold": 4000,
+          "freeshipping_threshold": 3997,
           "shipping": 499,
           "swiper-products": [
             "upsell-1",
@@ -24,7 +24,7 @@
           "cta_title": "Shop het Heatup kussen",
           "logo_link": "",
           "cta_link": "",
-          "search_aanuit": true,
+          "search_aanuit": false,
           "cta_gebied_aanuit": true,
           "urge_aanuit": true,
           "cta_aanuit": true,
