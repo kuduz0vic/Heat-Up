@@ -26,13 +26,15 @@
       {% endfor %}
     </nav>
     <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba04f3-aeba04e7" class="navbar-buttons-wrapper">
-      <a
-        data-w-id="b9088d66-d0c6-bef0-44e2-882faeba04f4"
-        href="#"
-        class="search-btn w-inline-block"><img
-          src="{{ 'search.svg' | asset_url }}"
-          loading="lazy"
-          alt=""></a>
+      {% if section.settings.desktop-search %}
+        <a
+          data-w-id="b9088d66-d0c6-bef0-44e2-882faeba04f4"
+          href="#"
+          class="search-btn w-inline-block"><img
+            src="{{ 'search.svg' | asset_url }}"
+            loading="lazy"
+            alt=""></a>
+      {% endif %}
       <a
         href="javascript:void(0)"
         data-ajax-cart-toggle-class-button="js-my-cart-open | add"
@@ -59,7 +61,7 @@
     </div>
   </div>
   <div class="mobile-menu-container">
-    {%- if section.settings.search_aanuit -%}
+    {% if section.settings.mobile-search %}
       <div class="mobile-menu-search">
         <div class="search-icon"><img
             src="{{ 'search-module-mobile.svg' | asset_url }}"
@@ -109,51 +111,50 @@
   <div data-w-id="bc916d55-dea1-1c74-bfec-649bf41b22cc" class="menu-overlay"></div>
 </div>
 <div class="search-announcement-wrapper">
-  <div class="search-bar">
-    <div class="search-inner-container">
-      <div class="left-side-search">
-        <a href="#" class="search-trigger-btn w-inline-block"><img
-            src="{{ 'search-module.svg' | asset_url }}"
+  {% if section.settings.desktop-search %}
+    <div class="search-bar">
+      <div class="search-inner-container">
+        <div class="left-side-search">
+          <a href="#" class="search-trigger-btn w-inline-block"><img
+              src="{{ 'search-module.svg' | asset_url }}"
+              loading="lazy"
+              alt=""></a>
+          <div class="text-block">{{ 't17716f2b' | t }}</div>
+        </div>
+        <a
+          data-w-id="b9088d66-d0c6-bef0-44e2-882faeba051e"
+          href="#"
+          class="close-search-btn w-inline-block"><img
+            src="{{ 'close-search.svg' | asset_url }}"
             loading="lazy"
-            alt=""></a>
-        <div class="text-block">{{ 't17716f2b' | t }}</div>
+            alt=""
+            class="close-search-img-btn"></a>
       </div>
-      <a
-        data-w-id="b9088d66-d0c6-bef0-44e2-882faeba051e"
-        href="#"
-        class="close-search-btn w-inline-block"><img
-          src="{{ 'close-search.svg' | asset_url }}"
-          loading="lazy"
-          alt=""
-          class="close-search-img-btn"></a>
     </div>
-  </div>
+  {% endif %}
   <div class="announcements">
     <div class="desktop-announcements-container">
-      <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba0522-aeba04e7" class="left-announcement"><img
-          src="{{ 'temperatuur.svg' | asset_url }}"
-          loading="lazy"
-          alt=""
-          class="announcement-img">
-        <div>{{ 't63fa3f1a' | t }}</div>
+      <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba0522-aeba04e7" class="left-announcement">
+        <div class="announcement-img">
+          {{ section.settings.announcment-svg-1 }}
+        </div>
+        <div>{{ section.settings.announcment-desktop-1 }}</div>
       </div>
       <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba0526-aeba04e7" class="middle-announcement">
         <div class="announcement-seperator"></div>
-        <div class="middle-announcement-inner"><img
-            src="{{ 'groene-bezorging-1.svg' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="announcement-img">
-          <div>{{ 't1db9b76' | t }}</div>
+        <div class="middle-announcement-inner">
+          <div class="announcement-img">
+            {{ section.settings.announcment-svg-1 }}
+          </div>
+          <div>{{ section.settings.announcment-desktop-2 }}</div>
         </div>
         <div class="announcement-seperator"></div>
       </div>
-      <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba052d-aeba04e7" class="right-announcement"><img
-          src="{{ 'duurzaamheid-rood-1.svg' | asset_url }}"
-          loading="lazy"
-          alt=""
-          class="announcement-img">
-        <div>{{ 't77319738' | t }}</div>
+      <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba052d-aeba04e7" class="right-announcement">
+        <div class="announcement-img">
+          {{ section.settings.announcment-svg-1 }}
+        </div>
+        <div>{{ section.settings.announcment-desktop-3 }}</div>
       </div>
     </div>
     <div
@@ -169,33 +170,21 @@
       data-duration="200"
       data-infinite="true">
       <div class="w-slider-mask">
-        <div class="announcement-slide w-slide">
-          <div class="announcement"><img
-              src="{{ 'temperatuur.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="announcement-img">
-            <div>{{ 't63fa3f1a' | t }}</div>
-          </div>
-        </div>
-        <div class="announcement-slide w-slide">
-          <div class="announcement"><img
-              src="{{ 'groene-bezorging-1.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="announcement-img">
-            <div>{{ 't1db9b76' | t }}</div>
-          </div>
-        </div>
-        <div class="announcement-slide w-slide">
-          <div class="announcement"><img
-              src="{{ 'duurzaamheid-rood-1.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="announcement-img">
-            <div>{{ 't77319738' | t }}</div>
-          </div>
-        </div>
+
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'facebook-icon' %}
+            <div class="announcement-slide w-slide">
+              <div class="announcement">
+                <div class="announcement-img">
+                  {{ block.settings.mobile-announcment_svg }}
+                </div>
+                <div>{{ block.settings.mobile-announcment_text }}</div>
+              </div>
+            </div>
+          {% endcase %}
+        {% endfor %}
+
       </div>
       <div class="left-arrow w-slider-arrow-left">
         <div class="icon-2 w-icon-slider-left"></div>
@@ -207,6 +196,7 @@
     </div>
   </div>
 </div>
+
 
 
 <script>
@@ -271,6 +261,16 @@
         "label": "CTA aan/uit",
         "default": true
       }, {
+        "type": "checkbox",
+        "id": "desktop-search",
+        "label": "Desktop Search",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "mobile-search",
+        "label": "Mobile Search",
+        "default": true
+      }, {
         "type": "link_list",
         "id": "main-menu_desktop",
         "label": "Main Menu Links"
@@ -278,6 +278,47 @@
         "type": "link_list",
         "id": "main-menu_mobile",
         "label": "Main Menu Mobile Links"
+      }, {
+        "type": "richtext",
+        "id": "announcment-desktop-1",
+        "label": "Announcment Desktop 1"
+      }, {
+        "type": "richtext",
+        "id": "announcment-desktop-2",
+        "label": "Announcment Desktop 2"
+      }, {
+        "type": "richtext",
+        "id": "announcment-desktop-3",
+        "label": "Announcment Desktop 3"
+      }, {
+        "type": "html",
+        "id": "announcment-svg-1",
+        "label": "Announcment SVG 1"
+      }, {
+        "type": "html",
+        "id": "announcment-svg-2",
+        "label": "Announcment SVG 2"
+      }, {
+        "type": "html",
+        "id": "announcment-svg-3",
+        "label": "Announcment SVG 3"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "announcment-mobile",
+        "name": "Mobile Announcment",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "mobile-announcment_text",
+            "label": "Announcment Text"
+          }, {
+            "type": "html",
+            "id": "mobile-announcment_svg",
+            "label": "Announcment SVG"
+          }
+        ]
       }
     ]
   }

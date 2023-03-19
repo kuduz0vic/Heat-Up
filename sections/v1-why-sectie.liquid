@@ -1,116 +1,235 @@
+<div class="page-padding">
+  <div class="container-v1 vertical">
+    <div class="heading-container">
+      <h1 class="h1-section">{{ section.settings.titel | newline_to_br }}</h1>
+      <p class="paragraph">{{ section.settings.tagline | newline_to_br }}</p>
+    </div>
+    <div class="why-swiper">
+      <div id="why-swiper" class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+        <div class="swiper-wrapper">
 
-    <div class="page-padding">
-      <div class="container-v1 vertical">
-        <div class="heading-container">
-          <h1 class="h1-section">{{ section.settings.titel | newline_to_br }}</h1>
-          <p class="paragraph">{{ section.settings.tagline | newline_to_br }}</p>
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'why-slide' %}
+              <div class="swiper-slide">
+                <div class="feature-slide">
+                  <div class="why-img-wrapper"><img
+                      src="{{ block.settings.slide-image | img_url: 'master' }}"
+                      loading="lazy"
+                      sizes="(max-width: 479px) NaNvw, 100vw"
+                      srcset="{{ block.settings.slide-image | img_url: 'master' }} 500w, {{ block.settings.slide-image | img_url: 'master' }} 594w"
+                      alt=""
+                      class="why-img"></div>
+                  <div class="why-slide-contents">
+                    <div class="why-icon-wrapper">
+                      <div class="why-icon">{{ block.settings.slide-svg }}</div>
+                    </div>
+                    <div class="why-title">{{ block.settings.slide-title }}</div>
+                    <div class="why-paragraph">{{ block.settings.slide-description }}</div>
+                  </div>
+                </div>
+              </div>
+            {% endcase %}
+          {% endfor %}
+
         </div>
-        <div class="why-swiper">
-          <div id="why-swiper" class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="feature-slide">
-                  <div class="why-img-wrapper"><img src="{{ 'instant-warmth-experience.png' | asset_url }}" loading="lazy" sizes="(max-width: 479px) NaNvw, 100vw" srcset="{{ 'instant-warmth-experience-p-500.png' | asset_url }} 500w, {{ 'instant-warmth-experience.png' | asset_url }} 594w" alt="" class="why-img"></div>
-                  <div class="why-slide-contents">
-                    <div class="why-icon-wrapper"><img src="{{ 'heatup.svg' | asset_url }}" loading="lazy" alt="" class="why-icon"></div>
-                    <div class="why-title">{{ 'tn58c2306e' | t }}</div>
-                    <div class="why-paragraph">{{ 'tn4c91487f' | t }}</div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="feature-slide">
-                  <div class="why-img-wrapper"><img src="{{ 'dsc04359.jpg' | asset_url }}" loading="lazy" sizes="(max-width: 479px) NaNvw, 100vw" srcset="{{ 'dsc04359-p-500.jpg' | asset_url }} 500w, {{ 'dsc04359-p-800.jpg' | asset_url }} 800w, {{ 'dsc04359-p-1080.jpg' | asset_url }} 1080w, {{ 'dsc04359-p-1600.jpg' | asset_url }} 1600w, {{ 'dsc04359-p-2000.jpg' | asset_url }} 2000w, {{ 'dsc04359-p-2600.jpg' | asset_url }} 2600w, {{ 'dsc04359-p-3200.jpg' | asset_url }} 3200w" alt="" class="why-img"></div>
-                  <div class="why-slide-contents">
-                    <div class="why-icon-wrapper"><img src="{{ 'connect-2.svg' | asset_url }}" loading="lazy" alt="" class="why-icon"></div>
-                    <div class="why-title">{{ 'tn5991a622' | t }}</div>
-                    <div class="why-paragraph">{{ 't75fb675' | t }}</div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="feature-slide">
-                  <div class="why-img-wrapper"><img src="{{ 'dsc04096.jpg' | asset_url }}" loading="lazy" sizes="(max-width: 479px) NaNvw, 100vw" srcset="{{ 'dsc04096-p-500.jpg' | asset_url }} 500w, {{ 'dsc04096-p-800.jpg' | asset_url }} 800w, {{ 'dsc04096-p-1080.jpg' | asset_url }} 1080w, {{ 'dsc04096-p-1600.jpg' | asset_url }} 1600w, {{ 'dsc04096-p-2000.jpg' | asset_url }} 2000w, {{ 'dsc04096-p-2600.jpg' | asset_url }} 2600w, {{ 'dsc04096-p-3200.jpg' | asset_url }} 3200w" alt="" class="why-img"></div>
-                  <div class="why-slide-contents">
-                    <div class="why-icon-wrapper"><img src="{{ 'temperatuur-4.svg' | asset_url }}" loading="lazy" alt="" class="why-icon"></div>
-                    <div class="why-title">{{ 't31f3b4a2' | t }}</div>
-                    <div class="why-paragraph">{{ 'tn2559d506' | t }}</div>
-                  </div>
-                </div>
-              </div>
+        <div class="slider-arrow-container">
+          <div id="why-prev-arrow" class="slider-arrow"><img
+              src="{{ 'arrow-right.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="arrow-swipe"></div>
+          <div id="why-next-arrow" class="slider-arrow"><img
+              src="{{ 'right-arrow.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="arrow-swipe"></div>
+        </div>
+      </div>
+      <a href="{{section.settings.button-url}}" class="mobile-why-cta w-inline-block">{{ section.settings.button-label }}</a>
+      <div id="WhySwiperPagination" class="swiper-pagination"></div>
+    </div>
+    <div
+      data-current="Tab 3"
+      data-easing="ease"
+      data-duration-in="300"
+      data-duration-out="100"
+      class="tabs-component w-tabs">
+      <div class="tabs-images-content w-tab-content">
+        <div data-w-tab="Tab 1" class="tab-img w-tab-pane"><img
+            sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 39vw"
+            srcset="{{ section.settings.desktop-image-1 | img_url: 'master' }} 500w, {{ section.settings.desktop-image-1 | img_url: 'master' }} 594w"
+            src="{{ section.settings.desktop-image-1 | img_url: 'master' }}"
+            loading="lazy"
+            alt=""
+            class="tab-image"></div>
+        <div data-w-tab="Tab 2" class="tab-img w-tab-pane"><img
+            sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 39vw"
+            srcset="{{ section.settings.desktop-image-2 | img_url: 'master' }} 500w, {{ section.settings.desktop-image-2 | img_url: 'master' }} 800w, {{ section.settings.desktop-image-2 | img_url: 'master' }} 1080w, {{ section.settings.desktop-image-2 | img_url: 'master' }} 1600w, {{ section.settings.desktop-image-2 | img_url: 'master' }} 2000w, {{ section.settings.desktop-image-2 | img_url: 'master' }} 2600w, {{ section.settings.desktop-image-2 | img_url: 'master' }} 3200w"
+            src="{{ section.settings.desktop-image-2 | img_url: 'master' }}"
+            loading="lazy"
+            alt=""
+            class="tab-image"></div>
+        <div data-w-tab="Tab 3" class="tab-img w-tab-pane w--tab-active"><img
+            sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 39vw"
+            srcset="{{ section.settings.desktop-image-3 | img_url: 'master' }} 500w, {{ section.settings.desktop-image-3 | img_url: 'master' }} 800w, {{ section.settings.desktop-image-3 | img_url: 'master' }} 1080w, {{ section.settings.desktop-image-3 | img_url: 'master' }} 1600w, {{ section.settings.desktop-image-3 | img_url: 'master' }} 2000w, {{ section.settings.desktop-image-3 | img_url: 'master' }} 2600w, {{ section.settings.desktop-image-3 | img_url: 'master' }} 3200w"
+            src="{{ section.settings.desktop-image-3 | img_url: 'master' }}"
+            loading="lazy"
+            alt=""
+            class="tab-image"></div>
+      </div>
+      <div class="tabs-menu w-tab-menu">
+        <a data-w-tab="Tab 1" class="tab-trigger w-inline-block w-tab-link">
+          <div class="tab-inner-contents">
+            <div class="tab-icon">
+              <div class="tab-icon-img _1">{{ section.settings.tab-svg-1 }}</div>
             </div>
-            <div class="slider-arrow-container">
-              <div id="why-prev-arrow" class="slider-arrow"><img src="{{ 'arrow-right.svg' | asset_url }}" loading="lazy" alt="" class="arrow-swipe"></div>
-              <div id="why-next-arrow" class="slider-arrow"><img src="{{ 'right-arrow.svg' | asset_url }}" loading="lazy" alt="" class="arrow-swipe"></div>
+            <div class="text-content-tab">
+              <div class="tab-title">{{ section.settings.tab-title-1 }}</div>
+              <div class="tab-paragraph">{{ section.settings.tab-description-1 }}</div>
             </div>
           </div>
-          <a href="#" class="mobile-why-cta w-inline-block">{{ 'tn28ec0a4e' | t }}</a>
-          <div id="WhySwiperPagination" class="swiper-pagination"></div>
-        </div>
-        <div data-current="Tab 3" data-easing="ease" data-duration-in="300" data-duration-out="100" class="tabs-component w-tabs">
-          <div class="tabs-images-content w-tab-content">
-            <div data-w-tab="Tab 1" class="tab-img w-tab-pane"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 39vw" srcset="{{ 'instant-warmth-experience-p-500.png' | asset_url }} 500w, {{ 'instant-warmth-experience.png' | asset_url }} 594w" src="{{ 'instant-warmth-experience.png' | asset_url }}" loading="lazy" alt="" class="tab-image"></div>
-            <div data-w-tab="Tab 2" class="tab-img w-tab-pane"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 39vw" srcset="{{ 'dsc04359-p-500.jpg' | asset_url }} 500w, {{ 'dsc04359-p-800.jpg' | asset_url }} 800w, {{ 'dsc04359-p-1080.jpg' | asset_url }} 1080w, {{ 'dsc04359-p-1600.jpg' | asset_url }} 1600w, {{ 'dsc04359-p-2000.jpg' | asset_url }} 2000w, {{ 'dsc04359-p-2600.jpg' | asset_url }} 2600w, {{ 'dsc04359-p-3200.jpg' | asset_url }} 3200w" src="{{ 'dsc04359.jpg' | asset_url }}" loading="lazy" alt="" class="tab-image"></div>
-            <div data-w-tab="Tab 3" class="tab-img w-tab-pane w--tab-active"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 39vw" srcset="{{ 'dsc04096-p-500.jpg' | asset_url }} 500w, {{ 'dsc04096-p-800.jpg' | asset_url }} 800w, {{ 'dsc04096-p-1080.jpg' | asset_url }} 1080w, {{ 'dsc04096-p-1600.jpg' | asset_url }} 1600w, {{ 'dsc04096-p-2000.jpg' | asset_url }} 2000w, {{ 'dsc04096-p-2600.jpg' | asset_url }} 2600w, {{ 'dsc04096-p-3200.jpg' | asset_url }} 3200w" src="{{ 'dsc04096.jpg' | asset_url }}" loading="lazy" alt="" class="tab-image"></div>
+        </a>
+        <a data-w-tab="Tab 2" class="tab-trigger w-inline-block w-tab-link">
+          <div class="tab-inner-contents">
+            <div class="tab-icon">
+              <div class="tab-icon-img _2">{{ section.settings.tab-svg-2 }}</div>
+            </div>
+            <div class="text-content-tab">
+              <div class="tab-title">{{ section.settings.tab-title-2 }}</div>
+              <div class="tab-paragraph">{{ section.settings.tab-description-2 }}</div>
+            </div>
           </div>
-          <div class="tabs-menu w-tab-menu">
-            <a data-w-tab="Tab 1" class="tab-trigger w-inline-block w-tab-link">
-              <div class="tab-inner-contents">
-                <div class="tab-icon"><img loading="lazy" src="{{ 'heatup.svg' | asset_url }}" alt="" class="tab-icon-img _1"></div>
-                <div class="text-content-tab">
-                  <div class="tab-title">{{ 'tn58c2306e' | t }}</div>
-                  <div class="tab-paragraph">{{ 'tn4c91487f' | t }}</div>
-                </div>
-              </div>
-            </a>
-            <a data-w-tab="Tab 2" class="tab-trigger w-inline-block w-tab-link">
-              <div class="tab-inner-contents">
-                <div class="tab-icon"><img loading="lazy" src="{{ 'wireless.svg' | asset_url }}" alt="" class="tab-icon-img _2"></div>
-                <div class="text-content-tab">
-                  <div class="tab-title">{{ 'tn5991a622' | t }}</div>
-                  <div class="tab-paragraph">{{ 't75fb675' | t }}</div>
-                </div>
-              </div>
-            </a>
-            <a data-w-tab="Tab 3" class="tab-trigger w-inline-block w-tab-link w--current">
-              <div class="tab-inner-contents">
-                <div class="tab-icon"><img loading="lazy" src="{{ 'temperatuur.svg' | asset_url }}" alt="" class="tab-icon-img _3"></div>
-                <div class="text-content-tab">
-                  <div class="tab-title">{{ 't31f3b4a2' | t }}</div>
-                  <div class="tab-paragraph">{{ 'tn2559d506' | t }}</div>
-                </div>
-              </div>
-            </a>
+        </a>
+        <a data-w-tab="Tab 3" class="tab-trigger w-inline-block w-tab-link w--current">
+          <div class="tab-inner-contents">
+            <div class="tab-icon">
+              <div class="tab-icon-img _1">{{ section.settings.tab-svg-3 }}</div>
+            </div>
+            <div class="text-content-tab">
+              <div class="tab-title">{{ section.settings.tab-title-3 }}</div>
+              <div class="tab-paragraph">{{ section.settings.tab-description-3 }}</div>
+            </div>
           </div>
-        </div>
-        <a href="#" class="cta mobile-hidden w-inline-block">{{ 'tn2191fdbd' | t }}</a>
+        </a>
       </div>
     </div>
-  
+    <a href="{{section.settings.button-url}}" class="cta mobile-hidden w-inline-block">{{ section.settings.button-label }}</a>
+  </div>
+</div>
 
-<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","why-section");</script>
-        
-{% schema %}{
-  "presets": [
-    {
-      "name": "V1 - Why Sectie"
-    }
-  ],
-  "name": "V1 - Why Sectie",
-  "tag": "div",
-  "class": "why-section",
-  "settings": [
-    {
-      "type": "textarea",
-      "id": "titel",
-      "label": "Titel",
-      "default": "Luxueuze warmte, zonder schuldgevoel."
-    },
-    {
-      "type": "textarea",
-      "id": "tagline",
-      "label": "Tagline",
-      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    }
-  ]
-}{% endschema %}
+
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');
+  currentSection.setAttribute("class", "why-section");
+</script>
+
+{% schema %}
+  {
+    "presets": [
+      {
+        "name": "V1 - Why Sectie"
+      }
+    ],
+    "name": "V1 - Why Sectie",
+    "tag": "div",
+    "class": "why-section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "titel",
+        "label": "Titel",
+        "default": "Luxueuze warmte, zonder schuldgevoel."
+      },
+      {
+        "type": "textarea",
+        "id": "tagline",
+        "label": "Tagline",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "type": "image_picker",
+        "id": "desktop-image-1",
+        "label": "Desktop Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "desktop-image-2",
+        "label": "Desktop Image 2"
+      }, {
+        "type": "image_picker",
+        "id": "desktop-image-3",
+        "label": "Desktop Image 3"
+      }, {
+        "type": "html",
+        "id": "tab-svg-1",
+        "label": "Tab Svg-1"
+      }, {
+        "type": "text",
+        "id": "tab-title-1",
+        "label": "Tab Title 1"
+      }, {
+        "type": "richtext",
+        "id": "tab-description-1",
+        "label": "Tab Description 1"
+      }, {
+        "type": "html",
+        "id": "tab-svg-2",
+        "label": "Tab Svg-2"
+      }, {
+        "type": "text",
+        "id": "tab-title-2",
+        "label": "Tab Title 2"
+      }, {
+        "type": "richtext",
+        "id": "tab-description-2",
+        "label": "Tab Description 2"
+      }, {
+        "type": "html",
+        "id": "tab-svg-3",
+        "label": "Tab Svg-3"
+      }, {
+        "type": "text",
+        "id": "tab-title-3",
+        "label": "Tab Title 3"
+      }, {
+        "type": "richtext",
+        "id": "tab-description-3",
+        "label": "Tab Description 3"
+      }, {
+        "type": "url",
+        "id": "button-url",
+        "label": "Button Url"
+      }, {
+        "type": "text",
+        "id": "button-label",
+        "label": "Button Label"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "why-slide",
+        "name": "Why Mobile Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "slide-image",
+            "label": "Slide Image"
+          }, {
+            "type": "html",
+            "id": "slide-svg",
+            "label": "Slide Svg"
+          }, {
+            "type": "text",
+            "id": "slide-title",
+            "label": "Slide Title"
+          }, {
+            "type": "richtext",
+            "id": "slide-description",
+            "label": "Slide Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
