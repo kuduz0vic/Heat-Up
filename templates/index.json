@@ -3,7 +3,8 @@
     "3e737601-60ce-4a51-9e7f-c38ada1b92b9": {
       "type": "v1-hero",
       "settings": {
-        "tagline": "Verwarm jezelf, waar en wanneer je wilt",
+        "title": "Verwarm jezelf, waar en wanneer je wilt",
+        "tagline": "Luxueuze warmte, zonder schuldgevoel.",
         "paragraph": "Met de draadloze warmtekussens van Heatup geniet je urenlang van duurzame warmte. Bestel jouw warmtekussen tijdelijk met 10% korting!",
         "cta": "Shop mijn Heatup kussen",
         "review_text": "4,8 met 100+ reviews",
@@ -225,6 +226,46 @@
     },
     "04df9282-021a-4983-bd7c-ddca87366f0f": {
       "type": "v1-statistics",
+      "blocks": {
+        "e9c74a65-c0e6-4e9d-9e32-8fc3289fc79b": {
+          "type": "counter",
+          "settings": {
+            "counter-number": "80",
+            "counter-sign": "",
+            "counter-text": "title 1"
+          }
+        },
+        "71abcb99-95ed-4930-9f62-5cf700fa9543": {
+          "type": "counter",
+          "settings": {
+            "counter-number": "30",
+            "counter-sign": "x",
+            "counter-text": "title 2"
+          }
+        },
+        "d646f8b7-9b84-4cbf-8c37-75d96beb25bf": {
+          "type": "counter",
+          "settings": {
+            "counter-number": "2000",
+            "counter-sign": "%",
+            "counter-text": "title 3"
+          }
+        },
+        "d9d2d06e-487e-4ff4-b5a1-585a5e112042": {
+          "type": "counter",
+          "settings": {
+            "counter-number": "8",
+            "counter-sign": "",
+            "counter-text": "title 4"
+          }
+        }
+      },
+      "block_order": [
+        "e9c74a65-c0e6-4e9d-9e32-8fc3289fc79b",
+        "71abcb99-95ed-4930-9f62-5cf700fa9543",
+        "d646f8b7-9b84-4cbf-8c37-75d96beb25bf",
+        "d9d2d06e-487e-4ff4-b5a1-585a5e112042"
+      ],
       "settings": {
         "titel": "Waarom een Heatup warmtekussen?",
         "tagline": "Tekst hier",
