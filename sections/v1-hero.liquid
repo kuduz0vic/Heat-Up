@@ -1,69 +1,94 @@
+<div class="hero-container">
+  <div class="hero-tagline">{{ section.settings.tagline | newline_to_br }}</div>
+  <h1 class="hero-h1">{{ section.settings.title | newline_to_br }}</h1>
+  <p class="hero-p">{{ section.settings.paragraph | newline_to_br }}</p>
+  <a href="{{ section.settings.knop_link }}" class="hero-cta-btn w-inline-block">{{ section.settings.knop_link_text }}</a>
+  <div class="hero-reviews"><img
+      src="{{ 'stars.svg' | asset_url }}"
+      loading="lazy"
+      width="99"
+      option:img="Review sterren afbeelding"
+      alt=""
+      class="hero-stars">
+    <div>{{ section.settings.review_text | newline_to_br }}</div>
+  </div>
+</div>
+<div class="hero-background">
+  {%- if section.settings.hero_afbeelding == nil -%}<img
+      src="{{ 'hero-image.png' | asset_url }}"
+      loading="lazy"
+      sizes="100vw"
+      srcset="{{ 'hero-image-p-500.png' | asset_url }} 500w, {{ 'hero-image-p-800.png' | asset_url }} 800w, {{ 'hero-image-p-1080.png' | asset_url }} 1080w, {{ 'hero-image.png' | asset_url }} 1512w"
+      alt=""
+      class="hero-image">{%- else -%}<img
+      src="{{ section.settings.hero_afbeelding.src | img_url: 'master' }}"
+      loading="lazy"
+      alt="{{ section.settings.hero_afbeelding.alt | escape }}"
+      class="hero-image"
+      srcset="{{ section.settings.hero_afbeelding | img_url: '1920x' }} 1920w,{{ section.settings.hero_afbeelding | img_url: '1600x' }} 1600w,{{ section.settings.hero_afbeelding | img_url: '1366x' }} 1366w,{{ section.settings.hero_afbeelding | img_url: '1024x' }} 1024w,{{ section.settings.hero_afbeelding | img_url: '768x' }} 768w,{{ section.settings.hero_afbeelding | img_url: '640x' }} 640w">{%- endif -%}
+  <div class="hero-background-overlay"></div>
+</div>
 
-    <div class="hero-container">
-      <div class="hero-tagline">{{ section.settings.tagline | newline_to_br }}</div>
-      <h1 class="hero-h1">{{ section.settings.tagline | newline_to_br }}</h1>
-      <p class="hero-p">{{ section.settings.paragraph | newline_to_br }}</p>
-      <a href="{{ section.settings.knop_link }}" class="hero-cta-btn w-inline-block">{{ section.settings.knop_link_text }}</a>
-      <div class="hero-reviews"><img src="{{ 'stars.svg' | asset_url }}" loading="lazy" width="99" option:img="Review sterren afbeelding" alt="" class="hero-stars">
-        <div>{{ section.settings.review_text | newline_to_br }}</div>
-      </div>
-    </div>
-    <div class="hero-background">{%- if section.settings.hero_afbeelding == nil -%}<img src="{{ 'hero-image.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'hero-image-p-500.png' | asset_url }} 500w, {{ 'hero-image-p-800.png' | asset_url }} 800w, {{ 'hero-image-p-1080.png' | asset_url }} 1080w, {{ 'hero-image.png' | asset_url }} 1512w" alt="" class="hero-image">{%- else -%}<img src="{{ section.settings.hero_afbeelding.src | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.hero_afbeelding.alt | escape }}" class="hero-image" srcset="{{ section.settings.hero_afbeelding | img_url: '1920x' }} 1920w,{{ section.settings.hero_afbeelding | img_url: '1600x' }} 1600w,{{ section.settings.hero_afbeelding | img_url: '1366x' }} 1366w,{{ section.settings.hero_afbeelding | img_url: '1024x' }} 1024w,{{ section.settings.hero_afbeelding | img_url: '768x' }} 768w,{{ section.settings.hero_afbeelding | img_url: '640x' }} 640w">{%- endif -%}
-      <div class="hero-background-overlay"></div>
-    </div>
-  
 
-<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","hero-section");</script>
-        
-{% schema %}{
-  "presets": [
-    {
-      "name": "V1 - Hero"
-    }
-  ],
-  "name": "V1 - Hero",
-  "tag": "div",
-  "class": "hero-section",
-  "settings": [
-    {
-      "type": "textarea",
-      "id": "tagline",
-      "label": "Tagline",
-      "default": "Luxueuze warmte, zonder schuldgevoel."
-    },
-    {
-      "type": "textarea",
-      "id": "paragraph",
-      "label": "Paragraph",
-      "default": "Geniet van ultieme comfort met ons elektrisch warmtekussen zonder je zorgen te hoeven maken over de uitstoot en energierekening. Ervaar de luxe warmte thuis zonder schuldgevoel."
-    },
-    {
-      "type": "textarea",
-      "id": "cta",
-      "label": "CTA",
-      "default": "Shop mijn heatup kussen"
-    },
-    {
-      "type": "textarea",
-      "id": "review_text",
-      "label": "Review text",
-      "default": "4,8 met 200+ reviews"
-    },
-    {
-      "type": "image_picker",
-      "id": "hero_afbeelding",
-      "label": "Hero Afbeelding"
-    },
-    {
-      "type": "url",
-      "id": "knop_link",
-      "label": "Knop link"
-    },
-    {
-      "type": "text",
-      "id": "knop_link_text",
-      "label": "Knop link Text",
-      "default": "{{ section.settings.cta | newline_to_br }}"
-    }
-  ]
-}{% endschema %}
+
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');
+  currentSection.setAttribute("class", "hero-section");
+</script>
+
+{% schema %}
+  {
+    "presets": [
+      {
+        "name": "V1 - Hero"
+      }
+    ],
+    "name": "V1 - Hero",
+    "tag": "div",
+    "class": "hero-section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title",
+        "default": "Verwarm jezelf, waar en wanneer je wilt"
+      },
+      {
+        "type": "textarea",
+        "id": "tagline",
+        "label": "Tagline",
+        "default": "Luxueuze warmte, zonder schuldgevoel."
+      },
+      {
+        "type": "textarea",
+        "id": "paragraph",
+        "label": "Paragraph",
+        "default": "Geniet van ultieme comfort met ons elektrisch warmtekussen zonder je zorgen te hoeven maken over de uitstoot en energierekening. Ervaar de luxe warmte thuis zonder schuldgevoel."
+      },
+      {
+        "type": "textarea",
+        "id": "cta",
+        "label": "CTA",
+        "default": "Shop mijn heatup kussen"
+      }, {
+        "type": "textarea",
+        "id": "review_text",
+        "label": "Review text",
+        "default": "4,8 met 200+ reviews"
+      }, {
+        "type": "image_picker",
+        "id": "hero_afbeelding",
+        "label": "Hero Afbeelding"
+      }, {
+        "type": "url",
+        "id": "knop_link",
+        "label": "Knop link"
+      }, {
+        "type": "text",
+        "id": "knop_link_text",
+        "label": "Knop link Text",
+        "default": "{{ section.settings.cta | newline_to_br }}"
+      }
+    ]
+  }
+{% endschema %}

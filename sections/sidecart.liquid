@@ -2,8 +2,7 @@
   <div
     id="sidecart_wrapper"
     class="overlay-banner"
-    data-ajax-cart-section
-    x-data="app()">
+    data-ajax-cart-section>
     {% assign freeShippingPrice = section.settings.freeshipping_threshold | plus: 0 %}
     {% assign cartPriceCents = cart.total_price | plus: 0 %}
     {% assign width = cartPriceCents | times: 100 | divided_by: freeShippingPrice %}
@@ -109,7 +108,10 @@
             {% endfor %}
             <div class="cart-line-seperator"></div>
           </div>
-          <div class="upsell-cart">
+          <div
+            class="upsell-cart"
+            x-data="sidecartApp(0)"
+            x-init="() => { $watch('product', value => { currentOptions = {}; }); }">
             <div class="upsell-cart-title">{{ section.settings.upsell_title | newline_to_br }}</div>
             <div class="upsell-cart-container">
 
@@ -126,6 +128,8 @@
                   </div>
                   <div class="upsell-cart-swatches">
                     <div class="upsell-cart-swatches-title">{{ 't2ac97090' | t }}</div>
+
+
                     {% if product.available == true %}
                       {% if product.variants.size > 1 %}
                         <div class="choice-container" x-data="{ showSizePopup: false }">
@@ -335,3 +339,64 @@
     ]
   }
 {% endschema %}
+
+
+<script>
+  const colorMap = {
+    {% for block in section.blocks %}
+      {% if block.type == 'color' %}
+        '{{ block.settings.name }}' : '{{ block.settings.code }}',{% endif %}{% endfor %}
+  };
+
+  const allProducts = [
+    {{ product | json }},{% for p in product.metafields.custom.linked_products.value %}{
+        {
+          p | json
+        }
+      },{% endfor %}
+  ];
+
+  function sidecartApp(index) {
+    return {
+      allProducts,
+      product: allProducts[index],
+      upsold: false,
+      currentOptions: {},
+
+      priceToCurr(price) {
+        const n = parseInt(price);
+        return `$${
+          (n / 100).toFixed(2)
+        }`;
+      },
+
+      get variant() {
+        for (const variant of this.product.variants) {
+          if (JSON.stringify(Object.values(this.currentOptions).sort()) === JSON.stringify(variant.options.sort())) {
+            return variant;
+          }
+        }
+        return null;
+      },
+
+      get productOptions() {
+        const x = this.product.variants.reduce((prev, curr) => {
+          for (let i = 0; i < curr.options.length; i++) {
+            if (!prev[this.product.options[i]]) 
+              prev[this.product.options[i]] = [];
+            
+
+            prev[this.product.options[i]].push(curr[`option${
+                i + 1
+              }`]);
+            prev[this.product.options[i]] = [...new Set(prev[this.product.options[i]])];
+          }
+
+          return prev;
+        }, {});
+
+        return x;
+      }
+    };
+  }
+</script>

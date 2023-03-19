@@ -902,46 +902,6 @@
       upsold: false,
       currentOptions: {},
 
-      init() {
-        const swiper = new Swiper('#swiper-                                                                                                                                                                       {{ section.id }}', {
-          direction: 'horizontal',
-          navigation: {
-            nextEl: '#swiper-next',
-            prevEl: '#swiper-prev'
-          },
-
-          pagination: {
-            el: '.swiper-pagination'
-          }
-        });
-
-        this.$watch('product', () => swiper.update());
-        this.$watch('variant', () => {
-          const variant = this.variant;
-          if (! variant || ! variant.featured_image) 
-            return;
-          
-
-
-
-          const imgSrc = variant.featured_image.src;
-          for (let i = 0; i < swiper.slides.length; i++) {
-            const slide = swiper.slides[i];
-            const img = slide.querySelector('img');
-            if (! img) 
-              continue;
-            
-
-
-
-            if (img.getAttribute("src") === imgSrc) {
-              swiper.slideTo(i);
-              break;
-            }
-          }
-        })
-      },
-
       priceToCurr(price) {
         const n = parseInt(price);
         return `$${
