@@ -131,7 +131,14 @@
         ]
       }, {
         "name": "USP",
-        "type": "usp"
+        "type": "usp",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text-usp",
+            "label": "Text USP"
+          }
+        ]
       }, {
         "name": "USP - Icon + Text",
         "type": "usp_icon_text",
@@ -588,7 +595,7 @@
             {%- for block in section.blocks -%}
               {%- if block.type == "usp" -%}
                 <div block.shopify_attributes>
-                  <div class="benefit-text-block">{{ 't26b847' | t }}</div>
+                  <div class="benefit-text-block">{{ block.settings.text-usp }}</div>
                 </div>
               {%- endif -%}
             {%- endfor -%}
