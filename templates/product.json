@@ -7,14 +7,13 @@
           "type": "media",
           "settings": {
             "label_text": "Verkoopt snel!",
-            "product_label_icon": "shopify:\/\/shop_images\/png-clipart-trusted-shops-gmbh-e-commerce-logo-organization-certification-trust-no-one-text-trademark.png",
-            "badge_1": "shopify:\/\/shop_images\/WebwinkelKeur.webp",
+            "product_label_icon": "shopify:\/\/shop_images\/Heatup-vlam-icon.png",
             "badge_2": "shopify:\/\/shop_images\/PlanetProof_Fine_RGB-1024x1024.png",
             "labels_aanuit": true,
             "product_label_aanuit": true,
             "trust_badges_aanuit": true,
-            "badge_1_aanuit": true,
-            "badge_2_aanuit": true
+            "badge_1_aanuit": false,
+            "badge_2_aanuit": false
           }
         },
         "f240907b-b701-4eca-b0a3-8e7973c02227": {
@@ -30,7 +29,7 @@
         "806757aa-4830-47c6-8e8d-f965a0082bc8": {
           "type": "reviews",
           "settings": {
-            "reviews": "100 +Reviews"
+            "reviews": "100+ Reviews"
           }
         },
         "806c7ef6-eeb6-4884-995f-549b9a4aeaed": {
@@ -46,7 +45,7 @@
         "63ef80d9-fb67-416f-ae4b-43558ce0c794": {
           "type": "checkout_buttons",
           "settings": {
-            "atc-text": "Bestel nu - €99,95"
+            "atc-text": "Bestel nu, €99,95"
           }
         },
         "7a496ca9-5239-4d92-a07e-e7a0e63975c5": {
@@ -147,33 +146,42 @@
         "328cff61-4969-4e76-8c01-2f693ce1edfc": {
           "type": "faq",
           "settings": {
-            "vraag": "Hoe snel wordt het kussen warm?",
-            "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "vraag": "Hoe werkt Heatup?",
+            "antwoord": "De Heatup warmtekussens verwarmen je met infraroodstraling. Dat maakt onze producten extra bijzonder!\n\nInfraroodstraling is een vorm van warmte die het lichaam van binnenuit verwarmt. De kachel thuis geeft je bijvoorbeeld stralingswarmte. De infrarood stralingen trekken dieper de huid in, tot wel 4 cm. Dit klinkt gek, maar hierdoor wordt het lichaam van binnenuit verwarmd en voelt het net als de zon buiten. \n\nNaast het verwarmen is bewezen dat Infraroodstraling ook positief bijdraagt aan je gezondheid. Zo helpt het tegen spierpijn, vermindert het de pijn in je rug en revitaliseert het je huid."
           }
         },
         "96a4b4c5-c9c4-451e-9c54-358eb182ceaf": {
           "type": "faq",
           "settings": {
             "vraag": "Hoe snel wordt het kussen warm?",
-            "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "antwoord": "Door de infraroodstraling wordt het warmtekussen binnen 2 minuten op temperatuur. Super snel dus! Met de drie verschillende warmtestanden, kies je de warmte die bij je past:\n\nStand 1 (rood) > 38\/42 C°\nStand 2 (blauw) > 34\/38 C°\nStand 3 (groen) > 30\/34 C°\n\nAfhankelijk van de gekozen warmtestand, verbruikt het Heatup warmtekussen ook meer stroom. De accu heeft meer dan voldoende capaciteit om een gehele avond te genieten van de duurzame warmte. De oplaadtijd van de batterij is gemiddeld 2,5 uur."
           }
         },
         "a6d206b5-2a87-4bf7-8533-36e6ac97797d": {
           "type": "faq",
           "settings": {
-            "vraag": "Hoe snel wordt het kussen warm?",
-            "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "vraag": "Zijn de warmtekussens veilig?",
+            "antwoord": "Ja, uiteraard zijn alle producten veilig om te gebruiken. Alle Heatup warmtekussens zijn uitgerust met een oververhittingsbeveiliging, die ervoor zorgt dat het kussen nooit te warm wordt."
+          }
+        },
+        "96a66cb7-1c48-4d6c-94fb-facbdf014720": {
+          "type": "faq",
+          "settings": {
+            "vraag": "Kun je Heatup buiten gebruiken?",
+            "antwoord": "De Heatup warmtekussens zijn perfect om in het voorjaar en in de zomer buiten te gebruiken. Een frisse voorjaarsdag of een koele zomeravond is geen excuus meer om niet in de tuin te zitten. Indien nodig kun je de hoes wassen, zoals beschreven staat op het waslabel."
           }
         }
       },
       "block_order": [
         "328cff61-4969-4e76-8c01-2f693ce1edfc",
         "96a4b4c5-c9c4-451e-9c54-358eb182ceaf",
-        "a6d206b5-2a87-4bf7-8533-36e6ac97797d"
+        "a6d206b5-2a87-4bf7-8533-36e6ac97797d",
+        "96a66cb7-1c48-4d6c-94fb-facbdf014720"
       ],
       "settings": {
-        "titel": "Snelle opwarming voor snelle verlichting",
-        "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+        "titel": "Verwarm jezelf, waar en wanneer je wilt",
+        "paragraph": "De Heatup warmtekussens zijn draadloos en verwarmen je met unieke met infraroodtechnologie en oplaadbare batterij. Kies één van de 3 warmtestanden en geniet urenlang van behaaglijke warmte.",
+        "afbeelding": "shopify:\/\/shop_images\/debbie-bank-heatup.jpg"
       }
     },
     "28d91dcc-bb18-4ea2-94f2-ca76be74bb6a": {
@@ -207,8 +215,9 @@
         "14d80c03-589f-496c-99df-70ead8f3e7ab"
       ],
       "settings": {
-        "titel": "Verwarming omlaag, Heatup omhoog.",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        "titel": "Zet jouw Heatup aan, schakel de verwarming uit",
+        "paragraph": "De kachel één graad lager, betekent op jaarbasis al 7% minder stookkosten. Dat is al snel €160,- voor een gemiddeld huishouden. Je hebt je Heatup dus zo terugverdiend.",
+        "afbeelding": "shopify:\/\/shop_images\/debbie-bank-heatup.jpg"
       }
     },
     "195379f5-b311-49f8-8f97-0ee841b2ce77": {
@@ -233,26 +242,26 @@
         "239380fb-6eaa-4188-b666-f899222fc4ca": {
           "type": "review",
           "settings": {
-            "titel": "Customizable Comfort Settings",
-            "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
-            "reviewer": "Marieke van der Meer",
+            "titel": "Ideaal voor buiten",
+            "paragraph": "Ontzettend tevreden over mijn Heatup. Hierdoor hoeft de radiator niet continu aan en dat is wel zo prettig. Ze geven een heerlijke warmte af en je kunt ze in het voorjaar en de zomer ook goed buiten gebruiken. De accuduur is op de middelste warmtestand erg goed!",
+            "reviewer": "Eline van Wijk",
             "text_naast_checkmark": "Geverifiëerd"
           }
         },
         "c90857b8-2f61-4d47-acc1-daeaca71bc1b": {
           "type": "review",
           "settings": {
-            "titel": "Customizable Comfort Settings",
-            "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
-            "reviewer": "Marieke van der Meer",
+            "titel": "Uitstekende klantenservice",
+            "paragraph": "Warmtekussen cadeau gegeven aan moeders, die er helemaal gelukkig mee is. Mooi en functioneel: top! Daarnaast was de eerste bestelling bij PostNL kwijtgeraakt en zonder af te wachten, heeft Heatup kosteloos een nieuwe gestuurd. Dat is nog eens topservice! Snel en adequaat gehandeld. Mooi bedrijf! Complimenten.",
+            "reviewer": "Thijs Jansen",
             "text_naast_checkmark": "Geverifiëerd"
           }
         },
         "f0115d90-efcf-44d6-a29a-50e9f61ce515": {
           "type": "review",
           "settings": {
-            "titel": "Customizable Comfort Settings",
-            "paragraph": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!",
+            "titel": "Een 'must have' voor de koukleum",
+            "paragraph": "Ik heb het altijd koud! Maar sinds ik dit warmtekussen heb, is dat verleden tijd. Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte 'must have' voor iedere koukleum!",
             "reviewer": "Marieke van der Meer",
             "text_naast_checkmark": "Geverifiëerd"
           }
@@ -310,7 +319,10 @@
         "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "usp_1": "Probeer gratis 30 dagen warmte",
         "usp_2": "Gratis verzending boven de €100",
-        "usp_3": "Wij planten 1m2 groen terug per kussen"
+        "usp_3": "Wij planten 1m2 groen terug per kussen",
+        "swiper-products": [
+
+        ]
       }
     },
     "03df28e7-6a50-44a2-89d4-0c28694b7185": {

@@ -123,10 +123,7 @@
         "type": "v1-homepage-featured-producten",
         "settings": {
           "titel": "Bestel het Heatup kussen",
-          "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "usp_1": "Probeer gratis 30 dagen warmte",
-          "usp_2": "Gratis verzending boven de €100",
-          "usp_3": "Wij planten 1m2 groen terug per kussen"
+          "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         }
       },
       "v1-home-faq": {

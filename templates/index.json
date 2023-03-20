@@ -141,11 +141,9 @@
     "1572f302-b4ac-4e70-be2d-405873e404fe": {
       "type": "v1-homepage-featured-producten",
       "settings": {
+        "product": "",
         "titel": "Bestel het Heatup warmtekussen",
-        "tagline": "En ontdek de warmte van Heatup 30 dagen gratis.",
-        "usp_1": "30 dagen gratis uitproberen",
-        "usp_2": "Gratis verzending boven de €100",
-        "usp_3": "Wij planten 1m2 groen terug per kussen"
+        "tagline": "En ontdek de warmte van Heatup 30 dagen gratis."
       }
     },
     "ed023ff0-c017-4744-8c17-17dc2436dcad": {
