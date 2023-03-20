@@ -19,17 +19,45 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "681abb18-7696-432a-afc6-3eb53a3904a0": {
+            "type": "announcment-mobile",
+            "settings": {
+              "mobile-announcment_text": "<p>Voor 17:00 besteld, <strong>morgen<\/strong> in huis<\/p>",
+              "mobile-announcment_svg": ""
+            }
+          },
+          "cac873c4-a3f7-4f16-a90a-c83bda022d5d": {
+            "type": "announcment-mobile",
+            "settings": {
+              "mobile-announcment_text": "<p>Tekst hier?<\/p>",
+              "mobile-announcment_svg": ""
+            }
+          }
+        },
+        "block_order": [
+          "681abb18-7696-432a-afc6-3eb53a3904a0",
+          "cac873c4-a3f7-4f16-a90a-c83bda022d5d"
+        ],
         "settings": {
           "urge": "Vandaag besteld, morgen groen geleverd.",
           "cta_title": "Shop het Heatup kussen",
-          "logo_link": "",
+          "logo_link": "shopify:\/\/products\/heatup-draadloos-warmtekussen",
           "cta_link": "",
           "search_aanuit": false,
           "cta_gebied_aanuit": true,
           "urge_aanuit": true,
           "cta_aanuit": true,
+          "desktop-search": true,
+          "mobile-search": true,
           "main-menu_desktop": "",
-          "main-menu_mobile": ""
+          "main-menu_mobile": "",
+          "announcment-desktop-1": "<p>Voor 17:00 besteld, <strong>morgen<\/strong> groen geleverd<\/p>",
+          "announcment-desktop-2": "<p>Probeer 30 dagen <strong>gratis<\/strong><\/p>",
+          "announcment-desktop-3": "<p>Per warmtekussen planten we <strong>1m² groen<\/strong> terug<\/p>",
+          "announcment-svg-1": "",
+          "announcment-svg-2": "",
+          "announcment-svg-3": ""
         }
       },
       "v1-hero": {
@@ -241,14 +269,14 @@
             "type": "footer-menu",
             "settings": {
               "main-menu_desktop": "main-menu",
-              "footer-block-title": "Title 1"
+              "footer-block-title": "Info & hulp"
             }
           },
           "0d1d6fd7-6bcc-4586-bb49-da3a3252e5d2": {
             "type": "footer-menu",
             "settings": {
               "main-menu_desktop": "footer",
-              "footer-block-title": "Title 2"
+              "footer-block-title": "Over Heatup"
             }
           },
           "e19e975f-155b-4234-859d-b68a2f090711": {
@@ -265,12 +293,14 @@
           },
           "fc464cd3-ddf4-41d9-a37e-2185f416915b": {
             "type": "twitter-icon",
+            "disabled": true,
             "settings": {
               "twitter-link": ""
             }
           },
           "66e1b797-28f5-4253-a725-186e2ed7973c": {
             "type": "linkedin-icon",
+            "disabled": true,
             "settings": {
               "linkedin-link": ""
             }

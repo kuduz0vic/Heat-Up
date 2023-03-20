@@ -6,7 +6,10 @@
         "c7f8bddd-dcff-447c-9c5a-1d89cf218263": {
           "type": "media",
           "settings": {
-            "label_text": "FAST SELLING",
+            "label_text": "Verkoopt snel!",
+            "product_label_icon": "shopify:\/\/shop_images\/png-clipart-trusted-shops-gmbh-e-commerce-logo-organization-certification-trust-no-one-text-trademark.png",
+            "badge_1": "shopify:\/\/shop_images\/WebwinkelKeur.webp",
+            "badge_2": "shopify:\/\/shop_images\/PlanetProof_Fine_RGB-1024x1024.png",
             "labels_aanuit": true,
             "product_label_aanuit": true,
             "trust_badges_aanuit": true,
@@ -27,7 +30,7 @@
         "806757aa-4830-47c6-8e8d-f965a0082bc8": {
           "type": "reviews",
           "settings": {
-            "reviews": "160 Reviews"
+            "reviews": "100 +Reviews"
           }
         },
         "806c7ef6-eeb6-4884-995f-549b9a4aeaed": {
@@ -43,7 +46,7 @@
         "63ef80d9-fb67-416f-ae4b-43558ce0c794": {
           "type": "checkout_buttons",
           "settings": {
-            "atc-text": "Add To Cart"
+            "atc-text": "Bestel nu - €99,95"
           }
         },
         "7a496ca9-5239-4d92-a07e-e7a0e63975c5": {
@@ -102,13 +105,15 @@
         "ade2a0c7-fb2e-44c2-93fd-b6c6ef26a99c": {
           "type": "why_reason",
           "settings": {
-            "why_paragraph": "Probeer gratis 30 dagen warmte"
+            "why_paragraph": "Gratis verzending boven de €100,-",
+            "afbeelding": "shopify:\/\/shop_images\/transport.png"
           }
         },
         "cbfabf79-3f35-44f4-aa43-f03b36d65abe": {
           "type": "why_reason",
           "settings": {
-            "why_paragraph": "Probeer gratis 30 dagen warmte"
+            "why_paragraph": "Wij planten 1 m² groen terug per kussen",
+            "afbeelding": "shopify:\/\/shop_images\/boom-icon.png"
           }
         }
       },
@@ -211,15 +216,15 @@
       "settings": {
         "kolom_1_titel": "Heatup",
         "kolom_2_titel": "Radiator",
-        "kolom_3_titel": "Concurrenten",
+        "kolom_3_titel": "Bekende concurrent",
         "reden_1": "100% Natural",
         "reden_2": "Warmt snel op",
         "reden_3": "Veilig in gebruik",
-        "reden_4": "100% Natural",
+        "reden_4": "3 warmtestanden",
         "reden_5": "Prijs",
         "kolom_1_prijs": "€99,95",
-        "kolom_2_prijs": "€900",
-        "kolom_3_prijs": "€1900"
+        "kolom_2_prijs": "€900,-",
+        "kolom_3_prijs": "€140,-"
       }
     },
     "21179ce5-6ba1-4604-926f-7fde0fbbc69b": {
@@ -312,7 +317,7 @@
       "type": "v1-missie",
       "settings": {
         "titel": "Veilig en ecologisch verantwoord",
-        "paragraph": "Dit kussen is Oeko-tex® gecertificeerd, wat betekent dat je dankzij de niet-toxische materialen heerlijk rustig kunt genieten. Dus zonder stoffen die schadelijk zijn voor je gezondheid, je huid of het milieu."
+        "paragraph": "Het Heatup warmtekussen is Oeko-tex® gecertificeerd, wat betekent dat je kan genieten van de warmte zonder stoffen die schadelijk zijn voor je gezondheid, je huid of het milieu."
       }
     },
     "f9dae1e6-b8b9-4a47-bc74-e30d65d92e86": {
