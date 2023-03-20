@@ -139,7 +139,7 @@
           {% if section.settings.announcment-svg-1 != blank %}
             {{ section.settings.announcment-svg-1 }}
           {% else %}
-            <img src="{{ section.settings.announcment-link-1 }}">
+            <img src="{{ section.settings.announcment-link-1 }}" class="announcement-img">
           {% endif %}
         </div>
         <div>{{ section.settings.announcment-desktop-1 }}</div>
@@ -151,7 +151,7 @@
             {% if section.settings.announcment-svg-2 != blank %}
               {{ section.settings.announcment-svg-2 }}
             {% else %}
-              <img src="{{ section.settings.announcment-link-2 }}">
+              <img src="{{ section.settings.announcment-link-2 }}" class="announcement-img">
             {% endif %}
           </div>
           <div>{{ section.settings.announcment-desktop-2 }}</div>
@@ -163,7 +163,7 @@
           {% if section.settings.announcment-svg-3 != blank %}
             {{ section.settings.announcment-svg-3 }}
           {% else %}
-            <img src="{{ section.settings.announcment-link-3 }}">
+            <img src="{{ section.settings.announcment-link-3 }}" class="announcement-img">
           {% endif %}
         </div>
         <div>{{ section.settings.announcment-desktop-3 }}</div>
@@ -192,7 +192,7 @@
                   {% if block.settings.mobile-announcment_svg != blank %}
                     {{ block.settings.mobile-announcment_svg }}
                   {% else %}
-                    <img src="{{ block.settings.announcment-link }}">
+                    <img src="{{ block.settings.announcment-link }}" class="announcement-img">
                   {% endif %}
                 </div>
                 <div>{{ block.settings.mobile-announcment_text }}</div>
