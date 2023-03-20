@@ -14,10 +14,18 @@
             "vraag": "Hoe retourneer ik mijn Heatup?",
             "antwoord": "Warmte is persoonlijk. Daarom vinden we het belangrijk dat je jouw Heatup warmtekussen thuis kunt uitproberen. Dan kun je zelf de warmte ervaren in je eigen omgeving.\n\nBevalt je Heatup toch niet? Dan kun je deze binnen 30 dagen na ontvangst retourneren. De directe kosten van het terugzenden van de goederen komen voor je eigen rekening. We betalen je het aankoopbedrag terug binnen 14 dagen, wanneer we je bestelling in goede orde retour hebben ontvangen."
           }
+        },
+        "7029f985-1686-47e5-adc2-9059e430add2": {
+          "type": "faq",
+          "settings": {
+            "vraag": "Hoe lang heb ik garantie op mijn Heatup?",
+            "antwoord": "Jouw Heatup warmtekussen heeft 1 jaar garantie, vanaf het moment van aankoop. Hieronder valt de technologie, het binnenkussen en de oplader. Let op: de batterij en de stof van een Heatup warmtekussen valt hier niet onder. Hierop geldt een garantieperiode van 6 maanden."
+          }
         }
       },
       "block_order": [
-        "39fdef59-d06a-4f87-9571-c3bd78b57f14"
+        "39fdef59-d06a-4f87-9571-c3bd78b57f14",
+        "7029f985-1686-47e5-adc2-9059e430add2"
       ],
       "settings": {
         "titel": "Hulp nodig? Deze vragen helpen je snel verder",
