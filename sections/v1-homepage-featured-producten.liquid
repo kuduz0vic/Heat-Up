@@ -105,7 +105,16 @@
           {% when 'usp' %}
           <div class="usp-wrapper">
             <div class="usp-icon">
-              <div class="ups-icon-img">{{ block.settings.usp_afbeelding }}</div>
+              <div class="ups-icon-img">
+                {% if block.settings.usp_afbeelding != blank %}
+                  {{ block.settings.usp_afbeelding }}
+                {% else %}
+                  <img
+                    class="ups-icon-img"
+                    src="{{block.settings.usp-image}}"
+                    alt="">
+                </div>
+              {% endif %}
             </div>
             <div>{{ block.settings.usp }}</div>
           </div>
@@ -207,7 +216,11 @@
           }, {
             "type": "html",
             "id": "usp_afbeelding",
-            "label": "USP Afbeelding"
+            "label": "USP SVG"
+          }, {
+            "type": "url",
+            "id": "usp-image",
+            "label": "USP Image"
           }
         ]
       }
