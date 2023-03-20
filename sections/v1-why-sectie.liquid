@@ -82,7 +82,19 @@
         <a data-w-tab="Tab 1" class="tab-trigger w-inline-block w-tab-link">
           <div class="tab-inner-contents">
             <div class="tab-icon">
-              <div class="tab-icon-img _1">{{ section.settings.tab-svg-1 }}</div>
+              <div
+                {% if section.settings.tab-svg-1 != blank %}
+                class="tab-icon-img _1"
+                {% endif %}>
+                {% if section.settings.tab-svg-1 != blank %}
+                  {{ section.settings.tab-svg-1 }}
+                {% else %}
+                  <img
+                    src="{{ section.settings.tab-image-1 }}"
+                    alt=""
+                    class="tab-icon-img _1">
+                {% endif %}
+              </div>
             </div>
             <div class="text-content-tab">
               <div class="tab-title">{{ section.settings.tab-title-1 }}</div>
@@ -93,7 +105,19 @@
         <a data-w-tab="Tab 2" class="tab-trigger w-inline-block w-tab-link">
           <div class="tab-inner-contents">
             <div class="tab-icon">
-              <div class="tab-icon-img _2">{{ section.settings.tab-svg-2 }}</div>
+              <div
+                {% if section.settings.tab-svg-2 != blank %}
+                class="tab-icon-img _2"
+                {% endif %}>
+                {% if section.settings.tab-svg-2 != blank %}
+                  {{ section.settings.tab-svg-2 }}
+                {% else %}
+                  <img
+                    src="{{ section.settings.tab-image-2 }}"
+                    alt=""
+                    class="tab-icon-img _2">
+                {% endif %}
+              </div>
             </div>
             <div class="text-content-tab">
               <div class="tab-title">{{ section.settings.tab-title-2 }}</div>
@@ -104,7 +128,19 @@
         <a data-w-tab="Tab 3" class="tab-trigger w-inline-block w-tab-link w--current">
           <div class="tab-inner-contents">
             <div class="tab-icon">
-              <div class="tab-icon-img _1">{{ section.settings.tab-svg-3 }}</div>
+              <div
+                {% if section.settings.tab-svg-3 != blank %}
+                class="tab-icon-img _3"
+                {% endif %}>
+                {% if section.settings.tab-svg-3 != blank %}
+                  {{ section.settings.tab-svg-3 }}
+                {% else %}
+                  <img
+                    src="{{ section.settings.tab-image-3 }}"
+                    alt=""
+                    class="tab-icon-img _3">
+                {% endif %}
+              </div>
             </div>
             <div class="text-content-tab">
               <div class="tab-title">{{ section.settings.tab-title-3 }}</div>
@@ -165,6 +201,10 @@
         "id": "tab-svg-1",
         "label": "Tab Svg-1"
       }, {
+        "type": "url",
+        "id": "tab-image-1",
+        "label": "Tab Image 1"
+      }, {
         "type": "text",
         "id": "tab-title-1",
         "label": "Tab Title 1"
@@ -177,6 +217,10 @@
         "id": "tab-svg-2",
         "label": "Tab Svg-2"
       }, {
+        "type": "url",
+        "id": "tab-image-2",
+        "label": "Tab Image 2"
+      }, {
         "type": "text",
         "id": "tab-title-2",
         "label": "Tab Title 2"
@@ -188,6 +232,10 @@
         "type": "html",
         "id": "tab-svg-3",
         "label": "Tab Svg-3"
+      }, {
+        "type": "url",
+        "id": "tab-image-3",
+        "label": "Tab Image 3"
       }, {
         "type": "text",
         "id": "tab-title-3",
