@@ -1,64 +1,155 @@
-
-    <div class="page-padding">
-      <div class="container-contact">
-        <div class="text-align-center">
-          <div class="max-width-large align-center">
-            <h2 class="contact-h1">{{ section.settings.titel | newline_to_br }}</h2>
-            <p class="text-size-medium-2">{{ section.settings.paragraph | newline_to_br }}</p>
-          </div>
-        </div>
-        <div class="contact2_component w-form">
-          {%- form "contact",  class: "contact2_form" -%}
-            <div class="form-field-2col">
-              <div class="form-field-wrapper"><label for="contact[contact_first_name_]" class="field-label">{{ 't69c1a21b' | t }}</label><input type="text" class="form-input-2 w-input" maxlength="256" name="contact[contact_first_name_]" data-name="Contact 2 First Name 3" placeholder="" id="Contact-2-First-Name-3" required=""></div>
-              <div class="form-field-wrapper"><label for="contact[contact_last_name_]" class="field-label">{{ 'tn1407da4b' | t }}</label><input type="text" class="form-input-2 w-input" maxlength="256" name="contact[contact_last_name_]" data-name="Contact 2 Last Name 2" placeholder="" id="Contact-2-Last-Name-2" required=""></div>
-            </div>
-            <div class="form-field-2col is-mobile-1col">
-              <div class="form-field-wrapper"><label for="Contact-2-Email-3" class="field-label">{{ 't3ff5b7c' | t }}</label><input type="email" class="form-input-2 w-input" maxlength="256" name="contact[email]" data-name="Contact 2 Email 2" placeholder="" id="Contact-2-Email-2" required=""></div>
-              <div class="form-field-wrapper"><label for="contact[contact_phone_]" class="field-label">{{ 'tn1f5cfda5' | t }}</label><input type="tel" class="form-input-2 w-input" maxlength="256" name="contact[contact_phone_]" data-name="Contact 2 Phone 2" placeholder="" id="Contact-2-Phone-2" required=""></div>
-            </div>
-            <div class="form-field-wrapper"><label for="contact[contact_select_]" class="field-label">{{ 't68082bc7' | t }}</label><select id="Contact-2-Select-2" name="contact[contact_select_]" data-name="Contact 2 Select 2" required="" class="form-input-2 is-select-input w-select">
-                <option value="">{{ 't57f3b1cc' | t }}</option>
-                <option value="First">{{ 'tn491b32af' | t }}</option>
-                <option value="Second">{{ 't3c4172cd' | t }}</option>
-                <option value="Third">{{ 'tn1b351146' | t }}</option>
-              </select></div>
-            <div class="form-field-wrapper"><label for="contact[contact_message_]" class="field-label">{{ 'tn63dc6819' | t }}</label><textarea placeholder="Type your message..." maxlength="5000" id="Contact-2-Message-2" name="contact[contact_message_]" data-name="Contact 2 Message 2" required="" class="form-input-2 is-text-area w-input"></textarea></div><input type="submit" value="Send message" data-wait="Please wait..." id="w-node-eae7831a-99c6-bb58-221e-7d9396d7c263-96d7c23e" class="button w-button">
-          {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
-          <div class="success-message-2 w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
-            <div class="success-text">{{ 't5a0ea5a1' | t }}</div>
-          </div>
-          {%- unless form_success -%}<div class="error-message w-form-fail  {% if form.errors %}form-has-errors{% endif %}">
-            <div class="error-text">{%- render "form-errors", form_errors: form_errors -%}</div>
-          </div>{%- endunless -%}
-        </div>
+<div class="page-padding">
+  <div class="container-contact">
+    <div class="text-align-center">
+      <div class="max-width-large align-center">
+        <h2 class="contact-h1">{{ section.settings.titel | newline_to_br }}</h2>
+        <p class="text-size-medium-2">{{ section.settings.paragraph | newline_to_br }}</p>
       </div>
     </div>
-  
+    <div class="contact2_component w-form">
+      {%- form "contact", class: "contact2_form" -%}
+        <div class="form-field-2col">
+          <div class="form-field-wrapper">
+            <label for="contact[contact_first_name_]" class="field-label">{{ section.settings.label-name }}</label><input
+              type="text"
+              class="form-input-2 w-input"
+              maxlength="256"
+              name="contact[contact_first_name_]"
+              data-name="Contact 2 First Name 3"
+              placeholder=""
+              id="Contact-2-First-Name-3"
+              required=""></div>
+          <div class="form-field-wrapper">
+            <label for="contact[contact_last_name_]" class="field-label">{{ section.settings.label-surname }}</label><input
+              type="text"
+              class="form-input-2 w-input"
+              maxlength="256"
+              name="contact[contact_last_name_]"
+              data-name="Contact 2 Last Name 2"
+              placeholder=""
+              id="Contact-2-Last-Name-2"
+              required=""></div>
+        </div>
+        <div class="form-field-2col is-mobile-1col">
+          <div class="form-field-wrapper">
+            <label for="Contact-2-Email-3" class="field-label">{{ section.settings.label-email }}</label><input
+              type="email"
+              class="form-input-2 w-input"
+              maxlength="256"
+              name="contact[email]"
+              data-name="Contact 2 Email 2"
+              placeholder=""
+              id="Contact-2-Email-2"
+              required=""></div>
+          <div class="form-field-wrapper">
+            <label for="contact[contact_phone_]" class="field-label">{{ section.settings.label-phone }}</label><input
+              type="tel"
+              class="form-input-2 w-input"
+              maxlength="256"
+              name="contact[contact_phone_]"
+              data-name="Contact 2 Phone 2"
+              placeholder=""
+              id="Contact-2-Phone-2"
+              required=""></div>
+        </div>
+        <div class="form-field-wrapper">
+          <label for="contact[contact_select_]" class="field-label">{{ section.settings.label-topic }}</label>
+          <select
+            id="Contact-2-Select-2"
+            name="contact[contact_select_]"
+            data-name="Contact 2 Select 2"
+            required=""
+            class="form-input-2 is-select-input w-select">
+            <option value="">{{ 't57f3b1cc' | t }}</option>
+            <option value="First">{{ 'tn491b32af' | t }}</option>
+            <option value="Second">{{ 't3c4172cd' | t }}</option>
+            <option value="Third">{{ 'tn1b351146' | t }}</option>
+          </select>
+        </div>
+        <div class="form-field-wrapper">
+          <label for="contact[contact_message_]" class="field-label">{{ section.settings.label-message }}</label>
+          <textarea
+            placeholder="Type your message..."
+            maxlength="5000"
+            id="Contact-2-Message-2"
+            name="contact[contact_message_]"
+            data-name="Contact 2 Message 2"
+            required=""
+            class="form-input-2 is-text-area w-input"></textarea>
+        </div><input
+          type="submit"
+          value="Send message"
+          data-wait="Please wait..."
+          id="w-node-eae7831a-99c6-bb58-221e-7d9396d7c263-96d7c23e"
+          class="button w-button">
+        {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
+      <div class="success-message-2 w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
+        <div class="success-text">{{ 't5a0ea5a1' | t }}</div>
+      </div>
+      {%- unless form_success -%}
+        <div class="error-message w-form-fail  {% if form.errors %}form-has-errors{% endif %}">
+          <div class="error-text">{%- render "form-errors", form_errors: form_errors -%}</div>
+        </div>
+      {%- endunless -%}
+    </div>
+  </div>
+</div>
 
-<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","contact-section");</script>
-        
-{% schema %}{
-  "presets": [
-    {
-      "name": "V1 - Contact Form"
-    }
-  ],
-  "name": "V1 - Contact Form",
-  "tag": "div",
-  "class": "contact-section",
-  "settings": [
-    {
-      "type": "textarea",
-      "id": "titel",
-      "label": "Titel",
-      "default": "Contact us"
-    },
-    {
-      "type": "textarea",
-      "id": "paragraph",
-      "label": "Paragraph",
-      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    }
-  ]
-}{% endschema %}
+
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');
+  currentSection.setAttribute("class", "contact-section");
+</script>
+
+{% schema %}
+  {
+    "presets": [
+      {
+        "name": "V1 - Contact Form"
+      }
+    ],
+    "name": "V1 - Contact Form",
+    "tag": "div",
+    "class": "contact-section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "titel",
+        "label": "Titel",
+        "default": "Contact us"
+      },
+      {
+        "type": "textarea",
+        "id": "paragraph",
+        "label": "Paragraph",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "type": "text",
+        "id": "label-name",
+        "label": "Label Name"
+      },
+      {
+        "type": "text",
+        "id": "label-surname",
+        "label": "Label Surname"
+      }, {
+        "type": "text",
+        "id": "label-email",
+        "label": "Label Email"
+      }, {
+        "type": "text",
+        "id": "label-phone",
+        "label": "Label Phone"
+      }, {
+        "type": "text",
+        "id": "label-topic",
+        "label": "Label Topic"
+      }, {
+        "type": "text",
+        "id": "label-message",
+        "label": "Label Message"
+      }
+    ]
+  }
+{% endschema %}
