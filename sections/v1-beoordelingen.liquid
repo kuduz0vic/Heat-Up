@@ -1,17 +1,18 @@
-
-    <div class="page-padding">
-      <div class="container-v1 vertical">
-        <div class="left-aligned-header">
-          <h1 class="h1-section">{{ section.settings.titel | newline_to_br }}</h1>
-          <p>{{ section.settings.paragraph | newline_to_br }}</p>
-        </div>
-        <div class="testimonial-swiper-component">
-          <div id="review-swiper" class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
-            <div class="swiper-wrapper">
-              {%- for block in section.blocks -%}{%- if block.type == "review" -%}<div class="swiper-slide" block.shopify_attributes>
+<div class="page-padding">
+  <div class="container-v1 vertical">
+    <div class="left-aligned-header">
+      <h1 class="h1-section">{{ section.settings.titel | newline_to_br }}</h1>
+      <p>{{ section.settings.paragraph | newline_to_br }}</p>
+    </div>
+    <div class="testimonial-swiper-component">
+      <div id="review-swiper" class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            {%- if block.type == "review" -%}
+              <div class="swiper-slide" block.shopify_attributes>
                 <div class="review-slide">
                   <div class="swiper-inner-container">
-                    <div class="testimonial-stars">{%- if block.settings.review_stars == nil -%}<img src="{{ 'stars.svg' | asset_url }}" loading="lazy" alt="">{%- else -%}<img src="{{ block.settings.review_stars.src | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.review_stars.alt | escape }}" srcset="{{ block.settings.review_stars | img_url: '1920x' }} 1920w,{{ block.settings.review_stars | img_url: '1600x' }} 1600w,{{ block.settings.review_stars | img_url: '1366x' }} 1366w,{{ block.settings.review_stars | img_url: '1024x' }} 1024w,{{ block.settings.review_stars | img_url: '768x' }} 768w,{{ block.settings.review_stars | img_url: '640x' }} 640w">{%- endif -%}</div>
+                    <div class="testimonial-stars">{{ block.settings.review_stars }}</div>
                     <div class="testimonial-title">{{ block.settings.titel | newline_to_br }}</div>
                     <div class="testimonial-paragraph">{{ block.settings.paragraph | newline_to_br }}</div>
                   </div>
@@ -19,85 +20,111 @@
                     <div class="testimonial-identity">
                       <div class="testimonial-person">{{ block.settings.reviewer | newline_to_br }}</div>
                       <div class="testimonial-verified">
-                        <div class="testimonial-check"><img src="{{ 'check.svg' | asset_url }}" loading="lazy" alt=""></div>
+                        <div class="testimonial-check"><img
+                            src="{{ 'check.svg' | asset_url }}"
+                            loading="lazy"
+                            alt=""></div>
                         <div>{{ block.settings.text_naast_checkmark | newline_to_br }}</div>
                       </div>
                     </div>
-                    <div class="testimonial-image"><img src="{{ 'instant-warmth-experience.png' | asset_url }}" loading="lazy" sizes="48px" srcset="{{ 'instant-warmth-experience-p-500.png' | asset_url }} 500w, {{ 'instant-warmth-experience.png' | asset_url }} 594w" alt="" class="testimonial-img"></div>
+                    <div class="testimonial-image"><img
+                        src="{{ block.settings.testimonial-image | img_url: 'master' }}"
+                        loading="lazy"
+                        sizes="48px"
+                        srcset="{{ block.settings.testimonial-image | img_url: 'master' }} 500w, {{ block.settings.testimonial-image | img_url: 'master' }} 594w"
+                        alt=""
+                        class="testimonial-img"></div>
                   </div>
                 </div>
-              </div>{%- endif -%}{%- endfor -%}
-            </div>
-            <div class="slider-arrow-container-relative">
-              <div id="review-prev-arrow" class="slider-arrow"><img src="{{ 'arrow-right.svg' | asset_url }}" loading="lazy" alt="" class="arrow-swipe"></div>
-              <div id="review-next-arrow" class="slider-arrow"><img src="{{ 'right-arrow.svg' | asset_url }}" loading="lazy" alt="" class="arrow-swipe"></div>
-            </div>
-          </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <div class="slider-arrow-container-relative">
+          <div id="review-prev-arrow" class="slider-arrow"><img
+              src="{{ 'arrow-right.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="arrow-swipe"></div>
+          <div id="review-next-arrow" class="slider-arrow"><img
+              src="{{ 'right-arrow.svg' | asset_url }}"
+              loading="lazy"
+              alt=""
+              class="arrow-swipe"></div>
         </div>
       </div>
     </div>
-  
+  </div>
+</div>
 
-<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","testimonials");</script>
-        
-{% schema %}{
-  "presets": [
-    {
-      "name": "V1 - Beoordelingen"
-    }
-  ],
-  "name": "V1 - Beoordelingen",
-  "tag": "div",
-  "class": "testimonials",
-  "settings": [
-    {
-      "type": "textarea",
-      "id": "titel",
-      "label": "Titel",
-      "default": "Klanten houden van Heatup."
-    },
-    {
-      "type": "textarea",
-      "id": "paragraph",
-      "label": "Paragraph",
-      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    }
-  ],
-  "blocks": [
-    {
-      "name": "Review",
-      "type": "review",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "titel",
-          "label": "Titel",
-          "default": "Customizable Comfort Settings"
-        },
-        {
-          "type": "textarea",
-          "id": "paragraph",
-          "label": "Paragraph",
-          "default": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!"
-        },
-        {
-          "type": "textarea",
-          "id": "reviewer",
-          "label": "Reviewer",
-          "default": "Marieke van der Meer"
-        },
-        {
-          "type": "textarea",
-          "id": "text_naast_checkmark",
-          "label": "Text naast checkmark",
-          "default": "Geverifiëerd"
-        },
-        {
-          "type": "image_picker",
-          "id": "review_stars",
-          "label": "Review Stars"
-        }
-      ]
-    }
-  ]
-}{% endschema %}
+
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');
+  currentSection.setAttribute("class", "testimonials");
+</script>
+
+{% schema %}
+  {
+    "presets": [
+      {
+        "name": "V1 - Beoordelingen"
+      }
+    ],
+    "name": "V1 - Beoordelingen",
+    "tag": "div",
+    "class": "testimonials",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "titel",
+        "label": "Titel",
+        "default": "Klanten houden van Heatup."
+      }, {
+        "type": "textarea",
+        "id": "paragraph",
+        "label": "Paragraph",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Review",
+        "type": "review",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "titel",
+            "label": "Titel",
+            "default": "Customizable Comfort Settings"
+          },
+          {
+            "type": "textarea",
+            "id": "paragraph",
+            "label": "Paragraph",
+            "default": "Als huismoeder heb ik altijd koude voeten en handen, maar sinds ik dit warmtekussen heb is dat verleden tijd! Het is zo snel opgewarmd en houdt de warmte zo goed vast. Het is ook zo fijn dat het veilig is dankzij de beveiliging tegen oververhitting. Een echte aanrader voor elke huismoeder die op zoek is naar een veilige en efficiënte manier om warm te blijven!"
+          },
+          {
+            "type": "textarea",
+            "id": "reviewer",
+            "label": "Reviewer",
+            "default": "Marieke van der Meer"
+          },
+          {
+            "type": "textarea",
+            "id": "text_naast_checkmark",
+            "label": "Text naast checkmark",
+            "default": "Geverifiëerd"
+          }, {
+            "type": "image_picker",
+            "label": "Testimonial Image",
+            "id": "testimonial-image"
+          }, {
+            "type": "html",
+            "id": "review_stars",
+            "label": "Review Stars"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
