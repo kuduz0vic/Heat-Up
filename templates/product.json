@@ -112,7 +112,8 @@
         "cbfabf79-3f35-44f4-aa43-f03b36d65abe": {
           "type": "why_reason",
           "settings": {
-            "why_paragraph": "Probeer gratis 30 dagen warmte"
+            "why_paragraph": "Wij planten 1 m² groen terug per kussen",
+            "afbeelding": "shopify:\/\/shop_images\/boom-icon.png"
           }
         }
       },
