@@ -23,13 +23,21 @@
           "681abb18-7696-432a-afc6-3eb53a3904a0": {
             "type": "announcment-mobile",
             "settings": {
-              "mobile-announcment_text": "",
+              "mobile-announcment_text": "<p>Voor 17:00 besteld, <strong>morgen<\/strong> in huis<\/p>",
+              "mobile-announcment_svg": ""
+            }
+          },
+          "cac873c4-a3f7-4f16-a90a-c83bda022d5d": {
+            "type": "announcment-mobile",
+            "settings": {
+              "mobile-announcment_text": "<p>Tekst hier?<\/p>",
               "mobile-announcment_svg": ""
             }
           }
         },
         "block_order": [
-          "681abb18-7696-432a-afc6-3eb53a3904a0"
+          "681abb18-7696-432a-afc6-3eb53a3904a0",
+          "cac873c4-a3f7-4f16-a90a-c83bda022d5d"
         ],
         "settings": {
           "urge": "Vandaag besteld, morgen groen geleverd.",
