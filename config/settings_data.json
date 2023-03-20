@@ -24,21 +24,24 @@
             "type": "announcment-mobile",
             "settings": {
               "mobile-announcment_text": "<p>Voor 17:00 besteld, <strong>morgen<\/strong> in huis<\/p>",
-              "mobile-announcment_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/transport.svg?v=1679337344"
+              "mobile-announcment_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/transport.svg?v=1679337344",
+              "announcment-link": ""
             }
           },
           "cac873c4-a3f7-4f16-a90a-c83bda022d5d": {
             "type": "announcment-mobile",
             "settings": {
               "mobile-announcment_text": "<p>Probeer 30 dagen <strong>gratis<\/strong><\/p>",
-              "mobile-announcment_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/Heatup-vlam-icon.png?v=1678472887"
+              "mobile-announcment_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/Heatup-vlam-icon.png?v=1678472887",
+              "announcment-link": ""
             }
           },
           "6d9c1c7f-6dc2-4d2c-8537-5a7a3d0a2c8d": {
             "type": "announcment-mobile",
             "settings": {
               "mobile-announcment_text": "<p>Per warmtekussen planten we <strong>1m² groen<\/strong> terug<\/p>",
-              "mobile-announcment_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/boom-icon.png?v=1678623272"
+              "mobile-announcment_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/boom-icon.png?v=1678623272",
+              "announcment-link": ""
             }
           }
         },
@@ -63,9 +66,12 @@
           "announcment-desktop-1": "<p>Voor 17:00 besteld, <strong>morgen<\/strong> groen geleverd<\/p>",
           "announcment-desktop-2": "<p>Probeer 30 dagen <strong>gratis<\/strong><\/p>",
           "announcment-desktop-3": "<p>Per warmtekussen planten we <strong>1m² groen<\/strong> terug<\/p>",
-          "announcment-svg-1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/transport.svg?v=1679337344",
-          "announcment-svg-2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/Heatup-vlam-icon.png?v=1678472887",
-          "announcment-svg-3": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/boom-icon.png?v=1678623272"
+          "announcment-svg-1": "",
+          "announcment-link-1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/transport.svg?v=1679337344",
+          "announcment-svg-2": "",
+          "announcment-link-2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/Heatup-vlam-icon.png?v=1678472887",
+          "announcment-svg-3": "",
+          "announcment-link-3": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/boom-icon.png?v=1678623272"
         }
       },
       "v1-hero": {
@@ -293,7 +299,7 @@
           "632295e9-45f1-41d8-8975-31e06f53a806": {
             "type": "instagram-icon",
             "settings": {
-              "instagram-link": ""
+              "instagram-link": "https:\/\/www.instagram.com\/myheatup\/"
             }
           },
           "fc464cd3-ddf4-41d9-a37e-2185f416915b": {
@@ -313,7 +319,7 @@
           "e815384a-f4c5-4020-8c04-69e58fe198b9": {
             "type": "youtube-icon",
             "settings": {
-              "youtube-link": ""
+              "youtube-link": "https:\/\/www.youtube.com\/@heatupwarmtekussens"
             }
           }
         },
