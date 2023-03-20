@@ -9,13 +9,21 @@
       "type": "v1-tekst-en-afbeelding",
       "settings": {
         "titel": "Snelle opwarming voor snelle verlichting",
-        "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten."
+        "paragraph": "Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten. Ervaar de transformerende kracht van ons warmtekussen. Met de snel opwarmende technologie, voel je binnen enkele minuten verlichting van rugpijn, nekpijn of spierpijn na een lange werkdag of na het sporten.",
+        "afbeelding": "shopify:\/\/shop_images\/debbie-tafel-thee.jpg"
+      }
+    },
+    "9efc42b7-cda9-44e6-9497-d9d29bb467e2": {
+      "type": "v1-faq",
+      "settings": {
+        "titel": "Questions? We have got answers.",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
       }
     },
     "contact-form": {
       "type": "v1-contact-form",
       "settings": {
-        "titel": "Contact us",
+        "titel": "Heatup staat voor je klaar!",
         "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       }
     },
@@ -57,6 +65,7 @@
   "order": [
     "template",
     "b751c807-48c4-411e-8330-65f0aaff8298",
+    "9efc42b7-cda9-44e6-9497-d9d29bb467e2",
     "contact-form",
     "971352fc-d947-44da-b59b-cca8a0696fed"
   ]

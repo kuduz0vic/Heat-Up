@@ -31,7 +31,7 @@
           "cac873c4-a3f7-4f16-a90a-c83bda022d5d": {
             "type": "announcment-mobile",
             "settings": {
-              "mobile-announcment_text": "<p>Probeer 30 dagen <strong>gratis<\/strong><\/p>",
+              "mobile-announcment_text": "<p>Probeer 30 dagen <strong>gratis <\/strong>warmte<\/p>",
               "mobile-announcment_svg": "",
               "announcment-link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/Heatup-vlam-icon.png?v=1678472887"
             }
@@ -64,7 +64,7 @@
           "main-menu_desktop": "main-menu",
           "main-menu_mobile": "main-menu",
           "announcment-desktop-1": "<p>Voor 17:00 besteld, <strong>morgen<\/strong> groen geleverd<\/p>",
-          "announcment-desktop-2": "<p>Probeer 30 dagen <strong>gratis<\/strong><\/p>",
+          "announcment-desktop-2": "<p>Probeer 30 dagen <strong>gratis <\/strong>warmte<\/p>",
           "announcment-desktop-3": "<p>Per warmtekussen planten we <strong>1m² groen<\/strong> terug<\/p>",
           "announcment-svg-1": "",
           "announcment-link-1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/0521\/9857\/files\/transport.svg?v=1679337344",
