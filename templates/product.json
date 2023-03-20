@@ -164,12 +164,20 @@
             "vraag": "Zijn de warmtekussens veilig?",
             "antwoord": "Ja, uiteraard zijn alle producten veilig om te gebruiken. Alle Heatup warmtekussens zijn uitgerust met een oververhittingsbeveiliging, die ervoor zorgt dat het kussen nooit te warm wordt."
           }
+        },
+        "96a66cb7-1c48-4d6c-94fb-facbdf014720": {
+          "type": "faq",
+          "settings": {
+            "vraag": "Kun je Heatup buiten gebruiken?",
+            "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          }
         }
       },
       "block_order": [
         "328cff61-4969-4e76-8c01-2f693ce1edfc",
         "96a4b4c5-c9c4-451e-9c54-358eb182ceaf",
-        "a6d206b5-2a87-4bf7-8533-36e6ac97797d"
+        "a6d206b5-2a87-4bf7-8533-36e6ac97797d",
+        "96a66cb7-1c48-4d6c-94fb-facbdf014720"
       ],
       "settings": {
         "titel": "Verwarm jezelf, waar en wanneer je wilt",
