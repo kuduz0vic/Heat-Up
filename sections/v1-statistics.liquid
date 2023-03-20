@@ -14,7 +14,8 @@
               {% when 'counter' %}
               <div class="statistics-list-item">
                 <div class="statistics-h2">
-                  <span class="counterup">{{ block.settings.counter-number }}</span><span>{{ block.settings.counter-sign }}</span>
+                  <span class="counterup">{{ block.settings.counter-number }}</span>
+                  <span>{{ block.settings.counter-sign }}</span>
                 </div>
                 <div>{{ block.settings.counter-text }}</div>
               </div>
@@ -22,50 +23,25 @@
           {% endfor %}
         </div>
       </div>
-      {%- if section.settings.main_image == nil -%}
-        <div id="w-node-_45c60ae5-807b-4817-dd70-25981868b661-1868b642" class="images-wrapper-statistics"><img
-            src="{{ 'screenshot-2022-06-30-at-23.47-2.png' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="statistics-img-1"><img
-            src="{{ 'rectangle-499.png' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="statistics-img-2"><img
-            src="{{ 'rectangle-499-1.png' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="statistics-img-3"><img
-            src="{{ 'group-2968.png' | asset_url }}"
-            loading="lazy"
-            sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, 100vw"
-            srcset="{{ 'group-2968-p-500.png' | asset_url }} 500w, {{ 'group-2968-p-800.png' | asset_url }} 800w, {{ 'group-2968.png' | asset_url }} 1074w"
-            alt=""
-            class="statistics-mobile"></div>
-      {%- else -%}
-        <div
-          id="w-node-_45c60ae5-807b-4817-dd70-25981868b661-1868b642"
-          class="images-wrapper-statistics"
-          style="background-image: url('{{ section.settings.main_image.src | img_url: 'master' }}');"><img
-            src="{{ 'screenshot-2022-06-30-at-23.47-2.png' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="statistics-img-1"><img
-            src="{{ 'rectangle-499.png' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="statistics-img-2"><img
-            src="{{ 'rectangle-499-1.png' | asset_url }}"
-            loading="lazy"
-            alt=""
-            class="statistics-img-3"><img
-            src="{{ 'group-2968.png' | asset_url }}"
-            loading="lazy"
-            sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, 100vw"
-            srcset="{{ 'group-2968-p-500.png' | asset_url }} 500w, {{ 'group-2968-p-800.png' | asset_url }} 800w, {{ 'group-2968.png' | asset_url }} 1074w"
-            alt=""
-            class="statistics-mobile"></div>
-      {%- endif -%}
+      <div id="w-node-_45c60ae5-807b-4817-dd70-25981868b661-1868b642" class="images-wrapper-statistics"><img
+          src="{{ section.settings.top_image | img_url: 'master' }}"
+          loading="lazy"
+          alt=""
+          class="statistics-img-1"><img
+          src="{{ section.settings.middle_image | img_url: 'master' }}"
+          loading="lazy"
+          alt=""
+          class="statistics-img-2"><img
+          src="{{ section.settings.bottom_image | img_url: 'master' }}"
+          loading="lazy"
+          alt=""
+          class="statistics-img-3"><img
+          src="{{ section.settings.mobile_image | img_url: 'master' }}"
+          loading="lazy"
+          sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, 100vw"
+          srcset="{{ section.settings.mobile_image | img_url: 'master' }} 500w, {{ section.settings.mobile_image | img_url: 'master' }} 800w, {{ section.settings.mobile_image | img_url: 'master' }} 1074w"
+          alt=""
+          class="statistics-mobile"></div>
     </div>
   </div>
 </div>
@@ -93,15 +69,30 @@
         "id": "titel",
         "label": "Titel",
         "default": "Highlight key features of the product or service"
-      }, {
+      },
+      {
         "type": "textarea",
         "id": "tagline",
         "label": "Tagline",
         "default": "Emphasise time-saving and use numbers to maximise credibility."
+      },
+      {
+        "type": "image_picker",
+        "id": "top_image",
+        "label": "Top Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "middle_image",
+        "label": "Middle Image"
       }, {
         "type": "image_picker",
-        "id": "main_image",
-        "label": "Main Image"
+        "id": "bottom_image",
+        "label": "Bottom Image"
+      }, {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
       }, {
         "type": "checkbox",
         "id": "subtitel_weergeven",

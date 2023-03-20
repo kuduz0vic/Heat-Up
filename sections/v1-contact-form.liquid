@@ -60,16 +60,19 @@
             data-name="Contact 2 Select 2"
             required=""
             class="form-input-2 is-select-input w-select">
-            <option value="">{{ 't57f3b1cc' | t }}</option>
-            <option value="First">{{ 'tn491b32af' | t }}</option>
-            <option value="Second">{{ 't3c4172cd' | t }}</option>
-            <option value="Third">{{ 'tn1b351146' | t }}</option>
+            <option value="">{{ section.settings.option-placeholder }}</option>
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'facebook-icon' %}
+                <option value="Third">{{ block.settings.option-text }}</option>
+              {% endcase %}
+            {% endfor %}
           </select>
         </div>
         <div class="form-field-wrapper">
           <label for="contact[contact_message_]" class="field-label">{{ section.settings.label-message }}</label>
           <textarea
-            placeholder="Type your message..."
+            placeholder="{{section.settings.message-placeholder}}"
             maxlength="5000"
             id="Contact-2-Message-2"
             name="contact[contact_message_]"
@@ -149,6 +152,27 @@
         "type": "text",
         "id": "label-message",
         "label": "Label Message"
+      }, {
+        "type": "text",
+        "id": "option-placeholder",
+        "label": "Option Placeholder"
+      }, {
+        "type": "text",
+        "id": "message-placeholder",
+        "label": "Message Placeholder"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "option",
+        "name": "Option",
+        "settings": [
+          {
+            "type": "text",
+            "id": "option-text",
+            "label": "Option Text"
+          }
+        ]
       }
     ]
   }
