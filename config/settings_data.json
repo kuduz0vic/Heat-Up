@@ -30,14 +30,22 @@
           "cac873c4-a3f7-4f16-a90a-c83bda022d5d": {
             "type": "announcment-mobile",
             "settings": {
-              "mobile-announcment_text": "<p>Tekst hier?<\/p>",
+              "mobile-announcment_text": "<p>Probeer 30 dagen <strong>gratis<\/strong><\/p>",
+              "mobile-announcment_svg": ""
+            }
+          },
+          "6d9c1c7f-6dc2-4d2c-8537-5a7a3d0a2c8d": {
+            "type": "announcment-mobile",
+            "settings": {
+              "mobile-announcment_text": "<p>Per warmtekussen planten we <strong>1m² groen<\/strong> terug<\/p>",
               "mobile-announcment_svg": ""
             }
           }
         },
         "block_order": [
           "681abb18-7696-432a-afc6-3eb53a3904a0",
-          "cac873c4-a3f7-4f16-a90a-c83bda022d5d"
+          "cac873c4-a3f7-4f16-a90a-c83bda022d5d",
+          "6d9c1c7f-6dc2-4d2c-8537-5a7a3d0a2c8d"
         ],
         "settings": {
           "urge": "Vandaag besteld, morgen groen geleverd.",
