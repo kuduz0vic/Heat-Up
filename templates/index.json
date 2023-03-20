@@ -299,7 +299,9 @@
       "settings": {
         "titel": "Waarom een Heatup warmtekussen?",
         "tagline": "Ontdek de duurzame warmte van Heatup zelf met altijd minimaal 30 dagen probeertijd.",
-        "bottom_image": "shopify:\/\/shop_images\/debbie-tafel-thee.jpg",
+        "top_image": "shopify:\/\/shop_images\/kristine-antraciet.jpg",
+        "middle_image": "shopify:\/\/shop_images\/stof-close-up-nagels.jpg",
+        "bottom_image": "shopify:\/\/shop_images\/debbie-woonkamer-thuis-kat.jpg",
         "mobile_image": "shopify:\/\/shop_images\/debbie-tafel-thee.jpg",
         "subtitel_weergeven": true
       }
