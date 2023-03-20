@@ -205,35 +205,34 @@
                 {% assign product = product %}
                 {% assign images = product.images %}
                 {% assign first_image = images[0] %}
+                {% assign first_image_alt = first_image.alt %}
                 {% assign second_image = images[1] %}
+                {% assign second_image_alt = second_image.alt %}
                 {% assign third_image = images[2] %}
+                {% assign third_image_alt = third_image.alt %}
                 {% assign fourth_image = images[3] %}
+                {% assign fourth_image_alt = fourth_image.alt %}
                 {% assign fifth_image = images[4] %}
+                {% assign fifth_image_alt = fifth_image.alt %}
                 {% assign sixth_image = images[5] %}
+                {% assign sixth_image_alt = sixth_image.alt %}
                 {% assign seventh_image = images[6] %}
+                {% assign seventh_image_alt = seventh_image.alt %}
                 {% assign eight_image = images[7] %}
+                {% assign eight_image_alt = eight_image.alt %}
                 {% assign nineth_image = images[8] %}
+                {% assign nineth_image_alt = nineth_image.alt %}
                 {% assign tenth_image = images[9] %}
-                {% assign eleveenth_image = images[10] %}
-                {% assign tvelweth_image = images[11] %}
-
-                {% assign alt_var_name = "" %}
-                {% for image in product.images %}
-                  {% if forloop.index0 == 0 %}
-                    {% assign alt_var_name = image.alt %}
-                  {% else %}
-                    {% assign ignore = "" %}
-                    {% assign ignore = ignore | append: alt_var_name %}
-                    {% assign ignore = ignore | append: "," %}
-                    {% assign ignore = ignore | append: image.alt %}
-                  {% endif %}
-                {% endfor %}
-
+                {% assign tenth_image_alt = tenth_image.alt %}
+                {% assign eleventh_image = images[10] %}
+                {% assign eleventh_image_alt = eleventh_image.alt %}
+                {% assign twelfth_image = images[11] %}
+                {% assign twelfth_image_alt = twelfth_image.alt %}
 
                 <div
                   block="Hero Afbeelding"
                   class="product-image"
-                  data-value="{{alt_var_name}}">
+                  data-value="{{first_image_alt}}">
                   <img
                     src="{{ first_image.src | img_url: 'master' }}"
                     loading="lazy"
@@ -275,14 +274,14 @@
                   {% endif %}
                 </div>
                 <div block="2 Afbeeldingen" class="product-images-row">
-                  <div data-value="{{alt_var_name}}" class="product-row-img"><img
+                  <div data-value="{{second_image_alt}}" class="product-row-img"><img
                       src="{{ second_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
                       srcset="{{ second_image.src | img_url: 'master' }} 500w, {{ second_image.src | img_url: 'master' }} 608w"
                       alt=""
                       class="product-img"></div>
-                  <div data-value="{{alt_var_name}}" class="product-row-img"><img
+                  <div data-value="{{third_image_alt}}" class="product-row-img"><img
                       src="{{ third_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -290,7 +289,7 @@
                       alt=""
                       class="product-img"></div>
                 </div>
-                <div data-value="{{alt_var_name}}" class="product-image"><img
+                <div data-value="{{fourth_image_alt}}" class="product-image"><img
                     src="{{ fourth_image.src | img_url: 'master' }}"
                     loading="lazy"
                     sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
@@ -298,7 +297,7 @@
                     alt=""
                     class="product-img"></div>
 
-                <div data-value="{{alt_var_name}}" class="product-image after-image">
+                <div data-value="{{fifth_image_alt}}" class="product-image after-image">
                   <img
                     src="{{ fifth_image.src | img_url: 'master' }}"
                     loading="lazy"
@@ -341,14 +340,14 @@
                   {% endif %}
                 </div>
                 <div block="2 Afbeeldingen" class="product-images-row">
-                  <div data-value="{{alt_var_name}}" class="product-row-img"><img
+                  <div data-value="{{sixth_image_alt}}" class="product-row-img"><img
                       src="{{ sixth_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
                       srcset="{{ sixth_image.src | img_url: 'master' }} 500w, {{ sixth_image.src | img_url: 'master' }} 608w"
                       alt=""
                       class="product-img"></div>
-                  <div data-value="{{alt_var_name}}" class="product-row-img"><img
+                  <div data-value="{{seventh_image_alt}}" class="product-row-img"><img
                       src="{{ seventh_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -356,7 +355,7 @@
                       alt=""
                       class="product-img"></div>
                 </div>
-                <div data-value="{{alt_var_name}}" class="product-image"><img
+                <div data-value="{{eight_image_alt}}" class="product-image"><img
                     src="{{ eight_image.src | img_url: 'master' }}"
                     loading="lazy"
                     sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
@@ -365,7 +364,7 @@
                     class="product-img"></div>
 
                 <div
-                  data-value="{{alt_var_name}}"
+                  data-value="{{nineth_image_alt}}"
                   block="Hero Afbeelding"
                   class="product-image after-image">
                   <img
@@ -410,14 +409,14 @@
                   {% endif %}
                 </div>
                 <div block="2 Afbeeldingen" class="product-images-row">
-                  <div data-value="{{alt_var_name}}" class="product-row-img"><img
+                  <div data-value="{{tenth_image_alt}}" class="product-row-img"><img
                       src="{{ tenth_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
                       srcset="{{ tenth_image.src | img_url: 'master' }} 500w, {{ tenth_image.src | img_url: 'master' }} 608w"
                       alt=""
                       class="product-img"></div>
-                  <div data-value="{{alt_var_name}}" class="product-row-img"><img
+                  <div data-value="{{eleventh_image_alt}}" class="product-row-img"><img
                       src="{{ eleveenth_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -425,7 +424,7 @@
                       alt=""
                       class="product-img"></div>
                 </div>
-                <div data-value="{{alt_var_name}}" class="product-image"><img
+                <div data-value="{{twelfth_image_alt}}" class="product-image"><img
                     src="{{ tvelweth_image.src | img_url: 'master' }}"
                     loading="lazy"
                     sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
@@ -678,7 +677,6 @@
                                     type="radio"
                                     :name="'Kleur'"
                                     :value="value"
-                                    @click="handleClick()"
                                     style="opacity:0;position:absolute;z-index:-1">
                                   <span
                                     :style="currentOptions[optionName] === value ?"
@@ -714,7 +712,6 @@
                                     type="radio"
                                     :name="'Aantal'"
                                     :value="value"
-                                    @click="handleClick()"
                                     style="opacity:0;position:absolute;z-index:-1">
                                   <span
                                     class="w-form-label"
@@ -829,11 +826,6 @@
   currentSection.setAttribute("class", "product-section");
 </script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.6.3.js"
-  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-  crossorigin="anonymous"></script>
 
 
 <script>
@@ -884,70 +876,6 @@
 </script>
 
 
-
-<script>
-
-
-  const colorMap = {
-    {% for block in section.blocks %}
-      {% if block.type == 'color' %}
-        '{{ block.settings.name }}' : '{{ block.settings.code }}',{% endif %}{% endfor %}
-  };
-
-  const allProducts = [
-    {{ product | json }},{% for p in product.metafields.custom.linked_products.value %}{
-        {
-          p | json
-        }
-      },{% endfor %}
-  ];
-
-  function app() {
-    return {
-      allProducts,
-      product: allProducts[0],
-      upsold: false,
-      currentOptions: {},
-
-      priceToCurr(price) {
-        const n = parseInt(price);
-        return `$${
-          (n / 100).toFixed(2)
-        }`;
-      },
-
-      get variant() {
-        for (const variant of this.product.variants) {
-          if (JSON.stringify(Object.values(this.currentOptions).sort()) === JSON.stringify(variant.options.sort())) {
-            return variant;
-          }
-        }
-        return null;
-      },
-
-      get productOptions() {
-        const x = this.product.variants.reduce((prev, curr) => {
-          for (let i = 0; i < curr.options.length; i++) {
-            if (!prev[this.product.options[i]]) 
-              prev[this.product.options[i]] = [];
-            
-
-
-
-            prev[this.product.options[i]].push(curr[`option${
-                i + 1
-              }`]);
-            prev[this.product.options[i]] = [...new Set(prev[this.product.options[i]])];
-          }
-
-          return prev;
-        }, {});
-
-        return x;
-      }
-    };
-  }
-</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {

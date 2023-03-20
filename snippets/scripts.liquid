@@ -7,6 +7,11 @@
 <script src="{{ 'shopify-money.js' | asset_url }}" type="text/javascript"></script>
 <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
 <script>// document.addEventListener('DOMContentLoaded', () => {
 // document.querySelectorAll('.cart-icon').forEach(trigger => {
 // trigger.addEventListener('click', function(){ 
@@ -186,4 +191,64 @@ var mySwiper = new Swiper('#Product-Images-Swiper', {
     prevEl: "#product-prev-arrow"
   }
 });
-</script>{{ 'udesly-shopify.min.js' | asset_url | script_tag }}
+</script><script>
+const colorMap = {
+  {% for block in section.blocks %}
+    {% if block.type == 'color' %}
+      '{{ block.settings.name }}' : '{{ block.settings.code }}',{% endif %}{% endfor %}
+};
+
+const allProducts = [
+  {{ product | json }},{% for p in product.metafields.custom.linked_products.value %}{
+      {
+        p | json
+      }
+    },{% endfor %}
+];
+
+function app() {
+  return {
+    allProducts,
+    product: allProducts[0],
+    upsold: false,
+    currentOptions: {},
+
+    priceToCurr(price) {
+      const n = parseInt(price);
+      return `$${
+        (n / 100).toFixed(2)
+      }`;
+    },
+
+    get variant() {
+      for (const variant of this.product.variants) {
+        if (JSON.stringify(Object.values(this.currentOptions).sort()) === JSON.stringify(variant.options.sort())) {
+          return variant;
+        }
+      }
+      return null;
+    },
+
+    get productOptions() {
+      const x = this.product.variants.reduce((prev, curr) => {
+        for (let i = 0; i < curr.options.length; i++) {
+          if (!prev[this.product.options[i]]) 
+            prev[this.product.options[i]] = [];
+          
+
+
+
+          prev[this.product.options[i]].push(curr[`option${
+              i + 1
+            }`]);
+          prev[this.product.options[i]] = [...new Set(prev[this.product.options[i]])];
+        }
+
+        return prev;
+      }, {});
+
+      return x;
+    }
+  };
+}
+</script>
