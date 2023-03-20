@@ -57,7 +57,21 @@
       }, {
         "type": "variants",
         "name": "Variants",
-        "limit": 1
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "variant-badge_text",
+            "label": "Variant Badge Text",
+            "default": "+ Gratis Kussensloop"
+          },
+          {
+            "type": "checkbox",
+            "id": "variant-badge",
+            "label": "Variant Badge Visible",
+            "default": true
+          }
+        ]
       }, {
         "type": "checkout_buttons",
         "name": "Checkout Buttons",
@@ -229,208 +243,232 @@
                 {% assign twelfth_image = images[11] %}
                 {% assign twelfth_image_alt = twelfth_image.alt %}
 
-                <div
-                  block="Hero Afbeelding"
-                  class="product-image"
-                  data-value="{{first_image_alt}}">
-                  <img
-                    src="{{ first_image.src | img_url: 'master' }}"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
-                    srcset="{{ first_image.src | img_url: 'master' }} 500w, {{ first_image.src | img_url: 'master' }} 608w"
-                    class="product-img">
-                  {%- if block.settings.labels_aanuit -%}
-                    <div class="desktop-pdp-badges">
-                      {%- if block.settings.product_label_aanuit -%}
-                        <div class="product-images-label-desktop"><img
-                            src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
-                            loading="lazy"
-                            alt=""
-                            class="label-img">
-                          <div>{{ block.settings.label_text | newline_to_br }}</div>
-                        </div>
-                      {% endif %}
-                      {%- if block.settings.trust_badges_aanuit -%}
-                        <div class="trust-badges">
-                          {%- if block.settings.badge_1_aanuit -%}
-                            <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
-                                src="{{ block.settings.badge_1.src | img_url: 'master' }}"
-                                loading="lazy"
-                                alt=""
-                                class="badge-img-inner"></div>
-                          {% endif %}
-                          {%- if block.settings.badge_2_aanuit -%}
-                            <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
-                                src="{{ block.settings.badge_2.src | img_url: 'master' }}"
-                                loading="lazy"
-                                sizes="(max-width: 767px) 100vw, 50.5px"
-                                srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
-                                alt=""
-                                class="badge-img-inner"></div>
-                          {% endif %}
-                        </div>
-                      {% endif %}
-                    </div>
-                  {% endif %}
-                </div>
-                <div block="2 Afbeeldingen" class="product-images-row">
-                  <div data-value="{{second_image_alt}}" class="product-row-img"><img
-                      src="{{ second_image.src | img_url: 'master' }}"
+                {% if first_image.src != blank %}
+                  <div
+                    block="Hero Afbeelding"
+                    class="product-image"
+                    data-value="{{first_image_alt}}">
+                    <img
+                      src="{{ first_image.src | img_url: 'master' }}"
                       loading="lazy"
-                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
-                      srcset="{{ second_image.src | img_url: 'master' }} 500w, {{ second_image.src | img_url: 'master' }} 608w"
-                      alt=""
-                      class="product-img"></div>
-                  <div data-value="{{third_image_alt}}" class="product-row-img"><img
-                      src="{{ third_image.src | img_url: 'master' }}"
-                      loading="lazy"
-                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
-                      srcset="{{ third_image.src | img_url: 'master' }} 500w, {{ third_image.src | img_url: 'master' }} 608w"
-                      alt=""
-                      class="product-img"></div>
-                </div>
-                <div data-value="{{fourth_image_alt}}" class="product-image"><img
-                    src="{{ fourth_image.src | img_url: 'master' }}"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
-                    srcset="{{ fourth_image.src | img_url: 'master' }} 500w, {{ fourth_image.src | img_url: 'master' }} 774w"
-                    alt=""
-                    class="product-img"></div>
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                      srcset="{{ first_image.src | img_url: 'master' }} 500w, {{ first_image.src | img_url: 'master' }} 608w"
+                      class="product-img">
+                    {%- if block.settings.labels_aanuit -%}
+                      <div class="desktop-pdp-badges">
+                        {%- if block.settings.product_label_aanuit -%}
+                          <div class="product-images-label-desktop"><img
+                              src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
+                              loading="lazy"
+                              alt=""
+                              class="label-img">
+                            <div>{{ block.settings.label_text | newline_to_br }}</div>
+                          </div>
+                        {% endif %}
+                        {%- if block.settings.trust_badges_aanuit -%}
+                          <div class="trust-badges">
+                            {%- if block.settings.badge_1_aanuit -%}
+                              <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
+                                  src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  alt=""
+                                  class="badge-img-inner"></div>
+                            {% endif %}
+                            {%- if block.settings.badge_2_aanuit -%}
+                              <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
+                                  src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  sizes="(max-width: 767px) 100vw, 50.5px"
+                                  srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                  alt=""
+                                  class="badge-img-inner"></div>
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
 
-                <div data-value="{{fifth_image_alt}}" class="product-image after-image">
-                  <img
-                    src="{{ fifth_image.src | img_url: 'master' }}"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
-                    srcset="{{ fifth_image.src | img_url: 'master' }} 500w, {{ fifth_image.src | img_url: 'master' }} 608w"
-                    alt=""
-                    class="product-img">
-                  {%- if block.settings.labels_aanuit -%}
-                    <div class="desktop-pdp-badges">
-                      {%- if block.settings.product_label_aanuit -%}
-                        <div class="product-images-label-desktop"><img
-                            src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
-                            loading="lazy"
-                            alt=""
-                            class="label-img">
-                          <div>{{ block.settings.label_text | newline_to_br }}</div>
-                        </div>
-                      {% endif %}
-                      {%- if block.settings.trust_badges_aanuit -%}
-                        <div class="trust-badges">
-                          {%- if block.settings.badge_1_aanuit -%}
-                            <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
-                                src="{{ block.settings.badge_1.src | img_url: 'master' }}"
-                                loading="lazy"
-                                alt=""
-                                class="badge-img-inner"></div>
-                          {% endif %}
-                          {%- if block.settings.badge_2_aanuit -%}
-                            <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
-                                src="{{ block.settings.badge_2.src | img_url: 'master' }}"
-                                loading="lazy"
-                                sizes="(max-width: 767px) 100vw, 50.5px"
-                                srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
-                                alt=""
-                                class="badge-img-inner"></div>
-                          {% endif %}
-                        </div>
-                      {% endif %}
-                    </div>
+                <div block="2 Afbeeldingen" class="product-images-row">
+                  {% if second_image.src != blank %}
+                    <div data-value="{{second_image_alt}}" class="product-row-img"><img
+                        src="{{ second_image.src | img_url: 'master' }}"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                        srcset="{{ second_image.src | img_url: 'master' }} 500w, {{ second_image.src | img_url: 'master' }} 608w"
+                        alt=""
+                        class="product-img"></div>
+                  {% endif %}
+                  {% if third_image.src != blank %}
+                    <div data-value="{{third_image_alt}}" class="product-row-img"><img
+                        src="{{ third_image.src | img_url: 'master' }}"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                        srcset="{{ third_image.src | img_url: 'master' }} 500w, {{ third_image.src | img_url: 'master' }} 608w"
+                        alt=""
+                        class="product-img"></div>
                   {% endif %}
                 </div>
-                <div block="2 Afbeeldingen" class="product-images-row">
-                  <div data-value="{{sixth_image_alt}}" class="product-row-img"><img
-                      src="{{ sixth_image.src | img_url: 'master' }}"
+                {% if fourth_image.src != blank %}
+                  <div data-value="{{fourth_image_alt}}" class="product-image"><img
+                      src="{{ fourth_image.src | img_url: 'master' }}"
                       loading="lazy"
-                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
-                      srcset="{{ sixth_image.src | img_url: 'master' }} 500w, {{ sixth_image.src | img_url: 'master' }} 608w"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                      srcset="{{ fourth_image.src | img_url: 'master' }} 500w, {{ fourth_image.src | img_url: 'master' }} 774w"
                       alt=""
                       class="product-img"></div>
-                  <div data-value="{{seventh_image_alt}}" class="product-row-img"><img
-                      src="{{ seventh_image.src | img_url: 'master' }}"
+                {% endif %}
+                {% if fifth_image.src != blank %}
+                  <div data-value="{{fifth_image_alt}}" class="product-image after-image">
+                    <img
+                      src="{{ fifth_image.src | img_url: 'master' }}"
                       loading="lazy"
-                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
-                      srcset="{{ seventh_image.src | img_url: 'master' }} 500w, {{ seventh_image.src | img_url: 'master' }} 608w"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                      srcset="{{ fifth_image.src | img_url: 'master' }} 500w, {{ fifth_image.src | img_url: 'master' }} 608w"
                       alt=""
-                      class="product-img"></div>
-                </div>
-                <div data-value="{{eight_image_alt}}" class="product-image"><img
-                    src="{{ eight_image.src | img_url: 'master' }}"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
-                    srcset="{{ eight_image.src | img_url: 'master' }} 500w, {{ eight_image.src | img_url: 'master' }} 774w"
-                    alt=""
-                    class="product-img"></div>
+                      class="product-img">
+                    {%- if block.settings.labels_aanuit -%}
+                      <div class="desktop-pdp-badges">
+                        {%- if block.settings.product_label_aanuit -%}
+                          <div class="product-images-label-desktop"><img
+                              src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
+                              loading="lazy"
+                              alt=""
+                              class="label-img">
+                            <div>{{ block.settings.label_text | newline_to_br }}</div>
+                          </div>
+                        {% endif %}
+                        {%- if block.settings.trust_badges_aanuit -%}
+                          <div class="trust-badges">
+                            {%- if block.settings.badge_1_aanuit -%}
+                              <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
+                                  src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  alt=""
+                                  class="badge-img-inner"></div>
+                            {% endif %}
+                            {%- if block.settings.badge_2_aanuit -%}
+                              <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
+                                  src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  sizes="(max-width: 767px) 100vw, 50.5px"
+                                  srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                  alt=""
+                                  class="badge-img-inner"></div>
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
 
-                <div
-                  data-value="{{nineth_image_alt}}"
-                  block="Hero Afbeelding"
-                  class="product-image after-image">
-                  <img
-                    src="{{ nineth_image.src | img_url: 'master' }}"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
-                    srcset="{{ nineth_image.src | img_url: 'master' }} 500w, {{ nineth_image.src | img_url: 'master' }} 608w"
-                    alt=""
-                    class="product-img">
-                  {%- if block.settings.labels_aanuit -%}
-                    <div class="desktop-pdp-badges">
-                      {%- if block.settings.product_label_aanuit -%}
-                        <div class="product-images-label-desktop"><img
-                            src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
-                            loading="lazy"
-                            alt=""
-                            class="label-img">
-                          <div>{{ block.settings.label_text | newline_to_br }}</div>
-                        </div>
-                      {% endif %}
-                      {%- if block.settings.trust_badges_aanuit -%}
-                        <div class="trust-badges">
-                          {%- if block.settings.badge_1_aanuit -%}
-                            <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
-                                src="{{ block.settings.badge_1.src | img_url: 'master' }}"
-                                loading="lazy"
-                                alt=""
-                                class="badge-img-inner"></div>
-                          {% endif %}
-                          {%- if block.settings.badge_2_aanuit -%}
-                            <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
-                                src="{{ block.settings.badge_2.src | img_url: 'master' }}"
-                                loading="lazy"
-                                sizes="(max-width: 767px) 100vw, 50.5px"
-                                srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
-                                alt=""
-                                class="badge-img-inner"></div>
-                          {% endif %}
-                        </div>
-                      {% endif %}
-                    </div>
+                <div block="2 Afbeeldingen" class="product-images-row">
+                  {% if sixth_image.src != blank %}
+                    <div data-value="{{sixth_image_alt}}" class="product-row-img"><img
+                        src="{{ sixth_image.src | img_url: 'master' }}"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                        srcset="{{ sixth_image.src | img_url: 'master' }} 500w, {{ sixth_image.src | img_url: 'master' }} 608w"
+                        alt=""
+                        class="product-img"></div>
+                  {% endif %}
+                  {% if seventh_image.src != blank %}
+                    <div data-value="{{seventh_image_alt}}" class="product-row-img"><img
+                        src="{{ seventh_image.src | img_url: 'master' }}"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                        srcset="{{ seventh_image.src | img_url: 'master' }} 500w, {{ seventh_image.src | img_url: 'master' }} 608w"
+                        alt=""
+                        class="product-img"></div>
                   {% endif %}
                 </div>
+                {% if eight_image.src != blank %}
+                  <div data-value="{{eight_image_alt}}" class="product-image"><img
+                      src="{{ eight_image.src | img_url: 'master' }}"
+                      loading="lazy"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                      srcset="{{ eight_image.src | img_url: 'master' }} 500w, {{ eight_image.src | img_url: 'master' }} 774w"
+                      alt=""
+                      class="product-img"></div>
+                {% endif %}
+                {% if nineth_image.src != blank %}
+                  <div
+                    data-value="{{nineth_image_alt}}"
+                    block="Hero Afbeelding"
+                    class="product-image after-image">
+                    <img
+                      src="{{ nineth_image.src | img_url: 'master' }}"
+                      loading="lazy"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                      srcset="{{ nineth_image.src | img_url: 'master' }} 500w, {{ nineth_image.src | img_url: 'master' }} 608w"
+                      alt=""
+                      class="product-img">
+                    {%- if block.settings.labels_aanuit -%}
+                      <div class="desktop-pdp-badges">
+                        {%- if block.settings.product_label_aanuit -%}
+                          <div class="product-images-label-desktop"><img
+                              src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
+                              loading="lazy"
+                              alt=""
+                              class="label-img">
+                            <div>{{ block.settings.label_text | newline_to_br }}</div>
+                          </div>
+                        {% endif %}
+                        {%- if block.settings.trust_badges_aanuit -%}
+                          <div class="trust-badges">
+                            {%- if block.settings.badge_1_aanuit -%}
+                              <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
+                                  src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  alt=""
+                                  class="badge-img-inner"></div>
+                            {% endif %}
+                            {%- if block.settings.badge_2_aanuit -%}
+                              <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
+                                  src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  sizes="(max-width: 767px) 100vw, 50.5px"
+                                  srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                  alt=""
+                                  class="badge-img-inner"></div>
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
                 <div block="2 Afbeeldingen" class="product-images-row">
-                  <div data-value="{{tenth_image_alt}}" class="product-row-img"><img
-                      src="{{ tenth_image.src | img_url: 'master' }}"
-                      loading="lazy"
-                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
-                      srcset="{{ tenth_image.src | img_url: 'master' }} 500w, {{ tenth_image.src | img_url: 'master' }} 608w"
-                      alt=""
-                      class="product-img"></div>
-                  <div data-value="{{eleventh_image_alt}}" class="product-row-img"><img
-                      src="{{ eleveenth_image.src | img_url: 'master' }}"
-                      loading="lazy"
-                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
-                      srcset="{{ eleveenth_image.src | img_url: 'master' }} 500w, {{ eleveenth_image.src | img_url: 'master' }} 608w"
-                      alt=""
-                      class="product-img"></div>
+                  {% if tenth_image.src != blank %}
+                    <div data-value="{{tenth_image_alt}}" class="product-row-img"><img
+                        src="{{ tenth_image.src | img_url: 'master' }}"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                        srcset="{{ tenth_image.src | img_url: 'master' }} 500w, {{ tenth_image.src | img_url: 'master' }} 608w"
+                        alt=""
+                        class="product-img"></div>
+                  {% endif %}
+                  {% if eleventh_image.src != blank %}
+                    <div data-value="{{eleventh_image_alt}}" class="product-row-img"><img
+                        src="{{ eleventh_image.src | img_url: 'master' }}"
+                        loading="lazy"
+                        sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                        srcset="{{ eleventh_image.src | img_url: 'master' }} 500w, {{ eleventh_image.src | img_url: 'master' }} 608w"
+                        alt=""
+                        class="product-img"></div>
+                  {% endif %}
                 </div>
-                <div data-value="{{twelfth_image_alt}}" class="product-image"><img
-                    src="{{ tvelweth_image.src | img_url: 'master' }}"
-                    loading="lazy"
-                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
-                    srcset="{{ tvelweth_image.src | img_url: 'master' }} 500w, {{ tvelweth_image.src | img_url: 'master' }} 774w"
-                    alt=""
-                    class="product-img"></div>
+                {% if twelfth_image.src != blank %}
+                  <div data-value="{{twelfth_image_alt}}" class="product-image"><img
+                      src="{{ twelfth_image.src | img_url: 'master' }}"
+                      loading="lazy"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                      srcset="{{ twelfth_image.src | img_url: 'master' }} 500w, {{ twelfth_image.src | img_url: 'master' }} 774w"
+                      alt=""
+                      class="product-img"></div>
+                {% endif %}
               </div>
               <div class="product-slider pdp-slider">
                 <div class="product-images-label"><img
@@ -442,109 +480,171 @@
                 </div>
                 <div id="Product-Images-Swiper" class="swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img
-                        src="{{ first_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ first_image.src | img_url: 'master' }} 500w, {{ first_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide">
-                      <div class="product-img-badges">
-                        {%- if block.settings.badge_1_aanuit -%}
-                          <div class="badge-img"><img
-                              src="{{ block.settings.badge_1.src | img_url: 'master' }}"
-                              loading="lazy"
-                              alt=""
-                              class="badge-img-inner"></div>
-                        {% endif %}
-                        {%- if block.settings.badge_2_aanuit -%}
-                          <div class="badge-img"><img
-                              src="{{ block.settings.badge_2.src | img_url: 'master' }}"
-                              loading="lazy"
-                              sizes="(max-width: 479px) 11vw, (max-width: 767px) 50.5px, 100vw"
-                              srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
-                              alt=""
-                              class="badge-img-inner"></div>
-                        {% endif %}
+                    {% if first_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{first_image_alt}}"><img
+                          src="{{ first_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ first_image.src | img_url: 'master' }} 500w, {{ first_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide">
+                        <div class="product-img-badges">
+                          {%- if block.settings.badge_1_aanuit -%}
+                            <div class="badge-img"><img
+                                src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                loading="lazy"
+                                alt=""
+                                class="badge-img-inner"></div>
+                          {% endif %}
+                          {%- if block.settings.badge_2_aanuit -%}
+                            <div class="badge-img"><img
+                                src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                loading="lazy"
+                                sizes="(max-width: 479px) 11vw, (max-width: 767px) 50.5px, 100vw"
+                                srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                alt=""
+                                class="badge-img-inner"></div>
+                          {% endif %}
+                        </div>
                       </div>
-                    </div>
-                    <div class="swiper-slide"><img
-                        src="{{ second_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ second_image.src | img_url: 'master' }} 500w, {{ second_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ third_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ third_image.src | img_url: 'master' }} 500w, {{ third_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ fourth_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ fourth_image.src | img_url: 'master' }} 500w, {{ fourth_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ fifth_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ fifth_image.src | img_url: 'master' }} 500w, {{ fifth_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ sixth_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ sixth_image.src | img_url: 'master' }} 500w, {{ sixth_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ seventh_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ seventh_image.src | img_url: 'master' }} 500w, {{ seventh_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ eight_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ eight_image.src | img_url: 'master' }} 500w, {{ eight_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ nineth_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ nineth_image.src | img_url: 'master' }} 500w, {{ nineth_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ tenth_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ tenth_image.src | img_url: 'master' }} 500w, {{ tenth_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ eleveenth_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ eleveenth_image.src | img_url: 'master' }} 500w, {{ eleveenth_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
-                    <div class="swiper-slide"><img
-                        src="{{ tvelweth_image.src | img_url: 'master' }}"
-                        loading="lazy"
-                        sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
-                        srcset="{{ tvelweth_image.src | img_url: 'master' }} 500w, {{ tvelweth_image.src | img_url: 'master' }} 608w"
-                        alt=""
-                        class="product-img-slide"></div>
+                    {% endif %}
+                    {% if second_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{second_image_alt}}"><img
+                          src="{{ second_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ second_image.src | img_url: 'master' }} 500w, {{ second_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
+                    {% if third_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{third_image_alt}}"><img
+                          src="{{ third_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ third_image.src | img_url: 'master' }} 500w, {{ third_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
+                    {% if fourth_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{fourth_image_alt}}"><img
+                          src="{{ fourth_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ fourth_image.src | img_url: 'master' }} 500w, {{ fourth_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
+                    {% if fifth_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{fifth_image_alt}}"><img
+                          src="{{ fifth_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ fifth_image.src | img_url: 'master' }} 500w, {{ fifth_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide">
+                        <div class="product-img-badges">
+                          {%- if block.settings.badge_1_aanuit -%}
+                            <div class="badge-img"><img
+                                src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                loading="lazy"
+                                alt=""
+                                class="badge-img-inner"></div>
+                          {% endif %}
+                          {%- if block.settings.badge_2_aanuit -%}
+                            <div class="badge-img"><img
+                                src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                loading="lazy"
+                                sizes="(max-width: 479px) 11vw, (max-width: 767px) 50.5px, 100vw"
+                                srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                alt=""
+                                class="badge-img-inner"></div>
+                          {% endif %}
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% if sixth_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{sixth_image_alt}}"><img
+                          src="{{ sixth_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ sixth_image.src | img_url: 'master' }} 500w, {{ sixth_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
+                    {% if seventh_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{seventh_image_alt}}"><img
+                          src="{{ seventh_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ seventh_image.src | img_url: 'master' }} 500w, {{ seventh_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
+                    {% if eight_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{eight_image_alt}}"><img
+                          src="{{ eight_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ eight_image.src | img_url: 'master' }} 500w, {{ eight_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
+                    {% if nineth_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{nineth_image_alt}}"><img
+                          src="{{ nineth_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ nineth_image.src | img_url: 'master' }} 500w, {{ nineth_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide">
+                        <div class="product-img-badges">
+                          {%- if block.settings.badge_1_aanuit -%}
+                            <div class="badge-img"><img
+                                src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                loading="lazy"
+                                alt=""
+                                class="badge-img-inner"></div>
+                          {% endif %}
+                          {%- if block.settings.badge_2_aanuit -%}
+                            <div class="badge-img"><img
+                                src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                loading="lazy"
+                                sizes="(max-width: 479px) 11vw, (max-width: 767px) 50.5px, 100vw"
+                                srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                alt=""
+                                class="badge-img-inner"></div>
+                          {% endif %}
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% if tenth_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{tenth_image_alt}}"><img
+                          src="{{ tenth_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ tenth_image.src | img_url: 'master' }} 500w, {{ tenth_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
+                    {% if eleventh_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{eleventh_image_alt}}"><img
+                          src="{{ eleventh_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ eleventh_image.src | img_url: 'master' }} 500w, {{ eleventh_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
+                    {% if twelfth_image.src != blank %}
+                      <div class="swiper-slide mySwiper2-slide" data-value="{{twelfth_image_alt}}"><img
+                          src="{{ twelfth_image.src | img_url: 'master' }}"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                          srcset="{{ twelfth_image.src | img_url: 'master' }} 500w, {{ twelfth_image.src | img_url: 'master' }} 608w"
+                          alt=""
+                          class="product-img-slide"></div>
+                    {% endif %}
                   </div>
                   <div class="product-swiper-nav">
                     <div id="product-prev-arrow" class="product-swiper-arrow"><img
@@ -668,6 +768,7 @@
                       <div class="choice-container" x-data="{ showSizePopup: false }">
                         <template x-if="Object.keys(productOptions).includes('Kleur')">
                           <div :class="`swatch-Kleur`" x-data="{ optionName: 'Kleur' }">
+                            <div aria-label="add description here" role="radiogroup" class="pdp-swatch-group"><label class="pdp-swatch-info"><strong>{{ 'tn61d06f63' | t }}</strong>{{ 'tn67e75256' | t }}</label>
                             <div class="pdp-swatch-column">
                               <template x-for="value of productOptions['Kleur']">
                                 <label class="pdp-swatch-field">
@@ -677,6 +778,7 @@
                                     type="radio"
                                     :name="'Kleur'"
                                     :value="value"
+                                    @click="handleClick()"
                                     style="opacity:0;position:absolute;z-index:-1">
                                   <span
                                     :style="currentOptions[optionName] === value ?"
@@ -702,7 +804,13 @@
                     {% if product.variants.size > 1 %}
                       <div class="choice-container" x-data="{ showSizePopup: false }">
                         <template x-if="Object.keys(productOptions).includes('Aantal')">
+                          <div aria-label="add description here" role="radiogroup" class="pdp-swatch-group"><label class="pdp-swatch-info"><strong>{{ 'tn1da6e1d1' | t }}</strong>(Bespaar <span id="discount"></span>)</label>
                           <div :class="`swatch-Aantal`" x-data="{ optionName: 'Aantal' }">
+                            {% if block.settings.variant-badge %}
+                            <div class="amount-labels">
+                              <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb46c-bf8cb3ff" class="amount-label">{{ block.settings.variant-badge_text }}</div>
+                            </div>
+                           {% endif %}
                             <div class="pdp-amount-column">
                               <template x-for="value of productOptions['Aantal']">
                                 <label class="pdp-amount-field">
@@ -824,110 +932,4 @@
 <script>
   var currentSection = document.currentScript.closest('.shopify-section');
   currentSection.setAttribute("class", "product-section");
-</script>
-
-
-
-<script>
-  $(document).ready(function() {
-
-    $(document).ready(function() {
-      $('.pdp-swatch-column>label:first').addClass('is-active');
-    });
-
-    $(document).ready(function() {
-      $('.pdp-amount-column>label:first').addClass('is-active');
-    });
-
-
-    $(document).ready(function() {
-      $('.pdp-swatch-column>div:first').addClass('w--redirected-checked');
-    });
-
-
-    $(document).ready(function() {
-      $('.pdp-amount-field>span:first').addClass('bold-text');
-    });
-
-
-// Handle active state on swatch click
-    $('.pdp-swatch-field').click(function() {
-      $('.pdp-swatch-field').removeClass('is-active');
-      $(this).closest('.pdp-swatch-field').addClass('is-active');
-    });
-
-    $('.pdp-swatch-field').click(function() {
-      $('.w-form-formradioinput').removeClass('w--redirected-checked');
-      $(this).find('.w-form-formradioinput').addClass('w--redirected-checked');
-    });
-
-
-    $('.pdp-amount-field').click(function() {
-      $('.w-form-label').removeClass('bold-text');
-      $(this).find('.w-form-label').addClass('bold-text');
-    });
-
-
-    $('.pdp-amount-field').click(function() {
-      $('.pdp-amount-field').removeClass('is-active');
-      $(this).closest('.pdp-amount-field').addClass('is-active');
-    });
-  });
-</script>
-
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const colorButtons = document.querySelectorAll(".swatch-Kleur label");
-    const sizeButtons = document.querySelectorAll(".swatch-Aantal label");
-    const addToCartButton = document.querySelector(".checkout-btn");
-    const variants = document.querySelectorAll("[id^='variant-']");
-    const price = document.querySelector(".price-pdp");
-    const comparePrice = document.querySelector(".before-price-pdp");
-    const discountSpan = document.querySelector("#discount");
-
-    function updateAddToCartButton() {
-      const selectedColor = document.querySelector(".swatch-Kleur input:checked").value;
-      const selectedSize = document.querySelector(".swatch-Aantal input:checked").value;
-      const selectedVariant = [... variants].find(variant => variant.dataset.color === selectedColor && variant.dataset.size === selectedSize);
-      if (selectedVariant) {
-        const variantId = selectedVariant.getAttribute("value");
-        const variantPrice = parseFloat(selectedVariant.dataset.price) / 100;
-        const formattedPrice = variantPrice.toLocaleString("nl-NL", {
-          style: "currency",
-          currency: "{{ shop.currency }}",
-          minimumFractionDigits: 2
-        });
-        const buttonText = "Add to Cart - " + formattedPrice;
-        addToCartButton.href = `/cart/add?id=${variantId}`;
-        addToCartButton.textContent = buttonText;
-
-// Update prices
-        const variantComparePrice = parseFloat(selectedVariant.dataset.comparePrice) / 100;
-        const formattedComparePrice = variantComparePrice.toLocaleString("nl-NL", {
-          style: "currency",
-          currency: "{{ shop.currency }}",
-          minimumFractionDigits: 2
-        });
-        price.textContent = formattedPrice;
-        comparePrice.textContent = formattedComparePrice;
-
-// Update discount
-        const discountAmount = Math.round((variantComparePrice - variantPrice) * 100) / 100;
-        const formattedDiscount = discountAmount.toLocaleString("nl-NL", {minimumFractionDigits: 0}).replace(/ /g, '\u00a0');
-        discountSpan.textContent = formattedDiscount;
-      }
-    }
-
-// Select the first variant on page load
-    const firstColor = document.querySelector(".swatch-Kleur input:first-of-type");
-    const firstSize = document.querySelector(".swatch-Aantal input:first-of-type");
-    firstColor.checked = true;
-    firstSize.checked = true;
-    updateAddToCartButton();
-
-    colorButtons.forEach(button => button.addEventListener("click", updateAddToCartButton));
-    sizeButtons.forEach(button => button.addEventListener("click", updateAddToCartButton));
-  });
 </script>

@@ -136,7 +136,11 @@
     <div class="desktop-announcements-container">
       <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba0522-aeba04e7" class="left-announcement">
         <div class="announcement-img">
-          {{ section.settings.announcment-svg-1 }}
+          {% if section.settings.announcment-svg-1 != blank %}
+            {{ section.settings.announcment-svg-1 }}
+          {% else %}
+            {{ section.settings.announcment-link-1 }}
+          {% endif %}
         </div>
         <div>{{ section.settings.announcment-desktop-1 }}</div>
       </div>
@@ -144,7 +148,11 @@
         <div class="announcement-seperator"></div>
         <div class="middle-announcement-inner">
           <div class="announcement-img">
-            {{ section.settings.announcment-svg-1 }}
+            {% if section.settings.announcment-svg-2 != blank %}
+              {{ section.settings.announcment-svg-2 }}
+            {% else %}
+              {{ section.settings.announcment-link-2 }}
+            {% endif %}
           </div>
           <div>{{ section.settings.announcment-desktop-2 }}</div>
         </div>
@@ -152,7 +160,11 @@
       </div>
       <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba052d-aeba04e7" class="right-announcement">
         <div class="announcement-img">
-          {{ section.settings.announcment-svg-1 }}
+          {% if section.settings.announcment-svg-3 != blank %}
+            {{ section.settings.announcment-svg-3 }}
+          {% else %}
+            {{ section.settings.announcment-link-3 }}
+          {% endif %}
         </div>
         <div>{{ section.settings.announcment-desktop-3 }}</div>
       </div>
@@ -177,7 +189,11 @@
             <div class="announcement-slide w-slide">
               <div class="announcement">
                 <div class="announcement-img">
-                  {{ block.settings.mobile-announcment_svg }}
+                  {% if block.settings.mobile-announcment_svg != blank %}
+                    {{ block.settings.mobile-announcment_svg }}
+                  {% else %}
+                    {{ block.settings.announcment-link }}
+                  {% endif %}
                 </div>
                 <div>{{ block.settings.mobile-announcment_text }}</div>
               </div>
@@ -295,13 +311,25 @@
         "id": "announcment-svg-1",
         "label": "Announcment SVG 1"
       }, {
+        "type": "url",
+        "id": "announcment-link-1",
+        "label": "Announcment Link 1"
+      }, {
         "type": "html",
         "id": "announcment-svg-2",
         "label": "Announcment SVG 2"
       }, {
+        "type": "url",
+        "id": "announcment-link-2",
+        "label": "Announcment Link 2"
+      }, {
         "type": "html",
         "id": "announcment-svg-3",
         "label": "Announcment SVG 3"
+      }, {
+        "type": "url",
+        "id": "announcment-link-3",
+        "label": "Announcment Link 3"
       }
     ],
     "blocks": [
@@ -317,6 +345,10 @@
             "type": "html",
             "id": "mobile-announcment_svg",
             "label": "Announcment SVG"
+          }, {
+            "type": "url",
+            "id": "announcment-link",
+            "label": "Announcment Link"
           }
         ]
       }
