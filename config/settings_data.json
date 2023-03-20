@@ -23,7 +23,7 @@
           "681abb18-7696-432a-afc6-3eb53a3904a0": {
             "type": "announcment-mobile",
             "settings": {
-              "mobile-announcment_text": "<p>Vandaag besteld, morgen groen geleverd.<\/p>",
+              "mobile-announcment_text": "",
               "mobile-announcment_svg": ""
             }
           }
@@ -45,8 +45,8 @@
           "main-menu_desktop": "",
           "main-menu_mobile": "",
           "announcment-desktop-1": "<p>Voor 17:00 besteld, <strong>morgen<\/strong> groen geleverd<\/p>",
-          "announcment-desktop-2": "",
-          "announcment-desktop-3": "",
+          "announcment-desktop-2": "<p>Probeer 30 dagen <strong>gratis<\/strong><\/p>",
+          "announcment-desktop-3": "<p>Per warmtekussen planten we <strong>1m² groen<\/strong> terug<\/p>",
           "announcment-svg-1": "",
           "announcment-svg-2": "",
           "announcment-svg-3": ""
