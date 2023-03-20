@@ -64,10 +64,24 @@
           "settings": {
             "option-text": "Ik wil mijn Heatup retourneren"
           }
+        },
+        "11707826-9756-4951-8746-72ec64b8eb89": {
+          "type": "option",
+          "settings": {
+            "option-text": "Ik heb een probleem"
+          }
+        },
+        "a7ccf0fb-ce13-4778-8561-3f5feaadbf78": {
+          "type": "option",
+          "settings": {
+            "option-text": "Ik ben een influencer of bedrijf en wil samenwerken"
+          }
         }
       },
       "block_order": [
-        "fced059e-8c6f-4cdb-9684-53bf0497f1ec"
+        "fced059e-8c6f-4cdb-9684-53bf0497f1ec",
+        "11707826-9756-4951-8746-72ec64b8eb89",
+        "a7ccf0fb-ce13-4778-8561-3f5feaadbf78"
       ],
       "settings": {
         "titel": "Niet geholpen? Heatup staat voor je klaar!",
