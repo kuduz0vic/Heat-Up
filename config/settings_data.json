@@ -28,8 +28,16 @@
           "cta_gebied_aanuit": true,
           "urge_aanuit": true,
           "cta_aanuit": true,
+          "desktop-search": true,
+          "mobile-search": true,
           "main-menu_desktop": "",
-          "main-menu_mobile": ""
+          "main-menu_mobile": "",
+          "announcment-desktop-1": "",
+          "announcment-desktop-2": "",
+          "announcment-desktop-3": "",
+          "announcment-svg-1": "",
+          "announcment-svg-2": "",
+          "announcment-svg-3": ""
         }
       },
       "v1-hero": {
@@ -241,14 +249,14 @@
             "type": "footer-menu",
             "settings": {
               "main-menu_desktop": "main-menu",
-              "footer-block-title": "Title 1"
+              "footer-block-title": "Info & hulp"
             }
           },
           "0d1d6fd7-6bcc-4586-bb49-da3a3252e5d2": {
             "type": "footer-menu",
             "settings": {
               "main-menu_desktop": "footer",
-              "footer-block-title": "Title 2"
+              "footer-block-title": "Over Heatup"
             }
           },
           "e19e975f-155b-4234-859d-b68a2f090711": {
@@ -265,12 +273,14 @@
           },
           "fc464cd3-ddf4-41d9-a37e-2185f416915b": {
             "type": "twitter-icon",
+            "disabled": true,
             "settings": {
               "twitter-link": ""
             }
           },
           "66e1b797-28f5-4253-a725-186e2ed7973c": {
             "type": "linkedin-icon",
+            "disabled": true,
             "settings": {
               "linkedin-link": ""
             }
