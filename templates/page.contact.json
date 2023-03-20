@@ -5,6 +5,14 @@
       "settings": {
       }
     },
+    "b751c807-48c4-411e-8330-65f0aaff8298": {
+      "type": "v1-tekst-en-afbeelding",
+      "settings": {
+        "titel": "Snelle opwarming voor snelle verlichting",
+        "paragraph": "Natuurlijk wil je een zo goed mogelijk antwoord op je vraag over je Heatup warmtekussen. We kunnen je op verschillende manieren helpen, afhankelijk van je vraag. Op deze pagina vind je het antwoord op veelgestelde vragen en kun je contact met ons opnemen.",
+        "afbeelding": "shopify:\/\/shop_images\/debbie-tafel-thee.jpg"
+      }
+    },
     "9efc42b7-cda9-44e6-9497-d9d29bb467e2": {
       "type": "v1-faq",
       "blocks": {
@@ -30,14 +38,6 @@
       "settings": {
         "titel": "Hulp nodig? Deze vragen helpen je snel verder",
         "paragraph": "Uiteraard staat onze klantenservice klaar voor al je vragen en opmerkingen. Op snel verder te kunnen, vind je hiernaast het antwoord op veelgestelde vragen."
-      }
-    },
-    "b751c807-48c4-411e-8330-65f0aaff8298": {
-      "type": "v1-tekst-en-afbeelding",
-      "settings": {
-        "titel": "Snelle opwarming voor snelle verlichting",
-        "paragraph": "",
-        "afbeelding": "shopify:\/\/shop_images\/debbie-tafel-thee.jpg"
       }
     },
     "contact-form": {
@@ -84,8 +84,8 @@
   },
   "order": [
     "template",
-    "9efc42b7-cda9-44e6-9497-d9d29bb467e2",
     "b751c807-48c4-411e-8330-65f0aaff8298",
+    "9efc42b7-cda9-44e6-9497-d9d29bb467e2",
     "contact-form",
     "971352fc-d947-44da-b59b-cca8a0696fed"
   ]
