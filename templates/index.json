@@ -65,6 +65,19 @@
     },
     "9fd60fcc-3c2b-4a6a-b9c2-cab75434ee48": {
       "type": "v1-why-sectie",
+      "blocks": {
+        "d88347b9-80f2-4f1f-ab0e-76bf1c984430": {
+          "type": "why-slide",
+          "settings": {
+            "slide-svg": "",
+            "slide-title": "",
+            "slide-description": ""
+          }
+        }
+      },
+      "block_order": [
+        "d88347b9-80f2-4f1f-ab0e-76bf1c984430"
+      ],
       "custom_css": [
 
       ],
@@ -241,33 +254,33 @@
         "e9c74a65-c0e6-4e9d-9e32-8fc3289fc79b": {
           "type": "counter",
           "settings": {
-            "counter-number": "80",
+            "counter-number": "30",
             "counter-sign": "",
-            "counter-text": "title 1"
+            "counter-text": "Dagen Gratis Proberen"
           }
         },
         "71abcb99-95ed-4930-9f62-5cf700fa9543": {
           "type": "counter",
           "settings": {
-            "counter-number": "30",
-            "counter-sign": "x",
-            "counter-text": "title 2"
+            "counter-number": "7",
+            "counter-sign": "%",
+            "counter-text": "Energie besparen per jaar"
           }
         },
         "d646f8b7-9b84-4cbf-8c37-75d96beb25bf": {
           "type": "counter",
           "settings": {
-            "counter-number": "2000",
+            "counter-number": "100",
             "counter-sign": "%",
-            "counter-text": "title 3"
+            "counter-text": "Tevreden klanten"
           }
         },
         "d9d2d06e-487e-4ff4-b5a1-585a5e112042": {
           "type": "counter",
           "settings": {
-            "counter-number": "8",
+            "counter-number": "3",
             "counter-sign": "",
-            "counter-text": "title 4"
+            "counter-text": "Warmtestanden"
           }
         }
       },
@@ -279,7 +292,7 @@
       ],
       "settings": {
         "titel": "Waarom een Heatup warmtekussen?",
-        "tagline": "Tekst hier",
+        "tagline": "",
         "subtitel_weergeven": true
       }
     },
