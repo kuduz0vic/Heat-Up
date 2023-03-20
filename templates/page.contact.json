@@ -66,7 +66,9 @@
         "label-email": "Emailadres*",
         "label-phone": "Telefoonnummer*",
         "label-topic": "Waar heb je hulp bij nodig?",
-        "label-message": "Wil je ons meer vertellen?"
+        "label-message": "Wil je ons meer vertellen?",
+        "option-placeholder": "Selecteer een onderwerp",
+        "message-placeholder": "Vertel ons meer..."
       }
     },
     "971352fc-d947-44da-b59b-cca8a0696fed": {
