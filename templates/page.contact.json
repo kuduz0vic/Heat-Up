@@ -36,12 +36,20 @@
             "vraag": "Hoe maak ik mijn Heatup schoon?",
             "antwoord": "Om jouw Heatup warmtekussen schoon te maken, haal je de hoes van het binnenkussen af. De hoes kun je wassen zoals beschreven staat op het waslabel. \n\nOver het algemeen is het aan te raden om de hoes op een lage temperatuur te wassen en deze niet in de droger te stoppen. Met andere woorden: laat moeder natuur haar werk doen en laat de hoes vanzelf drogen. Goed voor het milieu en de levensduur van jouw warmtekussen! ;)"
           }
+        },
+        "a7264481-3e95-45fb-a0cf-86cd2f39ad40": {
+          "type": "faq",
+          "settings": {
+            "vraag": "Mijn Heatup werkt niet",
+            "antwoord": "De warmtekussens van Heatup zijn hoogwaardig en duurzam geproduceerd. Mocht je problemen ervaren met jouw warmtekussen, bekijk dan eerst of de accu goed is opgeladen.\n\nMocht je nog steeds problemen ervaren? Neem dan contact met ons op via het formulier op deze pagina."
+          }
         }
       },
       "block_order": [
         "39fdef59-d06a-4f87-9571-c3bd78b57f14",
         "7029f985-1686-47e5-adc2-9059e430add2",
-        "e0b65b28-12d4-424a-9f9c-e905d3707bdf"
+        "e0b65b28-12d4-424a-9f9c-e905d3707bdf",
+        "a7264481-3e95-45fb-a0cf-86cd2f39ad40"
       ],
       "settings": {
         "titel": "Hulp nodig? Deze vragen helpen je snel verder",
