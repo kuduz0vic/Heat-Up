@@ -58,6 +58,17 @@
     },
     "contact-form": {
       "type": "v1-contact-form",
+      "blocks": {
+        "fced059e-8c6f-4cdb-9684-53bf0497f1ec": {
+          "type": "option",
+          "settings": {
+            "option-text": "Ik wil mijn Heatup retourneren"
+          }
+        }
+      },
+      "block_order": [
+        "fced059e-8c6f-4cdb-9684-53bf0497f1ec"
+      ],
       "settings": {
         "titel": "Niet geholpen? Heatup staat voor je klaar!",
         "paragraph": "Heb je toch nog een vraag? Dan kun je hieronder het formulier invullen. Wij streven er naar om binnen 4 uur contact met je op te nemen.",
