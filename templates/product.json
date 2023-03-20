@@ -7,14 +7,13 @@
           "type": "media",
           "settings": {
             "label_text": "Verkoopt snel!",
-            "product_label_icon": "shopify:\/\/shop_images\/png-clipart-trusted-shops-gmbh-e-commerce-logo-organization-certification-trust-no-one-text-trademark.png",
-            "badge_1": "shopify:\/\/shop_images\/png-clipart-trusted-shops-gmbh-e-commerce-logo-organization-certification-trust-no-one-text-trademark.png",
+            "product_label_icon": "shopify:\/\/shop_images\/Heatup-vlam-icon.png",
             "badge_2": "shopify:\/\/shop_images\/PlanetProof_Fine_RGB-1024x1024.png",
             "labels_aanuit": true,
             "product_label_aanuit": true,
             "trust_badges_aanuit": true,
-            "badge_1_aanuit": true,
-            "badge_2_aanuit": true
+            "badge_1_aanuit": false,
+            "badge_2_aanuit": false
           }
         },
         "f240907b-b701-4eca-b0a3-8e7973c02227": {
