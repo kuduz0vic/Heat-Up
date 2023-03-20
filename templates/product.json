@@ -7,6 +7,9 @@
           "type": "media",
           "settings": {
             "label_text": "Verkoopt snel!",
+            "product_label_icon": "shopify:\/\/shop_images\/png-clipart-trusted-shops-gmbh-e-commerce-logo-organization-certification-trust-no-one-text-trademark.png",
+            "badge_1": "shopify:\/\/shop_images\/WebwinkelKeur.webp",
+            "badge_2": "shopify:\/\/shop_images\/PlanetProof_Fine_RGB-1024x1024.png",
             "labels_aanuit": true,
             "product_label_aanuit": true,
             "trust_badges_aanuit": true,
@@ -27,7 +30,7 @@
         "806757aa-4830-47c6-8e8d-f965a0082bc8": {
           "type": "reviews",
           "settings": {
-            "reviews": "160 Reviews"
+            "reviews": "100+ Reviews"
           }
         },
         "806c7ef6-eeb6-4884-995f-549b9a4aeaed": {
