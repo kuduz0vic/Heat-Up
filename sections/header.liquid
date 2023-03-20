@@ -147,7 +147,10 @@
       <div id="w-node-b9088d66-d0c6-bef0-44e2-882faeba0526-aeba04e7" class="middle-announcement">
         <div class="announcement-seperator"></div>
         <div class="middle-announcement-inner">
-          <div class="announcement-img">
+          <div
+            {% if section.settings.announcment-svg-2 != blank %}
+            class="announcement-img"
+            {% endif %}>
             {% if section.settings.announcment-svg-2 != blank %}
               {{ section.settings.announcment-svg-2 }}
             {% else %}
