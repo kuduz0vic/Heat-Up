@@ -312,6 +312,7 @@
                       </div>
                     {% endif %}
                   </div>
+
                 {% endif %}
 
                 <div block="2 Afbeeldingen" class="product-images-row">
@@ -906,7 +907,7 @@
                           srcset="{{ twelfth_image.src | img_url: 'master' }} 500w, {{ twelfth_image.src | img_url: 'master' }} 608w"
                           alt=""
                           class="product-img-slide"></div>
-
+                        {% endif %}
 
                           {% if thirteenth_image.src != blank %}
                           <div class="swiper-slide mySwiper2-slide" data-value="{{thirteenth_image_alt}}"><img
@@ -936,6 +937,7 @@
                             </div>
                           </div>
                         {% endif %}
+                      
                         {% if fourteenth_image.src != blank %}
                           <div class="swiper-slide mySwiper2-slide" data-value="{{fourteenth_image_alt}}"><img
                               src="{{ fourteenth_image.src | img_url: 'master' }}"
@@ -962,7 +964,7 @@
                               srcset="{{ sixteenth_image.src | img_url: 'master' }} 500w, {{ sixteenth_image.src | img_url: 'master' }} 608w"
                               alt=""
                               class="product-img-slide"></div>
-
+                            {% endif %}
 
                               {% if seventeenth_image.src != blank %}
                               <div class="swiper-slide mySwiper2-slide" data-value="{{seventeenth_image_alt}}"><img
@@ -1018,7 +1020,7 @@
                                   srcset="{{ twentieth_image.src | img_url: 'master' }} 500w, {{ twentieth_image.src | img_url: 'master' }} 608w"
                                   alt=""
                                   class="product-img-slide"></div>
-
+ {% endif %}
 
                                   {% if twenty_first_image.src != blank %}
                                   <div class="swiper-slide mySwiper2-slide" data-value="{{twenty_first_image_alt}}"><img
@@ -1098,9 +1100,6 @@
                 <div class="custom-code-do-not-delete w-embed"></div>
               </div>
             </div>
-                  {% endif %}
-                {% endif %}
-              {% endif %}
           {% endcase %}
         {% endfor %}
         <div class="product-section-right">
@@ -1278,7 +1277,12 @@
                 {% endcase %}
               {% endfor %}
             </div>
-            <div class="pdp-guarantee">{{ block.settings.delivery }}</div>
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'delivery' %}
+            <div class="pdp-guarantee" style="margin: 16px 0px;">{{ block.settings.delivery }}</div>
+                {% endcase %}
+              {% endfor %}
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'checkout_buttons' %}
@@ -1368,4 +1372,23 @@
 <script>
   var currentSection = document.currentScript.closest('.shopify-section');
   currentSection.setAttribute("class", "product-section");
+</script>
+
+<script>
+  const description = document.querySelector('.product-section-right');
+
+  window.addEventListener('scroll', () => {
+    const bottomOffset = description.offsetTop + description.offsetHeight;
+    const viewportHeight = window.innerHeight;
+    const scrollPosition = window.scrollY + viewportHeight;
+    const descriptionHeight = description.offsetHeight;
+
+    if (scrollPosition > bottomOffset) {
+      description.classList.add('sticky-description');
+      description.style.top = `calc(90vh - ${descriptionHeight}px)`;
+    } else {
+      description.classList.remove('sticky-description');
+      description.style.top = null;
+    }
+  });
 </script>

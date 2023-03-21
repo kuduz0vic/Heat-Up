@@ -26,8 +26,12 @@
                 class="close-btn-img"></a>
           </div>
           <div class="shopping-bar-shipping-banner">
-            <div class="shipping-progress-text">{{ 't6a2ee5df' | t }}<strong>{{ 'tn3c91ae66' | t }}</strong>
-              {{ 't55f6d8d8' | t }}</div>
+            <div class="shipping-progress-text">
+              {% if freeShippingPrice <= cartPriceCents %}
+                {{ section.settings.reward-gotten }}
+              {% else %}
+                {{ section.settings.reward-not }}{% endif %}
+            </div>
             <div class="content-bar">
               <div class="shipping-progress-bar" style="width:{{width}}%; max-width: 100%;"></div>
             </div>
@@ -166,41 +170,11 @@
           name="checkout"
           class="checkout-btn w-inline-block">{{ 'tn4ac247ab' | t }}</button>
         <div class="payment-icons">
-          <div class="payment-icon"><img
-              src="{{ 'bancontact-1b5f5b192aedfa7ce6d2f62dccc81a01c97e6f4b48c301e8c54c610e9276de94.png.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="payment-icon-img"></div>
-          <div class="payment-icon"><img
-              src="{{ 'klarna-389801c6056cb5600b4f05f72ebc2c58e4947688c6c4f5e6ccea41f7973d3a28.svg.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="payment-icon-img"></div>
-          <div class="payment-icon"><img
-              src="{{ 'paypal-logo_uujmio.png.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="payment-icon-img"></div>
-          <div class="payment-icon"><img
-              src="{{ 'master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="payment-icon-img"></div>
-          <div class="payment-icon"><img
-              src="{{ 'maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="payment-icon-img"></div>
-          <div class="payment-icon"><img
-              src="{{ 'american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="payment-icon-img"></div>
-          <div class="payment-icon"><img
-              src="{{ 'visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg.svg' | asset_url }}"
-              loading="lazy"
-              alt=""
-              class="payment-icon-img"></div>
+          {% assign enabled_payment_types = section.settings.payments | remove: ' ' | split: ',' %}
+
+          {%- for type in enabled_payment_types -%}
+            {{ type | payment_type_svg_tag: class: 'payment-icon' }}
+          {%- endfor -%}
         </div>
       </div>
       <div class="w-embed"></div>
@@ -305,6 +279,21 @@
         "id": "swiper-products",
         "type": "product_list",
         "label": "Swiper Products"
+      }, {
+        "type": "text",
+        "id": "reward-gotten",
+        "placeholder": "Rewards",
+        "default": "Rewards",
+        "label": "Reward Gotten"
+      }, {
+        "type": "liquid",
+        "id": "reward-not",
+        "label": "Reward Not Achieved"
+      }, {
+        "id": "payments",
+        "label": "Payment Icons",
+        "type": "textarea",
+        "default": "klarna,visa,master,american_express,maestro,shopify_pay,apple_pay,google_pay"
       }
     ]
   }
