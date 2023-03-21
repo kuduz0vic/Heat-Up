@@ -263,6 +263,17 @@
             "review_stars": ""
           }
         },
+        "10f72934-d27e-4b04-b8aa-98ec6ba80c12": {
+          "type": "review",
+          "settings": {
+            "titel": "Gratis nieuw kussen",
+            "paragraph": "Zonder zorgen gratis nieuwe gekregen omdat de oude niet goed warm werd. Top service !!!!!\n\nHij wordt verder heerlijk (en snel) warm, fijn dat er drie standen op zitten. Gaat makkelijk een avond mee met de accu.",
+            "reviewer": "Pieter van Cuijk",
+            "text_naast_checkmark": "Geverifiëerd",
+            "testimonial-image": "shopify:\/\/shop_images\/1516861296526.jpg",
+            "review_stars": ""
+          }
+        },
         "f0115d90-efcf-44d6-a29a-50e9f61ce515": {
           "type": "review",
           "settings": {
@@ -278,11 +289,12 @@
       "block_order": [
         "239380fb-6eaa-4188-b666-f899222fc4ca",
         "c90857b8-2f61-4d47-acc1-daeaca71bc1b",
+        "10f72934-d27e-4b04-b8aa-98ec6ba80c12",
         "f0115d90-efcf-44d6-a29a-50e9f61ce515"
       ],
       "settings": {
         "titel": "Klanten houden van Heatup.",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "paragraph": "Dit vertelden warmteliefhebbers  over de Heatup warmtekussens."
       }
     },
     "b3081d19-0d7e-44e0-af7a-73a5229f1253": {
@@ -291,8 +303,8 @@
         "2d39b346-9df1-4f6c-9a34-b4bddee7de49": {
           "type": "faq",
           "settings": {
-            "vraag": "Hoe snel wordt het kussen warm?",
-            "antwoord": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "vraag": "Hoe werkt Heatup?",
+            "antwoord": "De Heatup warmtekussens verwarmen je met infraroodstraling. Dat maakt onze producten extra bijzonder!\n\nInfraroodstraling is een vorm van warmte die het lichaam van binnenuit verwarmt. De kachel thuis geeft je bijvoorbeeld stralingswarmte. De infrarood stralingen trekken dieper de huid in, tot wel 4 cm. Dit klinkt gek, maar hierdoor wordt het lichaam van binnenuit verwarmd en voelt het net als de zon buiten. \n\nNaast het verwarmen is bewezen dat Infraroodstraling ook positief bijdraagt aan je gezondheid. Zo helpt het tegen spierpijn, vermindert het de pijn in je rug en revitaliseert het je huid."
           }
         },
         "04e9619b-9cdd-4b0a-8aa9-6345d1046456": {
@@ -316,8 +328,8 @@
         "7143932c-ac65-4be5-8510-5649ea1fadf2"
       ],
       "settings": {
-        "titel": "Questions? We have got answers.",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        "titel": "Dit is waarom je een bestelt bij Heatup",
+        "paragraph": "Hier vind je een antwoord op alle vragen over het Heatup warmtekussen. Heb je toch nog hulp nodig? Ons team staat voor je klaar!"
       }
     },
     "6fd885d5-044e-4784-9569-62d7e3f309ee": {

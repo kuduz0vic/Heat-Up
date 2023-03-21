@@ -1,6 +1,9 @@
 {
   "current": {
     "favicon": "shopify:\/\/shop_images\/Heatup-vlam-icon.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Heatup.jpg",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_button_color": "#04da8d",
     "sections": {
       "sidecart": {
         "type": "sidecart",
@@ -333,8 +336,8 @@
           "e815384a-f4c5-4020-8c04-69e58fe198b9"
         ],
         "settings": {
-          "menu_titel_1": "Over Heatup",
-          "menu_titel_2": "Info & hulp",
+          "menu_titel_1": "Info & hulp",
+          "menu_titel_2": "Heatup",
           "menu_titel_3": "Volg ons",
           "nieuwsbrief_text": "Schrijf je in voor onze nieuwsbrief en leer alles over Heatup. Geen spam, dat beloven we! :)",
           "subscribe_button_text": "Meld je aan",

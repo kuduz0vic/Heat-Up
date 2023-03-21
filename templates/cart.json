@@ -1,8 +1,16 @@
 {
-    "sections": {
-      "template": {
-        "type": "template-cart"
+  "sections": {
+    "template": {
+      "type": "template-cart",
+      "settings": {
+        "titel": "Mijn winkelwagen (1 item)",
+        "gratis-shipping": "Gratis verzending! Vóór 17:00 uur besteld is morgen in huis",
+        "freeshipping_threshold": 4000,
+        "shipping": 499
       }
-    },
-    "order": ["template"]
-  }
+    }
+  },
+  "order": [
+    "template"
+  ]
+}

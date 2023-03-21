@@ -93,7 +93,8 @@
         "label-topic": "Waar heb je hulp bij nodig?",
         "label-message": "Wil je ons meer vertellen?",
         "option-placeholder": "Selecteer een onderwerp",
-        "message-placeholder": "Vertel ons meer..."
+        "message-placeholder": "Vertel ons meer...",
+        "button-label": "Verstuur je bericht"
       }
     },
     "971352fc-d947-44da-b59b-cca8a0696fed": {
@@ -127,7 +128,7 @@
         "1922b3df-3aef-4b8c-9a5d-b23ee365fb65"
       ],
       "settings": {
-        "titel": "Warmte in beeld"
+        "titel": "Heatup fans in beeld"
       }
     }
   },
