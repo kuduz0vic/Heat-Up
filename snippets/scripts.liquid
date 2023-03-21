@@ -472,7 +472,7 @@ function handleClick() {
   swiper2.update();
 }
 </script><script>
-function handleClick(initialColor) {
+function handleClickDesktop(initialColor) {
   const selectedColor = event.target.value || initialColor;
   const imageChangeDivs = document.querySelectorAll('.image-change');
 
@@ -495,12 +495,12 @@ function handleClick(initialColor) {
 document.addEventListener('DOMContentLoaded', function() {
   const colorMetafield = document.querySelector('.color-metafield');
   const initialColor = colorMetafield.textContent.trim();
-  handleClick(initialColor);
+  handleClickDesktop(initialColor);
 });
 
 // Add click event listeners to all swatch input elements
 const swatchInputs = document.querySelectorAll('.color-input');
 swatchInputs.forEach(input => {
-  input.addEventListener('click', handleClick);
+  input.addEventListener('click', handleClickDesktop);
 });
 </script>

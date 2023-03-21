@@ -22,7 +22,13 @@
                       class="why-img"></div>
                   <div class="why-slide-contents">
                     <div class="why-icon-wrapper">
-                      <div class="why-icon">{{ block.settings.slide-svg }}</div>
+                      <div {% if block.settings.slide-svg %}class="why-icon"{% endif %}>
+                        {% if block.settings.slide-svg %}
+                          {{ block.settings.slide-svg }}
+                        {% else %}
+                          {{ block.settings.slide-image_url }}
+                        {% endif %}
+                      </div>
                     </div>
                     <div class="why-title">{{ block.settings.slide-title }}</div>
                     <div class="why-paragraph">{{ block.settings.slide-description }}</div>
@@ -263,11 +269,18 @@
             "type": "image_picker",
             "id": "slide-image",
             "label": "Slide Image"
-          }, {
+          },
+          {
             "type": "html",
             "id": "slide-svg",
             "label": "Slide Svg"
-          }, {
+          },
+          {
+            "type": "url",
+            "id": "slide-image_url",
+            "label": "Slide Image"
+          },
+          {
             "type": "text",
             "id": "slide-title",
             "label": "Slide Title"
