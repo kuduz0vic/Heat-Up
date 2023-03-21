@@ -87,12 +87,15 @@
         "tagline": "De Heatup warmtekussens zijn draadloos en verwarmen je met unieke met infraroodtechnologie en oplaadbare batterij. Kies één van de 3 warmtestanden en geniet urenlang van behaaglijke warmte.",
         "desktop-image-1": "shopify:\/\/shop_images\/stof-close-up-nagels.jpg",
         "tab-svg-1": "",
+        "tab-image-1": "",
         "tab-title-1": "Energiebesparend",
         "tab-description-1": "<p>Wist jij dat je <\/p>",
         "tab-svg-2": "",
+        "tab-image-2": "",
         "tab-title-2": "USP HIER",
         "tab-description-2": "<p>Text here<\/p>",
         "tab-svg-3": "",
+        "tab-image-3": "",
         "tab-title-3": "USP hier",
         "tab-description-3": "<p>Text here<\/p>",
         "button-url": "shopify:\/\/products\/heatup-draadloos-warmtekussen",
@@ -124,6 +127,17 @@
             "review_stars": ""
           }
         },
+        "2c87a64f-a736-45ea-af7b-4341ee51ac96": {
+          "type": "review",
+          "settings": {
+            "titel": "Gratis nieuw kussen",
+            "paragraph": "Zonder zorgen gratis nieuwe gekregen omdat de oude niet goed warm werd. Top service !!!!!\n\nHij wordt verder heerlijk (en snel) warm, fijn dat er drie standen op zitten. Gaat makkelijk een avond mee met de accu.",
+            "reviewer": "Pieter van Cuijk",
+            "text_naast_checkmark": "Geverifiëerd",
+            "testimonial-image": "shopify:\/\/shop_images\/1516861296526.jpg",
+            "review_stars": ""
+          }
+        },
         "6c4d03c3-33a6-4913-91bf-bf31951c901a": {
           "type": "review",
           "settings": {
@@ -139,6 +153,7 @@
       "block_order": [
         "6bb99784-485b-4e74-a00f-68dca51b8d26",
         "0569af21-f42c-4ae6-ade8-4a03b3ddc639",
+        "2c87a64f-a736-45ea-af7b-4341ee51ac96",
         "6c4d03c3-33a6-4913-91bf-bf31951c901a"
       ],
       "settings": {
