@@ -252,16 +252,6 @@
             "review_stars": ""
           }
         },
-        "10f72934-d27e-4b04-b8aa-98ec6ba80c12": {
-          "type": "review",
-          "settings": {
-            "titel": "Gratis nieuw kussen",
-            "paragraph": "Zonder zorgen gratis nieuwe gekregen omdat de oude niet goed warm werd. Top service !!!!!",
-            "reviewer": "Pieter van Cuijk",
-            "text_naast_checkmark": "Geverifiëerd",
-            "review_stars": ""
-          }
-        },
         "c90857b8-2f61-4d47-acc1-daeaca71bc1b": {
           "type": "review",
           "settings": {
@@ -270,6 +260,16 @@
             "reviewer": "Thijs Jansen",
             "text_naast_checkmark": "Geverifiëerd",
             "testimonial-image": "shopify:\/\/shop_images\/05428fa5dbe6f2d07f65d496e72ba5ce.png",
+            "review_stars": ""
+          }
+        },
+        "10f72934-d27e-4b04-b8aa-98ec6ba80c12": {
+          "type": "review",
+          "settings": {
+            "titel": "Gratis nieuw kussen",
+            "paragraph": "Zonder zorgen gratis nieuwe gekregen omdat de oude niet goed warm werd. Top service !!!!!",
+            "reviewer": "Pieter van Cuijk",
+            "text_naast_checkmark": "Geverifiëerd",
             "review_stars": ""
           }
         },
@@ -287,8 +287,8 @@
       },
       "block_order": [
         "239380fb-6eaa-4188-b666-f899222fc4ca",
-        "10f72934-d27e-4b04-b8aa-98ec6ba80c12",
         "c90857b8-2f61-4d47-acc1-daeaca71bc1b",
+        "10f72934-d27e-4b04-b8aa-98ec6ba80c12",
         "f0115d90-efcf-44d6-a29a-50e9f61ce515"
       ],
       "settings": {
