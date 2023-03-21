@@ -81,7 +81,7 @@
             class="form-input-2 is-text-area w-input"></textarea>
         </div><input
           type="submit"
-          value="Send message"
+          value="{{section.settings.button-label}}"
           data-wait="Please wait..."
           id="w-node-eae7831a-99c6-bb58-221e-7d9396d7c263-96d7c23e"
           class="button w-button">
@@ -160,6 +160,10 @@
         "type": "text",
         "id": "message-placeholder",
         "label": "Message Placeholder"
+      }, {
+        "type": "text",
+        "id": "button-label",
+        "label": "Button Label"
       }
     ],
     "blocks": [

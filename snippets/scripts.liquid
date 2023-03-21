@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
         currency: "{{ shop.currency }}",
         minimumFractionDigits: 2
       });
-      const buttonText = "Add to Cart - " + formattedPrice;
+      const buttonText = "Bestel nu - " + formattedPrice;
       addToCartButton.href = `/cart/add?id=${variantId}`;
       addToCartButton.textContent = buttonText;
 
@@ -337,7 +337,10 @@ document.addEventListener("DOMContentLoaded", function() {
 // Update discount
       const discountAmount = Math.round((variantComparePrice - variantPrice) * 100) / 100;
       const formattedDiscount = discountAmount.toLocaleString("nl-NL", {minimumFractionDigits: 0}).replace(/ /g, '\u00a0');
-      discountSpan.textContent = formattedDiscount;
+      const discountSpans = document.querySelectorAll("#discount");
+      discountSpans.forEach(span => {
+        span.textContent = formattedDiscount;
+      });
     }
   }
 
@@ -352,7 +355,48 @@ document.addEventListener("DOMContentLoaded", function() {
   sizeButtons.forEach(button => button.addEventListener("click", updateAddToCartButton));
 });
 </script><script>
+document.addEventListener("DOMContentLoaded", function() {
+  const swatchFields = document.querySelectorAll(".pdp-swatch-field");
+  const colorInputSpan = document.querySelector(".color-input");
 
+// Run the function once on website load
+  const firstSwatchField = swatchFields[0];
+  const firstSwatchColor = firstSwatchField.querySelector("span").textContent;
+  colorInputSpan.textContent = firstSwatchColor;
+
+  swatchFields.forEach(function(swatchField) {
+    swatchField.addEventListener("click", function() {
+      const swatchColor = swatchField.querySelector("span").textContent;
+      colorInputSpan.textContent = swatchColor;
+    });
+  });
+});
+</script><script>
+document.addEventListener("DOMContentLoaded", function() {
+
+// Step 1: Create array to store variant data
+  const variantsData = [];
+
+// Step 2: Loop through first three variants and add data to array
+  {% for variant in product.variants limit:3 %}variantsData.push({option1: "{{ variant.option1 }}", option2: "{{ variant.option2 }}", price: "{{ variant.price | money_without_trailing_zeros }}", compare_at_price: "{{ variant.compare_at_price | money_without_trailing_zeros }}"});{% endfor %}
+
+// Step 3: Loop through pdp-amount-field spans and update prices
+  const amountFields = document.querySelectorAll('.pdp-amount-field span');
+  amountFields.forEach(function(span) {
+    const optionText = span.textContent.trim();
+    const variantData = variantsData.find(function(data) {
+      return data.option2 === optionText;
+    });
+    if (variantData) {
+      const beforePriceSpan = span.closest('.pdp-amount-field').querySelector('.before-swatch-price');
+      const newPriceSpan = span.closest('.pdp-amount-field').querySelector('.new-swatch-price');
+      beforePriceSpan.textContent = variantData.compare_at_price;
+      newPriceSpan.textContent = variantData.price;
+    }
+  });
+
+});
+</script><script>
 var originalSlides = [];
 
 // Save the original slides if they haven't been saved yet
@@ -363,9 +407,9 @@ if (originalSlides.length === 0) {
   }
 }
 
-
-var colorField = document.querySelector("#discount");
+var colorField = document.querySelector(".color-metafield");
 var color = colorField.innerText;
+
 
 var mySwiper2 = document.querySelector("#Product-Images-Swiper");
 var mySwiper2Slides = mySwiper2.querySelectorAll(".swiper-slide");
@@ -427,4 +471,36 @@ function handleClick() {
 
   swiper2.update();
 }
+</script><script>
+function handleClick(initialColor) {
+  const selectedColor = event.target.value || initialColor;
+  const imageChangeDivs = document.querySelectorAll('.image-change');
+
+// Loop through each image change div
+  imageChangeDivs.forEach(div => {
+
+// Get the data-value attribute of the div
+    const dataValue = div.getAttribute('data-value');
+
+// If the data-value matches the selected color, show the div, otherwise hide it
+    if (dataValue === selectedColor) {
+      div.style.display = 'block';
+    } else {
+      div.style.display = 'none';
+    }
+  });
+}
+
+// Call handleClick() once on page load using the text content from .color-metafield
+document.addEventListener('DOMContentLoaded', function() {
+  const colorMetafield = document.querySelector('.color-metafield');
+  const initialColor = colorMetafield.textContent.trim();
+  handleClick(initialColor);
+});
+
+// Add click event listeners to all swatch input elements
+const swatchInputs = document.querySelectorAll('.color-input');
+swatchInputs.forEach(input => {
+  input.addEventListener('click', handleClick);
+});
 </script>

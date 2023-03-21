@@ -201,7 +201,7 @@
 
 
 {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
-
+  <p class="color-metafield" style="display: none;">{{product.metafields.custom.product_color}}</p>
 
   <input
     type="hidden"
@@ -246,7 +246,7 @@
                 {% if first_image.src != blank %}
                   <div
                     block="Hero Afbeelding"
-                    class="product-image"
+                    class="product-image image-change"
                     data-value="{{first_image_alt}}">
                     <img
                       src="{{ first_image.src | img_url: 'master' }}"
@@ -292,7 +292,7 @@
 
                 <div block="2 Afbeeldingen" class="product-images-row">
                   {% if second_image.src != blank %}
-                    <div data-value="{{second_image_alt}}" class="product-row-img"><img
+                    <div data-value="{{second_image_alt}}" class="product-row-img image-change"><img
                         src="{{ second_image.src | img_url: 'master' }}"
                         loading="lazy"
                         sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -301,7 +301,7 @@
                         class="product-img"></div>
                   {% endif %}
                   {% if third_image.src != blank %}
-                    <div data-value="{{third_image_alt}}" class="product-row-img"><img
+                    <div data-value="{{third_image_alt}}" class="product-row-img image-change"><img
                         src="{{ third_image.src | img_url: 'master' }}"
                         loading="lazy"
                         sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -311,7 +311,7 @@
                   {% endif %}
                 </div>
                 {% if fourth_image.src != blank %}
-                  <div data-value="{{fourth_image_alt}}" class="product-image"><img
+                  <div data-value="{{fourth_image_alt}}" class="product-image image-change"><img
                       src="{{ fourth_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
@@ -320,7 +320,7 @@
                       class="product-img"></div>
                 {% endif %}
                 {% if fifth_image.src != blank %}
-                  <div data-value="{{fifth_image_alt}}" class="product-image after-image">
+                  <div data-value="{{fifth_image_alt}}" class="product-image after-image image-change">
                     <img
                       src="{{ fifth_image.src | img_url: 'master' }}"
                       loading="lazy"
@@ -366,7 +366,7 @@
 
                 <div block="2 Afbeeldingen" class="product-images-row">
                   {% if sixth_image.src != blank %}
-                    <div data-value="{{sixth_image_alt}}" class="product-row-img"><img
+                    <div data-value="{{sixth_image_alt}}" class="product-row-img image-change"><img
                         src="{{ sixth_image.src | img_url: 'master' }}"
                         loading="lazy"
                         sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -375,7 +375,7 @@
                         class="product-img"></div>
                   {% endif %}
                   {% if seventh_image.src != blank %}
-                    <div data-value="{{seventh_image_alt}}" class="product-row-img"><img
+                    <div data-value="{{seventh_image_alt}}" class="product-row-img image-change"><img
                         src="{{ seventh_image.src | img_url: 'master' }}"
                         loading="lazy"
                         sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -385,7 +385,7 @@
                   {% endif %}
                 </div>
                 {% if eight_image.src != blank %}
-                  <div data-value="{{eight_image_alt}}" class="product-image"><img
+                  <div data-value="{{eight_image_alt}}" class="product-image image-change"><img
                       src="{{ eight_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
@@ -397,7 +397,7 @@
                   <div
                     data-value="{{nineth_image_alt}}"
                     block="Hero Afbeelding"
-                    class="product-image after-image">
+                    class="product-image after-image image-change">
                     <img
                       src="{{ nineth_image.src | img_url: 'master' }}"
                       loading="lazy"
@@ -442,7 +442,7 @@
                 {% endif %}
                 <div block="2 Afbeeldingen" class="product-images-row">
                   {% if tenth_image.src != blank %}
-                    <div data-value="{{tenth_image_alt}}" class="product-row-img"><img
+                    <div data-value="{{tenth_image_alt}}" class="product-row-img image-change"><img
                         src="{{ tenth_image.src | img_url: 'master' }}"
                         loading="lazy"
                         sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -451,7 +451,7 @@
                         class="product-img"></div>
                   {% endif %}
                   {% if eleventh_image.src != blank %}
-                    <div data-value="{{eleventh_image_alt}}" class="product-row-img"><img
+                    <div data-value="{{eleventh_image_alt}}" class="product-row-img image-change"><img
                         src="{{ eleventh_image.src | img_url: 'master' }}"
                         loading="lazy"
                         sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
@@ -461,7 +461,7 @@
                   {% endif %}
                 </div>
                 {% if twelfth_image.src != blank %}
-                  <div data-value="{{twelfth_image_alt}}" class="product-image"><img
+                  <div data-value="{{twelfth_image_alt}}" class="product-image image-change"><img
                       src="{{ twelfth_image.src | img_url: 'master' }}"
                       loading="lazy"
                       sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
@@ -768,7 +768,7 @@
                       <div class="choice-container" x-data="{ showSizePopup: false }">
                         <template x-if="Object.keys(productOptions).includes('Kleur')">
                           <div :class="`swatch-Kleur`" x-data="{ optionName: 'Kleur' }">
-                            <div aria-label="add description here" role="radiogroup" class="pdp-swatch-group"><label class="pdp-swatch-info"><strong>{{ 'tn61d06f63' | t }}</strong>{{ 'tn67e75256' | t }}</label>
+                            <div aria-label="add description here" role="radiogroup" class="pdp-swatch-group"><label class="pdp-swatch-info"><strong>{{ 'tn61d06f63' | t }}</strong> <span class="color-input"></span></label>
                             <div class="pdp-swatch-column">
                               <template x-for="value of productOptions['Kleur']">
                                 <label class="pdp-swatch-field">
@@ -804,7 +804,7 @@
                     {% if product.variants.size > 1 %}
                       <div class="choice-container" x-data="{ showSizePopup: false }">
                         <template x-if="Object.keys(productOptions).includes('Aantal')">
-                          <div aria-label="add description here" role="radiogroup" class="pdp-swatch-group"><label class="pdp-swatch-info"><strong>{{ 'tn1da6e1d1' | t }}</strong>(Bespaar <span id="discount"></span>)</label>
+                          <div aria-label="add description here" role="radiogroup" class="pdp-swatch-group"><label class="pdp-swatch-info"><strong>{{ 'tn1da6e1d1' | t }} </strong>(Bespaar €<span id="discount"></span>)</label>
                           <div :class="`swatch-Aantal`" x-data="{ optionName: 'Aantal' }">
                             {% if block.settings.variant-badge %}
                             <div class="amount-labels">
@@ -825,9 +825,9 @@
                                     class="w-form-label"
                                     style="text-transform:uppercase;"
                                     x-text="value"></span>
-                                  <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb473-bf8cb3ff" class="prices">
-                                    <span class="before">€149,50</span>
-                                    €99,95</div>
+                                  <div id="w-node-ae0253a5-f8a5-a265-fbc0-6da1bf8cb473-bf8cb3ff" class="swatch-prices">
+                                    <span class="before-swatch-price"></span>
+                                    <span class="new-swatch-price"></span></div>
                                 </label>
                               </template>
                             </div>
@@ -851,7 +851,7 @@
                   type="submit"
                   data-ajax-cart-request-button
                   id="add-to-cart-btn"
-                  class="checkout-btn w-inline-block">{{ block.settings.atc-text }} -
+                  class="checkout-btn w-inline-block">{{ section.settings.atc-button_label }} -
                   <span id="variant-price"></span>
                 </a>
               {% endcase %}
