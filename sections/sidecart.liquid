@@ -127,39 +127,13 @@
                   <div class="upsell-cart-swatches">
                     <div class="upsell-cart-swatches-title">{{ 't2ac97090' | t }}</div>
 
-                    {% if product.available == true %}
-                      {% if product.variants.size > 1 %}
-                        <div class="choice-container" x-data="{ showSizePopup: false }">
-                          <template x-if="Object.keys(productOptions).includes('Kleur')">
-                            <div :class="`swatch-Kleur`" x-data="{ optionName: 'Kleur' }">
-                              <div class="pdp-swatch-column">
-                                <template x-for="value of productOptions['Kleur']">
-                                  <label class="pdp-swatch-field">
-                                    <div class="w-form-formradioinput w-form-formradioinput--inputType-custom fs-radio_button w-radio-input" :class="`swatch-${value.toLowerCase()}`"></div>
-                                    <input
-                                      class="color-input"
-                                      type="radio"
-                                      :name="'Kleur'"
-                                      :value="value"
-                                      @click="handleClick()"
-                                      style="opacity:0;position:absolute;z-index:-1">
-                                    <span
-                                      :style="currentOptions[optionName] === value ?"
-                                      class="size-radio-button-label swatch-text-outside w-form-label"
-                                      for="radio"
-                                      x-text="value"></span>
-                                  </label>
-                                </template>
-                              </div>
-                            </div>
-                          </template>
-                        </div>
-                      {% endif %}
-                    {% endif %}
-
 
                   </div>
-                  <a href="#" class="upsell-cart-atc w-inline-block">{{ 'tn71c64b52' | t }}</a>
+                  <a
+                    href="/cart/add?id={{ product.selected_or_first_available_variant.id }}"
+                    type="submit"
+                    data-ajax-cart-request-button
+                    class="upsell-cart-atc w-inline-block">{{ 'tn71c64b52' | t }}</a>
                 </div>
               {% endfor %}
             </div>
