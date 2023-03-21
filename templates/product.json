@@ -40,6 +40,8 @@
         "130404e8-171f-4383-a524-980a0c751ef6": {
           "type": "variants",
           "settings": {
+            "variant-badge_text": "+ Gratis Kussensloop",
+            "variant-badge": true
           }
         },
         "63ef80d9-fb67-416f-ae4b-43558ce0c794": {
@@ -62,19 +64,19 @@
         "631ed153-7aec-415c-b3bb-347d2936d5ab": {
           "type": "usp",
           "settings": {
-            "text-usp": ""
+            "text-usp": "FAST CHARGING"
           }
         },
         "2e4e334e-69d3-4879-ad72-7d4b7978aaf2": {
           "type": "usp",
           "settings": {
-            "text-usp": ""
+            "text-usp": "SALE"
           }
         },
         "f298c4ce-4398-4c9b-be35-2e7acdf2d6c2": {
           "type": "usp",
           "settings": {
-            "text-usp": ""
+            "text-usp": "TECH"
           }
         },
         "d84e0728-7a61-4c9a-a974-70ff25337b91": {
