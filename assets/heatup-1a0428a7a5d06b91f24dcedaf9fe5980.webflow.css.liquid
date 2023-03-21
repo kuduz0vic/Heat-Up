@@ -11741,3 +11741,22 @@ input[type=number] {
   position: sticky;
   bottom: 0;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .hero-mobile {
+    display: block;
+  }
+  .hero-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-mobile {
+    display: none;
+  }
+  .hero-desktop {
+    display: block;
+  }
+}

@@ -13,7 +13,7 @@
     <div>{{ section.settings.review_text | newline_to_br }}</div>
   </div>
 </div>
-<div class="hero-background">
+<div class="hero-background hero-desktop">
   {%- if section.settings.hero_afbeelding == nil -%}<img
       src="{{ 'hero-image.png' | asset_url }}"
       loading="lazy"
@@ -28,7 +28,15 @@
       srcset="{{ section.settings.hero_afbeelding | img_url: '1920x' }} 1920w,{{ section.settings.hero_afbeelding | img_url: '1600x' }} 1600w,{{ section.settings.hero_afbeelding | img_url: '1366x' }} 1366w,{{ section.settings.hero_afbeelding | img_url: '1024x' }} 1024w,{{ section.settings.hero_afbeelding | img_url: '768x' }} 768w,{{ section.settings.hero_afbeelding | img_url: '640x' }} 640w">{%- endif -%}
   <div class="hero-background-overlay"></div>
 </div>
-
+<div class="hero-background hero-mobile">
+  <img
+    src="{{ section.settings.hero_mobile.src | img_url: 'master' }}"
+    loading="lazy"
+    alt="{{ section.settings.hero_mobile.alt | escape }}"
+    class="hero-image"
+    srcset="{{ section.settings.hero_mobile | img_url: '1920x' }} 1920w,{{ section.settings.hero_mobile | img_url: '1600x' }} 1600w,{{ section.settings.hero_mobile | img_url: '1366x' }} 1366w,{{ section.settings.hero_mobile | img_url: '1024x' }} 1024w,{{ section.settings.hero_mobile | img_url: '768x' }} 768w,{{ section.settings.hero_mobile | img_url: '640x' }} 640w">
+  <div class="hero-background-overlay"></div>
+</div>
 
 
 <script>
@@ -79,6 +87,10 @@
         "type": "image_picker",
         "id": "hero_afbeelding",
         "label": "Hero Afbeelding"
+      }, {
+        "type": "image_picker",
+        "id": "hero_mobile",
+        "label": "Hero Mobile"
       }, {
         "type": "url",
         "id": "knop_link",
