@@ -3,6 +3,7 @@
     "favicon": "shopify:\/\/shop_images\/Heatup-vlam-icon.png",
     "checkout_logo_image": "shopify:\/\/shop_images\/Heatup.jpg",
     "checkout_body_background_color": "#ffffff",
+    "checkout_button_color": "#04da8d",
     "sections": {
       "sidecart": {
         "type": "sidecart",
