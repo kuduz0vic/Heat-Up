@@ -216,32 +216,56 @@
             <div class="product-section-left">
               <div class="product-desktop-imgs">
 
-                {% assign product = product %}
-                {% assign images = product.images %}
-                {% assign first_image = images[0] %}
-                {% assign first_image_alt = first_image.alt %}
-                {% assign second_image = images[1] %}
-                {% assign second_image_alt = second_image.alt %}
-                {% assign third_image = images[2] %}
-                {% assign third_image_alt = third_image.alt %}
-                {% assign fourth_image = images[3] %}
-                {% assign fourth_image_alt = fourth_image.alt %}
-                {% assign fifth_image = images[4] %}
-                {% assign fifth_image_alt = fifth_image.alt %}
-                {% assign sixth_image = images[5] %}
-                {% assign sixth_image_alt = sixth_image.alt %}
-                {% assign seventh_image = images[6] %}
-                {% assign seventh_image_alt = seventh_image.alt %}
-                {% assign eight_image = images[7] %}
-                {% assign eight_image_alt = eight_image.alt %}
-                {% assign nineth_image = images[8] %}
-                {% assign nineth_image_alt = nineth_image.alt %}
-                {% assign tenth_image = images[9] %}
-                {% assign tenth_image_alt = tenth_image.alt %}
-                {% assign eleventh_image = images[10] %}
-                {% assign eleventh_image_alt = eleventh_image.alt %}
-                {% assign twelfth_image = images[11] %}
-                {% assign twelfth_image_alt = twelfth_image.alt %}
+              {% assign product = product %}
+              {% assign images = product.images %}
+              {% assign first_image = images[0] %}
+              {% assign first_image_alt = first_image.alt %}
+              {% assign second_image = images[1] %}
+              {% assign second_image_alt = second_image.alt %}
+              {% assign third_image = images[2] %}
+              {% assign third_image_alt = third_image.alt %}
+              {% assign fourth_image = images[3] %}
+              {% assign fourth_image_alt = fourth_image.alt %}
+              {% assign fifth_image = images[4] %}
+              {% assign fifth_image_alt = fifth_image.alt %}
+              {% assign sixth_image = images[5] %}
+              {% assign sixth_image_alt = sixth_image.alt %}
+              {% assign seventh_image = images[6] %}
+              {% assign seventh_image_alt = seventh_image.alt %}
+              {% assign eight_image = images[7] %}
+              {% assign eight_image_alt = eight_image.alt %}
+              {% assign nineth_image = images[8] %}
+              {% assign nineth_image_alt = nineth_image.alt %}
+              {% assign tenth_image = images[9] %}
+              {% assign tenth_image_alt = tenth_image.alt %}
+              {% assign eleventh_image = images[10] %}
+              {% assign eleventh_image_alt = eleventh_image.alt %}
+              {% assign twelfth_image = images[11] %}
+              {% assign twelfth_image_alt = twelfth_image.alt %}
+              {% assign thirteenth_image = images[12] %}
+              {% assign thirteenth_image_alt = thirteenth_image.alt %}
+              {% assign fourteenth_image = images[13] %}
+              {% assign fourteenth_image_alt = fourteenth_image.alt %}
+              {% assign fifteenth_image = images[14] %}
+              {% assign fifteenth_image_alt = fifteenth_image.alt %}
+              {% assign sixteenth_image = images[15] %}
+              {% assign sixteenth_image_alt = sixteenth_image.alt %}
+              {% assign seventeenth_image = images[16] %}
+              {% assign seventeenth_image_alt = seventeenth_image.alt %}
+              {% assign eighteenth_image = images[17] %}
+              {% assign eighteenth_image_alt = eighteenth_image.alt %}
+              {% assign nineteenth_image = images[18] %}
+              {% assign nineteenth_image_alt = nineteenth_image.alt %}
+              {% assign twentieth_image = images[19] %}
+              {% assign twentieth_image_alt = twentieth_image.alt %}
+              {% assign twenty_first_image = images[20] %}
+              {% assign twenty_first_image_alt = twenty_first_image.alt %}
+              {% assign twenty_second_image = images[21] %}
+              {% assign twenty_second_image_alt = twenty_second_image.alt %}
+              {% assign twenty_third_image = images[22] %}
+              {% assign twenty_third_image_alt = twenty_third_image.alt %}
+              {% assign twenty_fourth_image = images[23] %}
+              {% assign twenty_fourth_image_alt = twenty_third_image.alt %}
 
                 {% if first_image.src != blank %}
                   <div
@@ -469,6 +493,244 @@
                       alt=""
                       class="product-img"></div>
                 {% endif %}
+
+
+                {% if thirteenth_image.src != blank %}
+                <div
+                  data-value="{{thirteenth_image_alt}}"
+                  block="Hero Afbeelding"
+                  class="product-image after-image image-change">
+                  <img
+                    src="{{ thirteenth_image.src | img_url: 'master' }}"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                    srcset="{{ thirteenth_image.src | img_url: 'master' }} 500w, {{ thirteenth_image.src | img_url: 'master' }} 608w"
+                    alt=""
+                    class="product-img">
+                  {%- if block.settings.labels_aanuit -%}
+                    <div class="desktop-pdp-badges">
+                      {%- if block.settings.product_label_aanuit -%}
+                        <div class="product-images-label-desktop"><img
+                            src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
+                            loading="lazy"
+                            alt=""
+                            class="label-img">
+                          <div>{{ block.settings.label_text | newline_to_br }}</div>
+                        </div>
+                      {% endif %}
+                      {%- if block.settings.trust_badges_aanuit -%}
+                        <div class="trust-badges">
+                          {%- if block.settings.badge_1_aanuit -%}
+                            <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
+                                src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                loading="lazy"
+                                alt=""
+                                class="badge-img-inner"></div>
+                          {% endif %}
+                          {%- if block.settings.badge_2_aanuit -%}
+                            <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
+                                src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                loading="lazy"
+                                sizes="(max-width: 767px) 100vw, 50.5px"
+                                srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                alt=""
+                                class="badge-img-inner"></div>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+              <div block="2 Afbeeldingen" class="product-images-row">
+                {% if fourteenth_image.src != blank %}
+                  <div data-value="{{fourteenth_image_alt}}" class="product-row-img image-change"><img
+                      src="{{ fourteenth_image.src | img_url: 'master' }}"
+                      loading="lazy"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                      srcset="{{ fourteenth_image.src | img_url: 'master' }} 500w, {{ fourteenth_image.src | img_url: 'master' }} 608w"
+                      alt=""
+                      class="product-img"></div>
+                {% endif %}
+                {% if fifteenth_image.src != blank %}
+                  <div data-value="{{fifteenth_image_alt}}" class="product-row-img image-change"><img
+                      src="{{ fifteenth_image.src | img_url: 'master' }}"
+                      loading="lazy"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                      srcset="{{ fifteenth_image.src | img_url: 'master' }} 500w, {{ fifteenth_image.src | img_url: 'master' }} 608w"
+                      alt=""
+                      class="product-img"></div>
+                {% endif %}
+              </div>
+              {% if sixteenth_image.src != blank %}
+                <div data-value="{{sixteenth_image_alt}}" class="product-image image-change"><img
+                    src="{{ sixteenth_image.src | img_url: 'master' }}"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                    srcset="{{ sixteenth_image.src | img_url: 'master' }} 500w, {{ sixteenth_image.src | img_url: 'master' }} 774w"
+                    alt=""
+                    class="product-img"></div>
+              {% endif %}
+
+
+
+
+              {% if seventeenth_image.src != blank %}
+              <div
+                data-value="{{seventeenth_image_alt}}"
+                block="Hero Afbeelding"
+                class="product-image after-image image-change">
+                <img
+                  src="{{ seventeenth_image.src | img_url: 'master' }}"
+                  loading="lazy"
+                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                  srcset="{{ seventeenth_image.src | img_url: 'master' }} 500w, {{ seventeenth_image.src | img_url: 'master' }} 608w"
+                  alt=""
+                  class="product-img">
+                {%- if block.settings.labels_aanuit -%}
+                  <div class="desktop-pdp-badges">
+                    {%- if block.settings.product_label_aanuit -%}
+                      <div class="product-images-label-desktop"><img
+                          src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
+                          loading="lazy"
+                          alt=""
+                          class="label-img">
+                        <div>{{ block.settings.label_text | newline_to_br }}</div>
+                      </div>
+                    {% endif %}
+                    {%- if block.settings.trust_badges_aanuit -%}
+                      <div class="trust-badges">
+                        {%- if block.settings.badge_1_aanuit -%}
+                          <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
+                              src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                              loading="lazy"
+                              alt=""
+                              class="badge-img-inner"></div>
+                        {% endif %}
+                        {%- if block.settings.badge_2_aanuit -%}
+                          <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
+                              src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                              loading="lazy"
+                              sizes="(max-width: 767px) 100vw, 50.5px"
+                              srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                              alt=""
+                              class="badge-img-inner"></div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+            <div block="2 Afbeeldingen" class="product-images-row">
+              {% if eighteenth_image.src != blank %}
+                <div data-value="{{eighteenth_image_alt}}" class="product-row-img image-change"><img
+                    src="{{ eighteenth_image.src | img_url: 'master' }}"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                    srcset="{{ eighteenth_image.src | img_url: 'master' }} 500w, {{ eighteenth_image.src | img_url: 'master' }} 608w"
+                    alt=""
+                    class="product-img"></div>
+              {% endif %}
+              {% if nineteenth_image.src != blank %}
+                <div data-value="{{nineteenth_image_alt}}" class="product-row-img image-change"><img
+                    src="{{ nineteenth_image.src | img_url: 'master' }}"
+                    loading="lazy"
+                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                    srcset="{{ nineteenth_image.src | img_url: 'master' }} 500w, {{ nineteenth_image.src | img_url: 'master' }} 608w"
+                    alt=""
+                    class="product-img"></div>
+              {% endif %}
+            </div>
+            {% if twentieth_image.src != blank %}
+              <div data-value="{{twentieth_image_alt}}" class="product-image image-change"><img
+                  src="{{ twentieth_image.src | img_url: 'master' }}"
+                  loading="lazy"
+                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                  srcset="{{ twentieth_image.src | img_url: 'master' }} 500w, {{ twentieth_image.src | img_url: 'master' }} 774w"
+                  alt=""
+                  class="product-img"></div>
+            {% endif %}
+
+
+            {% if twenty_first_image.src != blank %}
+            <div
+              data-value="{{twenty_first_image_alt}}"
+              block="Hero Afbeelding"
+              class="product-image after-image image-change">
+              <img
+                src="{{ twenty_first_image.src | img_url: 'master' }}"
+                loading="lazy"
+                sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                srcset="{{ twenty_first_image.src | img_url: 'master' }} 500w, {{ twenty_first_image.src | img_url: 'master' }} 608w"
+                alt=""
+                class="product-img">
+              {%- if block.settings.labels_aanuit -%}
+                <div class="desktop-pdp-badges">
+                  {%- if block.settings.product_label_aanuit -%}
+                    <div class="product-images-label-desktop"><img
+                        src="{{ block.settings.product_label_icon.src | img_url: 'master' }}"
+                        loading="lazy"
+                        alt=""
+                        class="label-img">
+                      <div>{{ block.settings.label_text | newline_to_br }}</div>
+                    </div>
+                  {% endif %}
+                  {%- if block.settings.trust_badges_aanuit -%}
+                    <div class="trust-badges">
+                      {%- if block.settings.badge_1_aanuit -%}
+                        <div id="w-node-_3f215b32-4cae-fc71-3946-6c2f07247842-f5de47a6" class="badge-img"><img
+                            src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                            loading="lazy"
+                            alt=""
+                            class="badge-img-inner"></div>
+                      {% endif %}
+                      {%- if block.settings.badge_2_aanuit -%}
+                        <div id="w-node-ec59c62a-14a1-a0a8-7624-d54c561dc90f-f5de47a6" class="badge-img"><img
+                            src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                            loading="lazy"
+                            sizes="(max-width: 767px) 100vw, 50.5px"
+                            srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                            alt=""
+                            class="badge-img-inner"></div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+          <div block="2 Afbeeldingen" class="product-images-row">
+            {% if twenty_second_image.src != blank %}
+              <div data-value="{{twenty_second_image_alt}}" class="product-row-img image-change"><img
+                  src="{{ twenty_second_image.src | img_url: 'master' }}"
+                  loading="lazy"
+                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                  srcset="{{ twenty_second_image.src | img_url: 'master' }} 500w, {{ twenty_second_image.src | img_url: 'master' }} 608w"
+                  alt=""
+                  class="product-img"></div>
+            {% endif %}
+            {% if twenty_third_image.src != blank %}
+              <div data-value="{{twenty_third_image_alt}}" class="product-row-img image-change"><img
+                  src="{{ twenty_third_image.src | img_url: 'master' }}"
+                  loading="lazy"
+                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 197.93333435058594px, 23vw"
+                  srcset="{{ twenty_third_image.src | img_url: 'master' }} 500w, {{ twenty_third_image.src | img_url: 'master' }} 608w"
+                  alt=""
+                  class="product-img"></div>
+            {% endif %}
+          </div>
+          {% if twenty_fourth_image.src != blank %}
+            <div data-value="{{twenty_fourth_image_alt}}" class="product-image image-change"><img
+                src="{{ twenty_fourth_image.src | img_url: 'master' }}"
+                loading="lazy"
+                sizes="(max-width: 767px) 100vw, (max-width: 991px) 414.8666687011719px, 46vw"
+                srcset="{{ twenty_fourth_image.src | img_url: 'master' }} 500w, {{ twenty_fourth_image.src | img_url: 'master' }} 774w"
+                alt=""
+                class="product-img"></div>
+          {% endif %}
+
+
               </div>
               <div class="product-slider pdp-slider">
                 <div class="product-images-label"><img
@@ -644,6 +906,177 @@
                           srcset="{{ twelfth_image.src | img_url: 'master' }} 500w, {{ twelfth_image.src | img_url: 'master' }} 608w"
                           alt=""
                           class="product-img-slide"></div>
+
+
+                          {% if thirteenth_image.src != blank %}
+                          <div class="swiper-slide mySwiper2-slide" data-value="{{thirteenth_image_alt}}"><img
+                              src="{{ nineth_image.src | img_url: 'master' }}"
+                              loading="lazy"
+                              sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                              srcset="{{ thirteenth_image.src | img_url: 'master' }} 500w, {{ thirteenth_image.src | img_url: 'master' }} 608w"
+                              alt=""
+                              class="product-img-slide">
+                            <div class="product-img-badges">
+                              {%- if block.settings.badge_1_aanuit -%}
+                                <div class="badge-img"><img
+                                    src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                    loading="lazy"
+                                    alt=""
+                                    class="badge-img-inner"></div>
+                              {% endif %}
+                              {%- if block.settings.badge_2_aanuit -%}
+                                <div class="badge-img"><img
+                                    src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                    loading="lazy"
+                                    sizes="(max-width: 479px) 11vw, (max-width: 767px) 50.5px, 100vw"
+                                    srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                    alt=""
+                                    class="badge-img-inner"></div>
+                              {% endif %}
+                            </div>
+                          </div>
+                        {% endif %}
+                        {% if fourteenth_image.src != blank %}
+                          <div class="swiper-slide mySwiper2-slide" data-value="{{fourteenth_image_alt}}"><img
+                              src="{{ fourteenth_image.src | img_url: 'master' }}"
+                              loading="lazy"
+                              sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                              srcset="{{ fourteenth_image.src | img_url: 'master' }} 500w, {{ fourteenth_image.src | img_url: 'master' }} 608w"
+                              alt=""
+                              class="product-img-slide"></div>
+                        {% endif %}
+                        {% if fifteenth_image.src != blank %}
+                          <div class="swiper-slide mySwiper2-slide" data-value="{{fifteenth_image_alt}}"><img
+                              src="{{ fifteenth_image.src | img_url: 'master' }}"
+                              loading="lazy"
+                              sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                              srcset="{{ fifteenth_image.src | img_url: 'master' }} 500w, {{ fifteenth_image.src | img_url: 'master' }} 608w"
+                              alt=""
+                              class="product-img-slide"></div>
+                        {% endif %}
+                        {% if sixteenth_image.src != blank %}
+                          <div class="swiper-slide mySwiper2-slide" data-value="{{sixteenth_image_alt}}"><img
+                              src="{{ sixteenth_image.src | img_url: 'master' }}"
+                              loading="lazy"
+                              sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                              srcset="{{ sixteenth_image.src | img_url: 'master' }} 500w, {{ sixteenth_image.src | img_url: 'master' }} 608w"
+                              alt=""
+                              class="product-img-slide"></div>
+
+
+                              {% if seventeenth_image.src != blank %}
+                              <div class="swiper-slide mySwiper2-slide" data-value="{{seventeenth_image_alt}}"><img
+                                  src="{{ seventeenth_image.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                                  srcset="{{ seventeenth_image.src | img_url: 'master' }} 500w, {{ seventeenth_image.src | img_url: 'master' }} 608w"
+                                  alt=""
+                                  class="product-img-slide">
+                                <div class="product-img-badges">
+                                  {%- if block.settings.badge_1_aanuit -%}
+                                    <div class="badge-img"><img
+                                        src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                        loading="lazy"
+                                        alt=""
+                                        class="badge-img-inner"></div>
+                                  {% endif %}
+                                  {%- if block.settings.badge_2_aanuit -%}
+                                    <div class="badge-img"><img
+                                        src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                        loading="lazy"
+                                        sizes="(max-width: 479px) 11vw, (max-width: 767px) 50.5px, 100vw"
+                                        srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                        alt=""
+                                        class="badge-img-inner"></div>
+                                  {% endif %}
+                                </div>
+                              </div>
+                            {% endif %}
+                            {% if eighteenth_image.src != blank %}
+                              <div class="swiper-slide mySwiper2-slide" data-value="{{eighteenth_image_alt}}"><img
+                                  src="{{ eighteenth_image.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                                  srcset="{{ eighteenth_image.src | img_url: 'master' }} 500w, {{ eighteenth_image.src | img_url: 'master' }} 608w"
+                                  alt=""
+                                  class="product-img-slide"></div>
+                            {% endif %}
+                            {% if nineteenth_image.src != blank %}
+                              <div class="swiper-slide mySwiper2-slide" data-value="{{nineteenth_image_alt}}"><img
+                                  src="{{ nineteenth_image.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                                  srcset="{{ nineteenth_image.src | img_url: 'master' }} 500w, {{ nineteenth_image.src | img_url: 'master' }} 608w"
+                                  alt=""
+                                  class="product-img-slide"></div>
+                            {% endif %}
+                            {% if twentieth_image.src != blank %}
+                              <div class="swiper-slide mySwiper2-slide" data-value="{{twentieth_image_alt}}"><img
+                                  src="{{ twentieth_image.src | img_url: 'master' }}"
+                                  loading="lazy"
+                                  sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                                  srcset="{{ twentieth_image.src | img_url: 'master' }} 500w, {{ twentieth_image.src | img_url: 'master' }} 608w"
+                                  alt=""
+                                  class="product-img-slide"></div>
+
+
+                                  {% if twenty_first_image.src != blank %}
+                                  <div class="swiper-slide mySwiper2-slide" data-value="{{twenty_first_image_alt}}"><img
+                                      src="{{ twenty_first_image.src | img_url: 'master' }}"
+                                      loading="lazy"
+                                      sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                                      srcset="{{ twenty_first_image.src | img_url: 'master' }} 500w, {{ twenty_first_image.src | img_url: 'master' }} 608w"
+                                      alt=""
+                                      class="product-img-slide">
+                                    <div class="product-img-badges">
+                                      {%- if block.settings.badge_1_aanuit -%}
+                                        <div class="badge-img"><img
+                                            src="{{ block.settings.badge_1.src | img_url: 'master' }}"
+                                            loading="lazy"
+                                            alt=""
+                                            class="badge-img-inner"></div>
+                                      {% endif %}
+                                      {%- if block.settings.badge_2_aanuit -%}
+                                        <div class="badge-img"><img
+                                            src="{{ block.settings.badge_2.src | img_url: 'master' }}"
+                                            loading="lazy"
+                                            sizes="(max-width: 479px) 11vw, (max-width: 767px) 50.5px, 100vw"
+                                            srcset="{{ block.settings.badge_2.src | img_url: 'master' }} 500w, {{ block.settings.badge_2.src | img_url: 'master' }} 532w"
+                                            alt=""
+                                            class="badge-img-inner"></div>
+                                      {% endif %}
+                                    </div>
+                                  </div>
+                                {% endif %}
+                                {% if twenty_second_image.src != blank %}
+                                  <div class="swiper-slide mySwiper2-slide" data-value="{{twenty_second_image_alt}}"><img
+                                      src="{{ twenty_second_image.src | img_url: 'master' }}"
+                                      loading="lazy"
+                                      sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                                      srcset="{{ twenty_second_image.src | img_url: 'master' }} 500w, {{ twenty_second_image.src | img_url: 'master' }} 608w"
+                                      alt=""
+                                      class="product-img-slide"></div>
+                                {% endif %}
+                                {% if twenty_third_image.src != blank %}
+                                  <div class="swiper-slide mySwiper2-slide" data-value="{{twenty_third_image_alt}}"><img
+                                      src="{{ twenty_third_image.src | img_url: 'master' }}"
+                                      loading="lazy"
+                                      sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                                      srcset="{{ twenty_third_image.src | img_url: 'master' }} 500w, {{ twenty_third_image.src | img_url: 'master' }} 608w"
+                                      alt=""
+                                      class="product-img-slide"></div>
+                                {% endif %}
+                                {% if twenty_fourth_image.src != blank %}
+                                  <div class="swiper-slide mySwiper2-slide" data-value="{{twenty_fourth_image_alt}}"><img
+                                      src="{{ twenty_fourth_image.src | img_url: 'master' }}"
+                                      loading="lazy"
+                                      sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, 100vw"
+                                      srcset="{{ twenty_fourth_image.src | img_url: 'master' }} 500w, {{ twenty_fourth_image.src | img_url: 'master' }} 608w"
+                                      alt=""
+                                      class="product-img-slide"></div>
+
+
+
                     {% endif %}
                   </div>
                   <div class="product-swiper-nav">
