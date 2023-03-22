@@ -334,6 +334,11 @@ document.addEventListener("DOMContentLoaded", function() {
       price.textContent = formattedPrice;
       comparePrice.textContent = formattedComparePrice;
 
+      const currentUrl = window.location.href;
+const urlWithoutVariant = currentUrl.replace(/\/\d+$/, '');
+const newUrl = urlWithoutVariant + `/${variantId}`;
+window.history.replaceState(null, null, newUrl);
+
 // Update discount
       const discountAmount = Math.round((variantComparePrice - variantPrice) * 100) / 100;
       const formattedDiscount = discountAmount.toLocaleString("nl-NL", {minimumFractionDigits: 0}).replace(/ /g, '\u00a0');
@@ -344,14 +349,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-// Select the first variant on page load
-  const firstColor = document.querySelector(".swatch-Kleur input:first-of-type");
-  const firstSize = document.querySelector(".swatch-Aantal input:first-of-type");
-  firstColor.checked = true;
-  firstSize.checked = true;
-  updateAddToCartButton();
 
-  colorButtons.forEach(button => button.addEventListener("click", updateAddToCartButton));
+  colorButtons.forEach(button => button.addEventListener("click", updateAddToCartButton, ));
   sizeButtons.forEach(button => button.addEventListener("click", updateAddToCartButton));
 });
 </script><script>
